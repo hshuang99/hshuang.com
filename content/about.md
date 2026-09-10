@@ -45,5 +45,3 @@ author = "黃宏勝"
 - 老天無眼，讀書沒有贏
 - 希望成為一個「有用」的人
 - 也許有一天我會回歸山林
-
-![黃宏勝](https://media.secologies.com/me-3.webp)
