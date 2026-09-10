@@ -1,61 +1,67 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>科技 on 黃宏勝的部落格 | hshuang.com</title>
-    <link>https://hshuang.com/categories/%E7%A7%91%E6%8A%80/</link>
-    <description>Recent content in 科技 on 黃宏勝的部落格 | hshuang.com</description>
-    <generator>Hugo</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Thu, 04 Jun 2026 10:16:00 +0800</lastBuildDate>
-    <atom:link href="https://hshuang.com/categories/%E7%A7%91%E6%8A%80/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Hugo 靜態部落格簡易留言板實作</title>
-      <link>https://hshuang.com/posts/hugo-simple-guestbook/</link>
-      <pubDate>Fri, 24 Apr 2026 23:06:00 +0800</pubDate>
-      <guid>https://hshuang.com/posts/hugo-simple-guestbook/</guid>
-      <description>由於利用 Cloudflare Worker 架設 Hugo 靜態部落格沒有後台伺服器可以儲存，所以我們利用 Google Apps Script、GitHub Gist 以及 Google 表單來建立一個簡易的留言系統</description>
-    </item>
-    <item>
-      <title>利用Cloudflare Domain搭配Gmail建立私人電子信箱</title>
-      <link>https://hshuang.com/posts/cloudflare-domain-create-free-private-email-using-gmail/</link>
-      <pubDate>Fri, 26 Dec 2025 15:59:00 +0800</pubDate>
-      <guid>https://hshuang.com/posts/cloudflare-domain-create-free-private-email-using-gmail/</guid>
-      <description>個人化電子郵件信箱讓你看起來更專業，本文向各位介紹如何利用Cloudflare購買的網域搭配免費的Gmail來建立私人信箱</description>
-    </item>
-    <item>
-      <title>電子書閱讀器改變了我的人生</title>
-      <link>https://hshuang.com/posts/ebook-ereader-changes-me/</link>
-      <pubDate>Thu, 27 Nov 2025 16:28:00 +0800</pubDate>
-      <guid>https://hshuang.com/posts/ebook-ereader-changes-me/</guid>
-      <description>放下會毒害自己大腦的社群媒體，擁抱單純的閱讀拯救自己的大腦吧</description>
-    </item>
-    <item>
-      <title>Framework工作機裝設Oculink</title>
-      <link>https://hshuang.com/posts/oculink-egpu-for-cuda/</link>
-      <pubDate>Tue, 02 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://hshuang.com/posts/oculink-egpu-for-cuda/</guid>
-      <description>由於研究上需要CUDA平行計算，所以我在Thunderbolt 4與Oculink中做選擇</description>
-    </item>
-    <item>
-      <title>Robots.txt與AI爬蟲的愛恨情仇</title>
-      <link>https://hshuang.com/posts/ai-vs-robots-txt/</link>
-      <pubDate>Sat, 02 Aug 2025 10:15:00 +0800</pubDate>
-      <guid>https://hshuang.com/posts/ai-vs-robots-txt/</guid>
-      <description>爬蟲巨獸無情吞噬網路上的一切，知識型網站的未來是？</description>
-    </item>
-    <item>
-      <title>自主選擇乾淨的資訊，回歸RSS的懷抱吧！</title>
-      <link>https://hshuang.com/posts/you-should-use-rss/</link>
-      <pubDate>Fri, 01 Aug 2025 14:23:00 +0800</pubDate>
-      <guid>https://hshuang.com/posts/you-should-use-rss/</guid>
-      <description>在這個注意力被各種事物搶奪的時代，你是否感覺自己在資訊海洋中溺水了？</description>
-    </item>
-    <item>
-      <title>讀墨 Readmoo mooInk Pro 2C 13.3吋 彩色電子書閱讀器 閱讀PDF檔案的應許之機</title>
-      <link>https://hshuang.com/posts/readmoo-mooink-pro-2c/</link>
-      <pubDate>Wed, 13 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://hshuang.com/posts/readmoo-mooink-pro-2c/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://media.secologies.com/Readmoo_mooInk_Pro_2C.webp&#34; alt=&#34;Readmoo_mooInk_Pro_2C&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;在大學時期上課都是使用ipad pro來看上課用的簡報或者相關文獻pdf檔案，但每次看久了眼睛都有些受不了，大三時有一天上Seminar課程過程中突然看見老師在使用一台不會發光的平板，湊近過去一看老師告訴我說這是一種叫做電子書閱讀器的產品&lt;/p&gt;</description>
-    </item>
-  </channel>
+<channel>
+<title>科技 on 黃宏勝的部落格 | hshuang.com</title>
+<link>https://hshuang.com/categories/%E7%A7%91%E6%8A%80/</link>
+<description>Recent content in 科技 on 黃宏勝的部落格 | hshuang.com</description><generator>Hugo -- gohugo.io</generator>
+<language>zh-tw</language>
+<lastBuildDate>Fri, 24 Apr 2026 23:06:00 +0800</lastBuildDate><atom:link href="https://hshuang.com/categories/%E7%A7%91%E6%8A%80/index.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>Hugo 靜態部落格簡易留言板實作</title>
+<link>https://hshuang.com/posts/hugo-simple-guestbook/</link>
+<pubDate>Fri, 24 Apr 2026 23:06:00 +0800</pubDate>
+<guid>https://hshuang.com/posts/hugo-simple-guestbook/</guid>
+<description>由於利用 Cloudflare Worker 架設 Hugo 靜態部落格沒有後台伺服器可以儲存，所以我們利用 Google Apps Script、GitHub Gist 以及 Google 表單來建立一個簡易的留言系統</description>
+</item>
+
+<item>
+<title>利用Cloudflare Domain搭配Gmail建立私人電子信箱</title>
+<link>https://hshuang.com/posts/cloudflare-domain-create-free-private-email-using-gmail/</link>
+<pubDate>Fri, 26 Dec 2025 15:59:00 +0800</pubDate>
+<guid>https://hshuang.com/posts/cloudflare-domain-create-free-private-email-using-gmail/</guid>
+<description>個人化電子郵件信箱讓你看起來更專業，本文向各位介紹如何利用Cloudflare購買的網域搭配免費的Gmail來建立私人信箱</description>
+</item>
+
+<item>
+<title>電子書閱讀器改變了我的人生</title>
+<link>https://hshuang.com/posts/ebook-ereader-changes-me/</link>
+<pubDate>Thu, 27 Nov 2025 16:28:00 +0800</pubDate>
+<guid>https://hshuang.com/posts/ebook-ereader-changes-me/</guid>
+<description>放下會毒害自己大腦的社群媒體，擁抱單純的閱讀拯救自己的大腦吧</description>
+</item>
+
+<item>
+<title>Framework工作機裝設Oculink</title>
+<link>https://hshuang.com/posts/oculink-egpu-for-cuda/</link>
+<pubDate>Tue, 02 Sep 2025 00:00:00 +0000</pubDate>
+<guid>https://hshuang.com/posts/oculink-egpu-for-cuda/</guid>
+<description>由於研究上需要CUDA平行計算，所以我在Thunderbolt 4與Oculink中做選擇</description>
+</item>
+
+<item>
+<title>Robots.txt與AI爬蟲的愛恨情仇</title>
+<link>https://hshuang.com/posts/ai-vs-robots-txt/</link>
+<pubDate>Sat, 02 Aug 2025 10:15:00 +0800</pubDate>
+<guid>https://hshuang.com/posts/ai-vs-robots-txt/</guid>
+<description>爬蟲巨獸無情吞噬網路上的一切，知識型網站的未來是？</description>
+</item>
+
+<item>
+<title>自主選擇乾淨的資訊，回歸RSS的懷抱吧！</title>
+<link>https://hshuang.com/posts/you-should-use-rss/</link>
+<pubDate>Fri, 01 Aug 2025 14:23:00 +0800</pubDate>
+<guid>https://hshuang.com/posts/you-should-use-rss/</guid>
+<description>在這個注意力被各種事物搶奪的時代，你是否感覺自己在資訊海洋中溺水了？</description>
+</item>
+
+<item>
+<title>讀墨 Readmoo mooInk Pro 2C 13.3吋 彩色電子書閱讀器 閱讀PDF檔案的應許之機</title>
+<link>https://hshuang.com/posts/readmoo-mooink-pro-2c/</link>
+<pubDate>Wed, 13 Nov 2024 00:00:00 +0000</pubDate>
+<guid>https://hshuang.com/posts/readmoo-mooink-pro-2c/</guid>
+<description>&lt;p&gt;&lt;img src=&#34;https://media.secologies.com/Readmoo_mooInk_Pro_2C.webp&#34; alt=&#34;Readmoo_mooInk_Pro_2C&#34;&gt;&lt;/p&gt;
+&lt;p&gt;在大學時期上課都是使用ipad pro來看上課用的簡報或者相關文獻pdf檔案，但每次看久了眼睛都有些受不了，大三時有一天上Seminar課程過程中突然看見老師在使用一台不會發光的平板，湊近過去一看老師告訴我說這是一種叫做電子書閱讀器的產品&lt;/p&gt;</description>
+</item>
+
+</channel>
 </rss>

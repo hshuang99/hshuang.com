@@ -1,40 +1,42 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>睡眠 on 黃宏勝的部落格 | hshuang.com</title>
-    <link>https://hshuang.com/tags/%E7%9D%A1%E7%9C%A0/</link>
-    <description>Recent content in 睡眠 on 黃宏勝的部落格 | hshuang.com</description>
-    <generator>Hugo</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Thu, 30 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://hshuang.com/tags/%E7%9D%A1%E7%9C%A0/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>職場上忽略了休息，我們最終會面臨什麼？</title>
-      <link>https://hshuang.com/posts/employment-ignore-rest/</link>
-      <pubDate>Sat, 11 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://hshuang.com/posts/employment-ignore-rest/</guid>
-      <description>好好休息，不應該被視為工作完成後的附帶產品，而是一個重要的身心修復過程，只有在適當休息過後，我們才能保持高效的生活方式</description>
-    </item>
-    <item>
-      <title>睡眠不足對於身體的各種危害</title>
-      <link>https://hshuang.com/posts/lack-of-sleep-harm/</link>
-      <pubDate>Tue, 15 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://hshuang.com/posts/lack-of-sleep-harm/</guid>
-      <description>人生中健康的三大支柱，有些人排序成「飲食」、「運動」，最後是「睡眠」，但從研究結果來看「睡眠」才是另外兩項條件的基底</description>
-    </item>
-    <item>
-      <title>理性思考最後才成熟</title>
-      <link>https://hshuang.com/posts/rational-thinking/</link>
-      <pubDate>Sat, 29 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://hshuang.com/posts/rational-thinking/</guid>
-      <description>你會不會覺得十六歲的青少年腦中總是少根筋？然而從腦神經科學中發現其實這是正常的</description>
-    </item>
-    <item>
-      <title>你是早鳥還是夜貓子？</title>
-      <link>https://hshuang.com/posts/are-you-early-birds-or-night-owls/</link>
-      <pubDate>Mon, 17 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://hshuang.com/posts/are-you-early-birds-or-night-owls/</guid>
-      <description>雖然你我的身體時鐘是運行二十四小時作息，但總會發現有些人早上精神較好，有些人則是晚上才會生龍活虎</description>
-    </item>
-  </channel>
+<channel>
+<title>睡眠 on 黃宏勝的部落格 | hshuang.com</title>
+<link>https://hshuang.com/tags/%E7%9D%A1%E7%9C%A0/</link>
+<description>Recent content in 睡眠 on 黃宏勝的部落格 | hshuang.com</description><generator>Hugo -- gohugo.io</generator>
+<language>zh-tw</language>
+<lastBuildDate>Sat, 11 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://hshuang.com/tags/%E7%9D%A1%E7%9C%A0/index.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>職場上忽略了休息，我們最終會面臨什麼？</title>
+<link>https://hshuang.com/posts/employment-ignore-rest/</link>
+<pubDate>Sat, 11 Oct 2025 00:00:00 +0000</pubDate>
+<guid>https://hshuang.com/posts/employment-ignore-rest/</guid>
+<description>好好休息，不應該被視為工作完成後的附帶產品，而是一個重要的身心修復過程，只有在適當休息過後，我們才能保持高效的生活方式</description>
+</item>
+
+<item>
+<title>睡眠不足對於身體的各種危害</title>
+<link>https://hshuang.com/posts/lack-of-sleep-harm/</link>
+<pubDate>Tue, 15 Apr 2025 00:00:00 +0000</pubDate>
+<guid>https://hshuang.com/posts/lack-of-sleep-harm/</guid>
+<description>人生中健康的三大支柱，有些人排序成「飲食」、「運動」，最後是「睡眠」，但從研究結果來看「睡眠」才是另外兩項條件的基底</description>
+</item>
+
+<item>
+<title>理性思考最後才成熟</title>
+<link>https://hshuang.com/posts/rational-thinking/</link>
+<pubDate>Sat, 29 Mar 2025 00:00:00 +0000</pubDate>
+<guid>https://hshuang.com/posts/rational-thinking/</guid>
+<description>你會不會覺得十六歲的青少年腦中總是少根筋？然而從腦神經科學中發現其實這是正常的</description>
+</item>
+
+<item>
+<title>你是早鳥還是夜貓子？</title>
+<link>https://hshuang.com/posts/are-you-early-birds-or-night-owls/</link>
+<pubDate>Mon, 17 Mar 2025 00:00:00 +0000</pubDate>
+<guid>https://hshuang.com/posts/are-you-early-birds-or-night-owls/</guid>
+<description>雖然你我的身體時鐘是運行二十四小時作息，但總會發現有些人早上精神較好，有些人則是晚上才會生龍活虎</description>
+</item>
+
+</channel>
 </rss>

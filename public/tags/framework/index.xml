@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Framework on 黃宏勝的部落格 | hshuang.com</title>
-    <link>https://hshuang.com/tags/framework/</link>
-    <description>Recent content in Framework on 黃宏勝的部落格 | hshuang.com</description>
-    <generator>Hugo</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Thu, 30 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://hshuang.com/tags/framework/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Framework工作機裝設Oculink</title>
-      <link>https://hshuang.com/posts/oculink-egpu-for-cuda/</link>
-      <pubDate>Tue, 02 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://hshuang.com/posts/oculink-egpu-for-cuda/</guid>
-      <description>由於研究上需要CUDA平行計算，所以我在Thunderbolt 4與Oculink中做選擇</description>
-    </item>
-  </channel>
+<channel>
+<title>Framework on 黃宏勝的部落格 | hshuang.com</title>
+<link>https://hshuang.com/tags/framework/</link>
+<description>Recent content in Framework on 黃宏勝的部落格 | hshuang.com</description><generator>Hugo -- gohugo.io</generator>
+<language>zh-tw</language>
+<lastBuildDate>Tue, 02 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://hshuang.com/tags/framework/index.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>Framework工作機裝設Oculink</title>
+<link>https://hshuang.com/posts/oculink-egpu-for-cuda/</link>
+<pubDate>Tue, 02 Sep 2025 00:00:00 +0000</pubDate>
+<guid>https://hshuang.com/posts/oculink-egpu-for-cuda/</guid>
+<description>由於研究上需要CUDA平行計算，所以我在Thunderbolt 4與Oculink中做選擇</description>
+</item>
+
+</channel>
 </rss>

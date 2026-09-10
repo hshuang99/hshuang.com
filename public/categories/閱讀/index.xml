@@ -1,33 +1,35 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>閱讀 on 黃宏勝的部落格 | hshuang.com</title>
-    <link>https://hshuang.com/categories/%E9%96%B1%E8%AE%80/</link>
-    <description>Recent content in 閱讀 on 黃宏勝的部落格 | hshuang.com</description>
-    <generator>Hugo</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Mon, 30 Mar 2026 15:16:00 +0800</lastBuildDate>
-    <atom:link href="https://hshuang.com/categories/%E9%96%B1%E8%AE%80/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>《動物農莊》讀後心得：所有動物一律平等，但有些動物比其他動物更平等</title>
-      <link>https://hshuang.com/posts/animal-farm/</link>
-      <pubDate>Thu, 15 Jan 2026 19:48:00 +0800</pubDate>
-      <guid>https://hshuang.com/posts/animal-farm/</guid>
-      <description>所有動物一律平等，但有些動物比其他動物更平等</description>
-    </item>
-    <item>
-      <title>《我想念我自己》讀後心得</title>
-      <link>https://hshuang.com/posts/still-alice/</link>
-      <pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://hshuang.com/posts/still-alice/</guid>
-      <description>失去了過往而未來也不再期待，因為能夠體驗的只有這個當下，該具備何種勇氣才能繼續走下去？</description>
-    </item>
-    <item>
-      <title>《長銷！》讀後心得，從個人創作到企業經營都要懂的打造經典之道</title>
-      <link>https://hshuang.com/posts/perennial-seller/</link>
-      <pubDate>Thu, 25 May 2023 15:15:00 +0800</pubDate>
-      <guid>https://hshuang.com/posts/perennial-seller/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://media.secologies.com/perennial_seller_cover.webp&#34; alt=&#34;perennial_seller_cover&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;各位讀者想過要創作嗎？我們都曾有那麼一個時刻，希望自己可以解決其他人的問題，或者將自己內心的想法製作出來，事實上，根據 1% 規則&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;其實任何的平台或社群裡只有 1% 的人在創造新內容、9% 的人修改這些舊的內容，而剩下 90% 的人只是單純消費這些內容&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;，這是所謂的 1-9-90 法則&lt;/p&gt;</description>
-    </item>
-  </channel>
+<channel>
+<title>閱讀 on 黃宏勝的部落格 | hshuang.com</title>
+<link>https://hshuang.com/categories/%E9%96%B1%E8%AE%80/</link>
+<description>Recent content in 閱讀 on 黃宏勝的部落格 | hshuang.com</description><generator>Hugo -- gohugo.io</generator>
+<language>zh-tw</language>
+<lastBuildDate>Thu, 15 Jan 2026 19:48:00 +0800</lastBuildDate><atom:link href="https://hshuang.com/categories/%E9%96%B1%E8%AE%80/index.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>《動物農莊》讀後心得：所有動物一律平等，但有些動物比其他動物更平等</title>
+<link>https://hshuang.com/posts/animal-farm/</link>
+<pubDate>Thu, 15 Jan 2026 19:48:00 +0800</pubDate>
+<guid>https://hshuang.com/posts/animal-farm/</guid>
+<description>所有動物一律平等，但有些動物比其他動物更平等</description>
+</item>
+
+<item>
+<title>《我想念我自己》讀後心得</title>
+<link>https://hshuang.com/posts/still-alice/</link>
+<pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
+<guid>https://hshuang.com/posts/still-alice/</guid>
+<description>失去了過往而未來也不再期待，因為能夠體驗的只有這個當下，該具備何種勇氣才能繼續走下去？</description>
+</item>
+
+<item>
+<title>《長銷！》讀後心得，從個人創作到企業經營都要懂的打造經典之道</title>
+<link>https://hshuang.com/posts/perennial-seller/</link>
+<pubDate>Thu, 25 May 2023 15:15:00 +0800</pubDate>
+<guid>https://hshuang.com/posts/perennial-seller/</guid>
+<description>&lt;p&gt;&lt;img src=&#34;https://media.secologies.com/perennial_seller_cover.webp&#34; alt=&#34;perennial_seller_cover&#34;&gt;&lt;/p&gt;
+&lt;p&gt;各位讀者想過要創作嗎？我們都曾有那麼一個時刻，希望自己可以解決其他人的問題，或者將自己內心的想法製作出來，事實上，根據 1% 規則&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;其實任何的平台或社群裡只有 1% 的人在創造新內容、9% 的人修改這些舊的內容，而剩下 90% 的人只是單純消費這些內容&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;，這是所謂的 1-9-90 法則&lt;/p&gt;</description>
+</item>
+
+</channel>
 </rss>

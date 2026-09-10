@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>練習 on 黃宏勝的部落格 | hshuang.com</title>
-    <link>https://hshuang.com/tags/%E7%B7%B4%E7%BF%92/</link>
-    <description>Recent content in 練習 on 黃宏勝的部落格 | hshuang.com</description>
-    <generator>Hugo</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Wed, 25 Mar 2026 19:01:00 +0800</lastBuildDate>
-    <atom:link href="https://hshuang.com/tags/%E7%B7%B4%E7%BF%92/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>萬事無法一步到位</title>
-      <link>https://hshuang.com/posts/you-can-not-rushperfection/</link>
-      <pubDate>Wed, 25 Mar 2026 19:00:00 +0800</pubDate>
-      <guid>https://hshuang.com/posts/you-can-not-rushperfection/</guid>
-      <description>生命中所有值得達成的目標都需要練習</description>
-    </item>
-  </channel>
+<channel>
+<title>練習 on 黃宏勝的部落格 | hshuang.com</title>
+<link>https://hshuang.com/tags/%E7%B7%B4%E7%BF%92/</link>
+<description>Recent content in 練習 on 黃宏勝的部落格 | hshuang.com</description><generator>Hugo -- gohugo.io</generator>
+<language>zh-tw</language>
+<lastBuildDate>Wed, 25 Mar 2026 19:00:00 +0800</lastBuildDate><atom:link href="https://hshuang.com/tags/%E7%B7%B4%E7%BF%92/index.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>萬事無法一步到位</title>
+<link>https://hshuang.com/posts/you-can-not-rushperfection/</link>
+<pubDate>Wed, 25 Mar 2026 19:00:00 +0800</pubDate>
+<guid>https://hshuang.com/posts/you-can-not-rushperfection/</guid>
+<description>生命中所有值得達成的目標都需要練習</description>
+</item>
+
+</channel>
 </rss>

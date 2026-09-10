@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>意義 on 黃宏勝的部落格 | hshuang.com</title>
-    <link>https://hshuang.com/tags/%E6%84%8F%E7%BE%A9/</link>
-    <description>Recent content in 意義 on 黃宏勝的部落格 | hshuang.com</description>
-    <generator>Hugo</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Wed, 20 May 2026 14:26:00 +0800</lastBuildDate>
-    <atom:link href="https://hshuang.com/tags/%E6%84%8F%E7%BE%A9/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>你以為的絕境，藏著豐收的秘密</title>
-      <link>https://hshuang.com/posts/within-the-abyss-you-perceive-lies-the-secret-to-a-bountiful-harvest/</link>
-      <pubDate>Mon, 18 May 2026 11:12:00 +0800</pubDate>
-      <guid>https://hshuang.com/posts/within-the-abyss-you-perceive-lies-the-secret-to-a-bountiful-harvest/</guid>
-      <description>即使面臨最絕望的困境，我們依舊要走下去，過度這段痛苦的轉變，最終可以採收到最豐碩的果實</description>
-    </item>
-  </channel>
+<channel>
+<title>意義 on 黃宏勝的部落格 | hshuang.com</title>
+<link>https://hshuang.com/tags/%E6%84%8F%E7%BE%A9/</link>
+<description>Recent content in 意義 on 黃宏勝的部落格 | hshuang.com</description><generator>Hugo -- gohugo.io</generator>
+<language>zh-tw</language>
+<lastBuildDate>Mon, 18 May 2026 11:12:00 +0800</lastBuildDate><atom:link href="https://hshuang.com/tags/%E6%84%8F%E7%BE%A9/index.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>你以為的絕境，藏著豐收的秘密</title>
+<link>https://hshuang.com/posts/within-the-abyss-you-perceive-lies-the-secret-to-a-bountiful-harvest/</link>
+<pubDate>Mon, 18 May 2026 11:12:00 +0800</pubDate>
+<guid>https://hshuang.com/posts/within-the-abyss-you-perceive-lies-the-secret-to-a-bountiful-harvest/</guid>
+<description>即使面臨最絕望的困境，我們依舊要走下去，過度這段痛苦的轉變，最終可以採收到最豐碩的果實</description>
+</item>
+
+</channel>
 </rss>

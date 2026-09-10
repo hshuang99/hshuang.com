@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>達克效應 on 黃宏勝的部落格 | hshuang.com</title>
-    <link>https://hshuang.com/tags/%E9%81%94%E5%85%8B%E6%95%88%E6%87%89/</link>
-    <description>Recent content in 達克效應 on 黃宏勝的部落格 | hshuang.com</description>
-    <generator>Hugo</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Fri, 20 Feb 2026 17:25:00 +0800</lastBuildDate>
-    <atom:link href="https://hshuang.com/tags/%E9%81%94%E5%85%8B%E6%95%88%E6%87%89/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>好學生與壞學生</title>
-      <link>https://hshuang.com/posts/good-student-and-bad-student/</link>
-      <pubDate>Fri, 20 Feb 2026 17:25:00 +0800</pubDate>
-      <guid>https://hshuang.com/posts/good-student-and-bad-student/</guid>
-      <description>只因為他們總是乖乖照著老師的要求執行，從不思考自己覺得如何；永遠單純讀完老師指定的章節內容(甚至往往根本沒讀完)</description>
-    </item>
-  </channel>
+<channel>
+<title>達克效應 on 黃宏勝的部落格 | hshuang.com</title>
+<link>https://hshuang.com/tags/%E9%81%94%E5%85%8B%E6%95%88%E6%87%89/</link>
+<description>Recent content in 達克效應 on 黃宏勝的部落格 | hshuang.com</description><generator>Hugo -- gohugo.io</generator>
+<language>zh-tw</language>
+<lastBuildDate>Fri, 20 Feb 2026 17:25:00 +0800</lastBuildDate><atom:link href="https://hshuang.com/tags/%E9%81%94%E5%85%8B%E6%95%88%E6%87%89/index.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>好學生與壞學生</title>
+<link>https://hshuang.com/posts/good-student-and-bad-student/</link>
+<pubDate>Fri, 20 Feb 2026 17:25:00 +0800</pubDate>
+<guid>https://hshuang.com/posts/good-student-and-bad-student/</guid>
+<description>只因為他們總是乖乖照著老師的要求執行，從不思考自己覺得如何；永遠單純讀完老師指定的章節內容(甚至往往根本沒讀完)</description>
+</item>
+
+</channel>
 </rss>

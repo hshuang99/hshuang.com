@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>天堂 on 黃宏勝的部落格 | hshuang.com</title>
-    <link>https://hshuang.com/tags/%E5%A4%A9%E5%A0%82/</link>
-    <description>Recent content in 天堂 on 黃宏勝的部落格 | hshuang.com</description>
-    <generator>Hugo</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Thu, 08 Jan 2026 22:44:00 +0800</lastBuildDate>
-    <atom:link href="https://hshuang.com/tags/%E5%A4%A9%E5%A0%82/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>這就是人生</title>
-      <link>https://hshuang.com/posts/this-is-the-life/</link>
-      <pubDate>Thu, 08 Jan 2026 22:44:00 +0800</pubDate>
-      <guid>https://hshuang.com/posts/this-is-the-life/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://media.secologies.com/This-is-fine.webp&#34; alt=&#34;This-is-fine&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;每一秒鐘，我們不是走進天堂，&lt;/p&gt;&#xA;&lt;p&gt;就是走出天堂。&lt;/p&gt;&#xA;&lt;p&gt;By 克里斯提昂·博班(Christian Bobin, 1951-2022)，法國作家、詩人&lt;/p&gt;</description>
-    </item>
-  </channel>
+<channel>
+<title>天堂 on 黃宏勝的部落格 | hshuang.com</title>
+<link>https://hshuang.com/tags/%E5%A4%A9%E5%A0%82/</link>
+<description>Recent content in 天堂 on 黃宏勝的部落格 | hshuang.com</description><generator>Hugo -- gohugo.io</generator>
+<language>zh-tw</language>
+<lastBuildDate>Thu, 08 Jan 2026 22:44:00 +0800</lastBuildDate><atom:link href="https://hshuang.com/tags/%E5%A4%A9%E5%A0%82/index.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>這就是人生</title>
+<link>https://hshuang.com/posts/this-is-the-life/</link>
+<pubDate>Thu, 08 Jan 2026 22:44:00 +0800</pubDate>
+<guid>https://hshuang.com/posts/this-is-the-life/</guid>
+<description>&lt;p&gt;&lt;img src=&#34;https://media.secologies.com/This-is-fine.webp&#34; alt=&#34;This-is-fine&#34;&gt;&lt;/p&gt;
+&lt;p&gt;每一秒鐘，我們不是走進天堂，&lt;/p&gt;
+&lt;p&gt;就是走出天堂。&lt;/p&gt;
+&lt;p&gt;By 克里斯提昂·博班(Christian Bobin, 1951-2022)，法國作家、詩人&lt;/p&gt;</description>
+</item>
+
+</channel>
 </rss>

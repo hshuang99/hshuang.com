@@ -8,7 +8,7 @@
              translated version of the current page when one exists,
              otherwise that language's home page. */}}
         {{ $cur := .Language.Lang }}
-        {{ $others := where .Site.Sites "Language.Lang" "ne" $cur }}
+        {{ $others := where hugo.Sites "Language.Lang" "ne" $cur }}
         {{ if $others }}
         <span class="lang-switcher">
             {{ range $others }}
@@ -17,7 +17,7 @@
                 {{ range $.Translations }}
                     {{ if eq .Language.Lang $siteLang }}{{ $target = .RelPermalink }}{{ end }}
                 {{ end }}
-                <a href="{{ $target }}" class="lang-switch-link">{{ .Language.LanguageName | default $siteLang }}</a>
+                <a href="{{ $target }}" class="lang-switch-link">{{ .Language.Label | default $siteLang }}</a>
             {{ end }}
         </span>
         {{ end }}

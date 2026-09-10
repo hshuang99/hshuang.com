@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>藝術 on 黃宏勝的部落格 | hshuang.com</title>
-    <link>https://hshuang.com/categories/%E8%97%9D%E8%A1%93/</link>
-    <description>Recent content in 藝術 on 黃宏勝的部落格 | hshuang.com</description>
-    <generator>Hugo</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Thu, 30 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://hshuang.com/categories/%E8%97%9D%E8%A1%93/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>「我們只能透過繪畫表達自我」 - 文森・梵谷</title>
-      <link>https://hshuang.com/posts/vincent-van-gogh/</link>
-      <pubDate>Wed, 18 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://hshuang.com/posts/vincent-van-gogh/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://media.secologies.com/VincentVanGogh-Cover.webp&#34; alt=&#34;VincentVanGogh-Cover&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;文森・梵谷的藝術家之旅始於27歲，在那之前他的工作都挺不順遂的，遊歷海牙回到家鄉紐南時喜歡在大自然中體驗「真正的生活」，1885年4月的第一幅大型油畫作品《吃馬鈴薯的人》誕生，使用的色調非常暗，很明顯是受到米勒的影響&lt;/p&gt;</description>
-    </item>
-  </channel>
+<channel>
+<title>藝術 on 黃宏勝的部落格 | hshuang.com</title>
+<link>https://hshuang.com/categories/%E8%97%9D%E8%A1%93/</link>
+<description>Recent content in 藝術 on 黃宏勝的部落格 | hshuang.com</description><generator>Hugo -- gohugo.io</generator>
+<language>zh-tw</language>
+<lastBuildDate>Wed, 18 Jun 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://hshuang.com/categories/%E8%97%9D%E8%A1%93/index.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>「我們只能透過繪畫表達自我」 - 文森・梵谷</title>
+<link>https://hshuang.com/posts/vincent-van-gogh/</link>
+<pubDate>Wed, 18 Jun 2025 00:00:00 +0000</pubDate>
+<guid>https://hshuang.com/posts/vincent-van-gogh/</guid>
+<description>&lt;p&gt;&lt;img src=&#34;https://media.secologies.com/VincentVanGogh-Cover.webp&#34; alt=&#34;VincentVanGogh-Cover&#34;&gt;&lt;/p&gt;
+&lt;p&gt;文森・梵谷的藝術家之旅始於27歲，在那之前他的工作都挺不順遂的，遊歷海牙回到家鄉紐南時喜歡在大自然中體驗「真正的生活」，1885年4月的第一幅大型油畫作品《吃馬鈴薯的人》誕生，使用的色調非常暗，很明顯是受到米勒的影響&lt;/p&gt;</description>
+</item>
+
+</channel>
 </rss>

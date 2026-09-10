@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>音樂 on 黃宏勝的部落格 | hshuang.com</title>
-    <link>https://hshuang.com/tags/%E9%9F%B3%E6%A8%82/</link>
-    <description>Recent content in 音樂 on 黃宏勝的部落格 | hshuang.com</description>
-    <generator>Hugo</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Wed, 01 Jul 2026 15:43:00 +0800</lastBuildDate>
-    <atom:link href="https://hshuang.com/tags/%E9%9F%B3%E6%A8%82/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>⾳樂式⾃縛</title>
-      <link>https://hshuang.com/posts/musical-self-bondage/</link>
-      <pubDate>Tue, 30 Jun 2026 23:59:59 +0800</pubDate>
-      <guid>https://hshuang.com/posts/musical-self-bondage/</guid>
-      <description>或許我把⾃⼰⾃縛起來，就是為了得到⾃由。正如康德所説：「⼀旦我們意會到我們有能⼒進⾏這種內在的⽴法，⾃然⼈就會感覺有股衝動要去尊重存在於⾃⼰體內的那名道德⼈」</description>
-    </item>
-  </channel>
+<channel>
+<title>音樂 on 黃宏勝的部落格 | hshuang.com</title>
+<link>https://hshuang.com/tags/%E9%9F%B3%E6%A8%82/</link>
+<description>Recent content in 音樂 on 黃宏勝的部落格 | hshuang.com</description><generator>Hugo -- gohugo.io</generator>
+<language>zh-tw</language>
+<lastBuildDate>Tue, 30 Jun 2026 23:59:59 +0800</lastBuildDate><atom:link href="https://hshuang.com/tags/%E9%9F%B3%E6%A8%82/index.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>⾳樂式⾃縛</title>
+<link>https://hshuang.com/posts/musical-self-bondage/</link>
+<pubDate>Tue, 30 Jun 2026 23:59:59 +0800</pubDate>
+<guid>https://hshuang.com/posts/musical-self-bondage/</guid>
+<description>或許我把⾃⼰⾃縛起來，就是為了得到⾃由。正如康德所説：「⼀旦我們意會到我們有能⼒進⾏這種內在的⽴法，⾃然⼈就會感覺有股衝動要去尊重存在於⾃⼰體內的那名道德⼈」</description>
+</item>
+
+</channel>
 </rss>

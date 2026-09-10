@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>超能蛋白 on 黃宏勝的部落格 | hshuang.com</title>
-    <link>https://hshuang.com/tags/%E8%B6%85%E8%83%BD%E8%9B%8B%E7%99%BD/</link>
-    <description>Recent content in 超能蛋白 on 黃宏勝的部落格 | hshuang.com</description>
-    <generator>Hugo</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Wed, 31 Dec 2025 13:35:00 +0800</lastBuildDate>
-    <atom:link href="https://hshuang.com/tags/%E8%B6%85%E8%83%BD%E8%9B%8B%E7%99%BD/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>低能蛋白</title>
-      <link>https://hshuang.com/posts/super-protein/</link>
-      <pubDate>Wed, 31 Dec 2025 13:35:00 +0800</pubDate>
-      <guid>https://hshuang.com/posts/super-protein/</guid>
-      <description>流汗的「低能蛋白」</description>
-    </item>
-  </channel>
+<channel>
+<title>超能蛋白 on 黃宏勝的部落格 | hshuang.com</title>
+<link>https://hshuang.com/tags/%E8%B6%85%E8%83%BD%E8%9B%8B%E7%99%BD/</link>
+<description>Recent content in 超能蛋白 on 黃宏勝的部落格 | hshuang.com</description><generator>Hugo -- gohugo.io</generator>
+<language>zh-tw</language>
+<lastBuildDate>Wed, 31 Dec 2025 13:35:00 +0800</lastBuildDate><atom:link href="https://hshuang.com/tags/%E8%B6%85%E8%83%BD%E8%9B%8B%E7%99%BD/index.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>低能蛋白</title>
+<link>https://hshuang.com/posts/super-protein/</link>
+<pubDate>Wed, 31 Dec 2025 13:35:00 +0800</pubDate>
+<guid>https://hshuang.com/posts/super-protein/</guid>
+<description>流汗的「低能蛋白」</description>
+</item>
+
+</channel>
 </rss>

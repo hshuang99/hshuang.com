@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>委屈求全 on 黃宏勝的部落格 | hshuang.com</title>
-    <link>https://hshuang.com/tags/%E5%A7%94%E5%B1%88%E6%B1%82%E5%85%A8/</link>
-    <description>Recent content in 委屈求全 on 黃宏勝的部落格 | hshuang.com</description>
-    <generator>Hugo</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Tue, 12 Aug 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://hshuang.com/tags/%E5%A7%94%E5%B1%88%E6%B1%82%E5%85%A8/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>永遠不要委屈求全</title>
-      <link>https://hshuang.com/posts/never-compromise-myself/</link>
-      <pubDate>Wed, 06 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://hshuang.com/posts/never-compromise-myself/</guid>
-      <description>面臨著事業危機，也不被任何人支持，究竟該如何撐過這場暴風？</description>
-    </item>
-  </channel>
+<channel>
+<title>委屈求全 on 黃宏勝的部落格 | hshuang.com</title>
+<link>https://hshuang.com/tags/%E5%A7%94%E5%B1%88%E6%B1%82%E5%85%A8/</link>
+<description>Recent content in 委屈求全 on 黃宏勝的部落格 | hshuang.com</description><generator>Hugo -- gohugo.io</generator>
+<language>zh-tw</language>
+<lastBuildDate>Wed, 06 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://hshuang.com/tags/%E5%A7%94%E5%B1%88%E6%B1%82%E5%85%A8/index.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>永遠不要委屈求全</title>
+<link>https://hshuang.com/posts/never-compromise-myself/</link>
+<pubDate>Wed, 06 Aug 2025 00:00:00 +0000</pubDate>
+<guid>https://hshuang.com/posts/never-compromise-myself/</guid>
+<description>面臨著事業危機，也不被任何人支持，究竟該如何撐過這場暴風？</description>
+</item>
+
+</channel>
 </rss>

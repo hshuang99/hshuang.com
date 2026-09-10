@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>七月 on 黃宏勝的部落格 | hshuang.com</title>
-    <link>https://hshuang.com/tags/%E4%B8%83%E6%9C%88/</link>
-    <description>Recent content in 七月 on 黃宏勝的部落格 | hshuang.com</description>
-    <generator>Hugo</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Wed, 26 Aug 2026 12:00:00 +0800</lastBuildDate>
-    <atom:link href="https://hshuang.com/tags/%E4%B8%83%E6%9C%88/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>七月雜記</title>
-      <link>https://hshuang.com/posts/july-2026-notes/</link>
-      <pubDate>Wed, 26 Aug 2026 11:33:00 +0800</pubDate>
-      <guid>https://hshuang.com/posts/july-2026-notes/</guid>
-      <description>對所有口試委員我心中只有感恩再感恩，感謝他們在 7/31 最後一天幫我口試。</description>
-    </item>
-  </channel>
+<channel>
+<title>七月 on 黃宏勝的部落格 | hshuang.com</title>
+<link>https://hshuang.com/tags/%E4%B8%83%E6%9C%88/</link>
+<description>Recent content in 七月 on 黃宏勝的部落格 | hshuang.com</description><generator>Hugo -- gohugo.io</generator>
+<language>zh-tw</language>
+<lastBuildDate>Wed, 26 Aug 2026 11:33:00 +0800</lastBuildDate><atom:link href="https://hshuang.com/tags/%E4%B8%83%E6%9C%88/index.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>七月雜記</title>
+<link>https://hshuang.com/posts/july-2026-notes/</link>
+<pubDate>Wed, 26 Aug 2026 11:33:00 +0800</pubDate>
+<guid>https://hshuang.com/posts/july-2026-notes/</guid>
+<description>對所有口試委員我心中只有感恩再感恩，感謝他們在 7/31 最後一天幫我口試。</description>
+</item>
+
+</channel>
 </rss>

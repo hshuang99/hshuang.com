@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>行為科學 on 黃宏勝的部落格 | hshuang.com</title>
-    <link>https://hshuang.com/tags/%E8%A1%8C%E7%82%BA%E7%A7%91%E5%AD%B8/</link>
-    <description>Recent content in 行為科學 on 黃宏勝的部落格 | hshuang.com</description>
-    <generator>Hugo</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Fri, 31 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://hshuang.com/tags/%E8%A1%8C%E7%82%BA%E7%A7%91%E5%AD%B8/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>為什麼改變會如此困難？</title>
-      <link>https://hshuang.com/posts/why-change-is-so-hard/</link>
-      <pubDate>Thu, 30 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://hshuang.com/posts/why-change-is-so-hard/</guid>
-      <description>你我都不喜歡改變帶來的損失，但人生中總有一個時刻，是我們不得不做出改變</description>
-    </item>
-  </channel>
+<channel>
+<title>行為科學 on 黃宏勝的部落格 | hshuang.com</title>
+<link>https://hshuang.com/tags/%E8%A1%8C%E7%82%BA%E7%A7%91%E5%AD%B8/</link>
+<description>Recent content in 行為科學 on 黃宏勝的部落格 | hshuang.com</description><generator>Hugo -- gohugo.io</generator>
+<language>zh-tw</language>
+<lastBuildDate>Thu, 30 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://hshuang.com/tags/%E8%A1%8C%E7%82%BA%E7%A7%91%E5%AD%B8/index.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>為什麼改變會如此困難？</title>
+<link>https://hshuang.com/posts/why-change-is-so-hard/</link>
+<pubDate>Thu, 30 Oct 2025 00:00:00 +0000</pubDate>
+<guid>https://hshuang.com/posts/why-change-is-so-hard/</guid>
+<description>你我都不喜歡改變帶來的損失，但人生中總有一個時刻，是我們不得不做出改變</description>
+</item>
+
+</channel>
 </rss>

@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>生產力 on 黃宏勝的部落格 | hshuang.com</title>
-    <link>https://hshuang.com/tags/%E7%94%9F%E7%94%A2%E5%8A%9B/</link>
-    <description>Recent content in 生產力 on 黃宏勝的部落格 | hshuang.com</description>
-    <generator>Hugo</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Mon, 06 Apr 2026 11:55:00 +0800</lastBuildDate>
-    <atom:link href="https://hshuang.com/tags/%E7%94%9F%E7%94%A2%E5%8A%9B/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>過度通訊降低生產力</title>
-      <link>https://hshuang.com/posts/over-communication-reduces-productivity/</link>
-      <pubDate>Sun, 05 Apr 2026 21:33:00 +0800</pubDate>
-      <guid>https://hshuang.com/posts/over-communication-reduces-productivity/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://media.secologies.com/4034df0be5598bddb97fbf931419538e.webp&#34; alt=&#34;4034df0be5598bddb97fbf931419538e&#34;&gt;&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;這是我的「&lt;a href=&#34;https://blogblog.club/party/?ref=wen-lab.tw&#34;&gt;BlogBlog 同樂會 - 2026 年 4 月&lt;/a&gt;」的投稿文章。本月主題是「&lt;a href=&#34;https://www.wen-lab.tw/blogblog-party-productivity&#34;&gt;生產力&lt;/a&gt;」！&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://media.secologies.com/BlogBlog%E5%90%8C%E6%A8%82%E6%9C%83%E6%88%90%E7%99%AE.webp&#34; alt=&#34;BlogBlog 同樂會成癮&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;不知道你現在是正在上班時間摸魚看 BlogBlog 同樂會的文章嗎？(也很感謝你看我的文章😚)，抑或是你今天一整天都為要交給主管的報告焦慮；甚者，你上班的時候一直反覆查看電子郵件信箱、Slack、Teams 或其他種數位通訊軟體看有沒有任何新資訊？&lt;/p&gt;</description>
-    </item>
-  </channel>
+<channel>
+<title>生產力 on 黃宏勝的部落格 | hshuang.com</title>
+<link>https://hshuang.com/tags/%E7%94%9F%E7%94%A2%E5%8A%9B/</link>
+<description>Recent content in 生產力 on 黃宏勝的部落格 | hshuang.com</description><generator>Hugo -- gohugo.io</generator>
+<language>zh-tw</language>
+<lastBuildDate>Sun, 05 Apr 2026 21:33:00 +0800</lastBuildDate><atom:link href="https://hshuang.com/tags/%E7%94%9F%E7%94%A2%E5%8A%9B/index.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>過度通訊降低生產力</title>
+<link>https://hshuang.com/posts/over-communication-reduces-productivity/</link>
+<pubDate>Sun, 05 Apr 2026 21:33:00 +0800</pubDate>
+<guid>https://hshuang.com/posts/over-communication-reduces-productivity/</guid>
+<description>&lt;p&gt;&lt;img src=&#34;https://media.secologies.com/4034df0be5598bddb97fbf931419538e.webp&#34; alt=&#34;4034df0be5598bddb97fbf931419538e&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;這是我的「&lt;a href=&#34;https://blogblog.club/party/?ref=wen-lab.tw&#34;&gt;BlogBlog 同樂會 - 2026 年 4 月&lt;/a&gt;」的投稿文章。本月主題是「&lt;a href=&#34;https://www.wen-lab.tw/blogblog-party-productivity&#34;&gt;生產力&lt;/a&gt;」！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://media.secologies.com/BlogBlog%E5%90%8C%E6%A8%82%E6%9C%83%E6%88%90%E7%99%AE.webp&#34; alt=&#34;BlogBlog 同樂會成癮&#34;&gt;&lt;/p&gt;
+&lt;p&gt;不知道你現在是正在上班時間摸魚看 BlogBlog 同樂會的文章嗎？(也很感謝你看我的文章😚)，抑或是你今天一整天都為要交給主管的報告焦慮；甚者，你上班的時候一直反覆查看電子郵件信箱、Slack、Teams 或其他種數位通訊軟體看有沒有任何新資訊？&lt;/p&gt;</description>
+</item>
+
+</channel>
 </rss>

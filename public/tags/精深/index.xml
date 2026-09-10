@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>精深 on 黃宏勝的部落格 | hshuang.com</title>
-    <link>https://hshuang.com/tags/%E7%B2%BE%E6%B7%B1/</link>
-    <description>Recent content in 精深 on 黃宏勝的部落格 | hshuang.com</description>
-    <generator>Hugo</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Fri, 17 Apr 2026 14:31:00 +0800</lastBuildDate>
-    <atom:link href="https://hshuang.com/tags/%E7%B2%BE%E6%B7%B1/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>這個時代更要寫作</title>
-      <link>https://hshuang.com/posts/writing-clearly-present-your-opinion/</link>
-      <pubDate>Sat, 11 Apr 2026 18:13:00 +0800</pubDate>
-      <guid>https://hshuang.com/posts/writing-clearly-present-your-opinion/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://media.secologies.com/writing-clearly-present-your-opinion.webp&#34; alt=&#34;writing-clearly-present-your-opinion&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;這是一個許多人利用機器學習/深度學習/強化學習技術解決許多事情的時代，這也是一個寫作者崛起的時代&lt;/p&gt;&#xA;&lt;p&gt;曾幾何時，寫作是少數人才能完全掌握的工具，然而在 2007 年後智慧型手機的出現，加上 2010 年後社群媒體的進步，人們寫作並非只為了接受某種評鑑，而是用來溝通、娛樂、遊說，或者說為了獲得其他人的注意力&lt;/p&gt;</description>
-    </item>
-  </channel>
+<channel>
+<title>精深 on 黃宏勝的部落格 | hshuang.com</title>
+<link>https://hshuang.com/tags/%E7%B2%BE%E6%B7%B1/</link>
+<description>Recent content in 精深 on 黃宏勝的部落格 | hshuang.com</description><generator>Hugo -- gohugo.io</generator>
+<language>zh-tw</language>
+<lastBuildDate>Sat, 11 Apr 2026 18:13:00 +0800</lastBuildDate><atom:link href="https://hshuang.com/tags/%E7%B2%BE%E6%B7%B1/index.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>這個時代更要寫作</title>
+<link>https://hshuang.com/posts/writing-clearly-present-your-opinion/</link>
+<pubDate>Sat, 11 Apr 2026 18:13:00 +0800</pubDate>
+<guid>https://hshuang.com/posts/writing-clearly-present-your-opinion/</guid>
+<description>&lt;p&gt;&lt;img src=&#34;https://media.secologies.com/writing-clearly-present-your-opinion.webp&#34; alt=&#34;writing-clearly-present-your-opinion&#34;&gt;&lt;/p&gt;
+&lt;p&gt;這是一個許多人利用機器學習/深度學習/強化學習技術解決許多事情的時代，這也是一個寫作者崛起的時代&lt;/p&gt;
+&lt;p&gt;曾幾何時，寫作是少數人才能完全掌握的工具，然而在 2007 年後智慧型手機的出現，加上 2010 年後社群媒體的進步，人們寫作並非只為了接受某種評鑑，而是用來溝通、娛樂、遊說，或者說為了獲得其他人的注意力&lt;/p&gt;</description>
+</item>
+
+</channel>
 </rss>

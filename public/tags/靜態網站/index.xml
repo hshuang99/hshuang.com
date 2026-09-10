@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>靜態網站 on 黃宏勝的部落格 | hshuang.com</title>
-    <link>https://hshuang.com/tags/%E9%9D%9C%E6%85%8B%E7%B6%B2%E7%AB%99/</link>
-    <description>Recent content in 靜態網站 on 黃宏勝的部落格 | hshuang.com</description>
-    <generator>Hugo</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Sun, 24 May 2026 14:02:00 +0800</lastBuildDate>
-    <atom:link href="https://hshuang.com/tags/%E9%9D%9C%E6%85%8B%E7%B6%B2%E7%AB%99/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Hugo 靜態部落格簡易留言板實作</title>
-      <link>https://hshuang.com/posts/hugo-simple-guestbook/</link>
-      <pubDate>Fri, 24 Apr 2026 23:06:00 +0800</pubDate>
-      <guid>https://hshuang.com/posts/hugo-simple-guestbook/</guid>
-      <description>由於利用 Cloudflare Worker 架設 Hugo 靜態部落格沒有後台伺服器可以儲存，所以我們利用 Google Apps Script、GitHub Gist 以及 Google 表單來建立一個簡易的留言系統</description>
-    </item>
-  </channel>
+<channel>
+<title>靜態網站 on 黃宏勝的部落格 | hshuang.com</title>
+<link>https://hshuang.com/tags/%E9%9D%9C%E6%85%8B%E7%B6%B2%E7%AB%99/</link>
+<description>Recent content in 靜態網站 on 黃宏勝的部落格 | hshuang.com</description><generator>Hugo -- gohugo.io</generator>
+<language>zh-tw</language>
+<lastBuildDate>Fri, 24 Apr 2026 23:06:00 +0800</lastBuildDate><atom:link href="https://hshuang.com/tags/%E9%9D%9C%E6%85%8B%E7%B6%B2%E7%AB%99/index.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>Hugo 靜態部落格簡易留言板實作</title>
+<link>https://hshuang.com/posts/hugo-simple-guestbook/</link>
+<pubDate>Fri, 24 Apr 2026 23:06:00 +0800</pubDate>
+<guid>https://hshuang.com/posts/hugo-simple-guestbook/</guid>
+<description>由於利用 Cloudflare Worker 架設 Hugo 靜態部落格沒有後台伺服器可以儲存，所以我們利用 Google Apps Script、GitHub Gist 以及 Google 表單來建立一個簡易的留言系統</description>
+</item>
+
+</channel>
 </rss>

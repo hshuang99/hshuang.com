@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>智慧 on 黃宏勝的部落格 | hshuang.com</title>
-    <link>https://hshuang.com/tags/%E6%99%BA%E6%85%A7/</link>
-    <description>Recent content in 智慧 on 黃宏勝的部落格 | hshuang.com</description>
-    <generator>Hugo</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Sat, 17 Jan 2026 18:32:00 +0800</lastBuildDate>
-    <atom:link href="https://hshuang.com/tags/%E6%99%BA%E6%85%A7/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>處處尋覓尋求勇氣與智慧</title>
-      <link>https://hshuang.com/posts/seeking-courage-and-wisdom-everywhere/</link>
-      <pubDate>Sat, 17 Jan 2026 18:32:00 +0800</pubDate>
-      <guid>https://hshuang.com/posts/seeking-courage-and-wisdom-everywhere/</guid>
-      <description>崇高的存在啊，請賜予我平靜，能接受我無法改變的事；請賜予我勇氣，去改變我能改變的事；請賜予我智慧，分辨兩者的差異。</description>
-    </item>
-  </channel>
+<channel>
+<title>智慧 on 黃宏勝的部落格 | hshuang.com</title>
+<link>https://hshuang.com/tags/%E6%99%BA%E6%85%A7/</link>
+<description>Recent content in 智慧 on 黃宏勝的部落格 | hshuang.com</description><generator>Hugo -- gohugo.io</generator>
+<language>zh-tw</language>
+<lastBuildDate>Sat, 17 Jan 2026 18:32:00 +0800</lastBuildDate><atom:link href="https://hshuang.com/tags/%E6%99%BA%E6%85%A7/index.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>處處尋覓尋求勇氣與智慧</title>
+<link>https://hshuang.com/posts/seeking-courage-and-wisdom-everywhere/</link>
+<pubDate>Sat, 17 Jan 2026 18:32:00 +0800</pubDate>
+<guid>https://hshuang.com/posts/seeking-courage-and-wisdom-everywhere/</guid>
+<description>崇高的存在啊，請賜予我平靜，能接受我無法改變的事；請賜予我勇氣，去改變我能改變的事；請賜予我智慧，分辨兩者的差異。</description>
+</item>
+
+</channel>
 </rss>

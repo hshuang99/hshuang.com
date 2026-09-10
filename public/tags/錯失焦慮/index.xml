@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>錯失焦慮 on 黃宏勝的部落格 | hshuang.com</title>
-    <link>https://hshuang.com/tags/%E9%8C%AF%E5%A4%B1%E7%84%A6%E6%85%AE/</link>
-    <description>Recent content in 錯失焦慮 on 黃宏勝的部落格 | hshuang.com</description>
-    <generator>Hugo</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Sat, 07 Mar 2026 11:50:00 +0800</lastBuildDate>
-    <atom:link href="https://hshuang.com/tags/%E9%8C%AF%E5%A4%B1%E7%84%A6%E6%85%AE/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>從被動到主動：脫離FOMO邁向JOMO</title>
-      <link>https://hshuang.com/posts/from-fomo-to-jomo/</link>
-      <pubDate>Mon, 15 Sep 2025 14:32:00 +0800</pubDate>
-      <guid>https://hshuang.com/posts/from-fomo-to-jomo/</guid>
-      <description>數位原生世代面對FOMO現象更劇烈，有沒有哪些對策可以使用？</description>
-    </item>
-    <item>
-      <title>你今天FOMO了嗎？</title>
-      <link>https://hshuang.com/posts/fear-of-missing-out-and-me/</link>
-      <pubDate>Thu, 11 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://hshuang.com/posts/fear-of-missing-out-and-me/</guid>
-      <description>資訊如浪潮般襲來的時代，在AI產生的大量低熵資訊中，錯過任何一則訊息你都覺得被世界遺落了</description>
-    </item>
-  </channel>
+<channel>
+<title>錯失焦慮 on 黃宏勝的部落格 | hshuang.com</title>
+<link>https://hshuang.com/tags/%E9%8C%AF%E5%A4%B1%E7%84%A6%E6%85%AE/</link>
+<description>Recent content in 錯失焦慮 on 黃宏勝的部落格 | hshuang.com</description><generator>Hugo -- gohugo.io</generator>
+<language>zh-tw</language>
+<lastBuildDate>Mon, 15 Sep 2025 14:32:00 +0800</lastBuildDate><atom:link href="https://hshuang.com/tags/%E9%8C%AF%E5%A4%B1%E7%84%A6%E6%85%AE/index.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>從被動到主動：脫離FOMO邁向JOMO</title>
+<link>https://hshuang.com/posts/from-fomo-to-jomo/</link>
+<pubDate>Mon, 15 Sep 2025 14:32:00 +0800</pubDate>
+<guid>https://hshuang.com/posts/from-fomo-to-jomo/</guid>
+<description>數位原生世代面對FOMO現象更劇烈，有沒有哪些對策可以使用？</description>
+</item>
+
+<item>
+<title>你今天FOMO了嗎？</title>
+<link>https://hshuang.com/posts/fear-of-missing-out-and-me/</link>
+<pubDate>Thu, 11 Sep 2025 00:00:00 +0000</pubDate>
+<guid>https://hshuang.com/posts/fear-of-missing-out-and-me/</guid>
+<description>資訊如浪潮般襲來的時代，在AI產生的大量低熵資訊中，錯過任何一則訊息你都覺得被世界遺落了</description>
+</item>
+
+</channel>
 </rss>

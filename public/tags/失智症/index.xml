@@ -1,33 +1,34 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>失智症 on 黃宏勝的部落格 | hshuang.com</title>
-    <link>https://hshuang.com/tags/%E5%A4%B1%E6%99%BA%E7%97%87/</link>
-    <description>Recent content in 失智症 on 黃宏勝的部落格 | hshuang.com</description>
-    <generator>Hugo</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Wed, 29 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://hshuang.com/tags/%E5%A4%B1%E6%99%BA%E7%97%87/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>《我想念我自己》讀後心得</title>
-      <link>https://hshuang.com/posts/still-alice/</link>
-      <pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://hshuang.com/posts/still-alice/</guid>
-      <description>失去了過往而未來也不再期待，因為能夠體驗的只有這個當下，該具備何種勇氣才能繼續走下去？</description>
-    </item>
-    <item>
-      <title>閱讀、寫信、玩遊戲將失智症延後五年</title>
-      <link>https://hshuang.com/posts/cognitive-reserve/</link>
-      <pubDate>Mon, 11 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://hshuang.com/posts/cognitive-reserve/</guid>
-      <description>關鍵因素在於你如何處理資訊，任何能刺激心智，對智力有挑戰的活動都有辦法讓認知能力水平下降速度減緩</description>
-    </item>
-    <item>
-      <title>運動三十五天逆轉大腦老化</title>
-      <link>https://hshuang.com/posts/reverse-brain-aging/</link>
-      <pubDate>Sun, 10 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://hshuang.com/posts/reverse-brain-aging/</guid>
-      <description>三十五天才能體驗到認知能力的顯著改善</description>
-    </item>
-  </channel>
+<channel>
+<title>失智症 on 黃宏勝的部落格 | hshuang.com</title>
+<link>https://hshuang.com/tags/%E5%A4%B1%E6%99%BA%E7%97%87/</link>
+<description>Recent content in 失智症 on 黃宏勝的部落格 | hshuang.com</description><generator>Hugo -- gohugo.io</generator>
+<language>zh-tw</language>
+<lastBuildDate>Wed, 29 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://hshuang.com/tags/%E5%A4%B1%E6%99%BA%E7%97%87/index.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>《我想念我自己》讀後心得</title>
+<link>https://hshuang.com/posts/still-alice/</link>
+<pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
+<guid>https://hshuang.com/posts/still-alice/</guid>
+<description>失去了過往而未來也不再期待，因為能夠體驗的只有這個當下，該具備何種勇氣才能繼續走下去？</description>
+</item>
+
+<item>
+<title>閱讀、寫信、玩遊戲將失智症延後五年</title>
+<link>https://hshuang.com/posts/cognitive-reserve/</link>
+<pubDate>Mon, 11 Aug 2025 00:00:00 +0000</pubDate>
+<guid>https://hshuang.com/posts/cognitive-reserve/</guid>
+<description>關鍵因素在於你如何處理資訊，任何能刺激心智，對智力有挑戰的活動都有辦法讓認知能力水平下降速度減緩</description>
+</item>
+
+<item>
+<title>運動三十五天逆轉大腦老化</title>
+<link>https://hshuang.com/posts/reverse-brain-aging/</link>
+<pubDate>Sun, 10 Aug 2025 00:00:00 +0000</pubDate>
+<guid>https://hshuang.com/posts/reverse-brain-aging/</guid>
+<description>三十五天才能體驗到認知能力的顯著改善</description>
+</item>
+
+</channel>
 </rss>

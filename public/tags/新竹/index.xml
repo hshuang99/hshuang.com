@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>新竹 on 黃宏勝的部落格 | hshuang.com</title>
-    <link>https://hshuang.com/tags/%E6%96%B0%E7%AB%B9/</link>
-    <description>Recent content in 新竹 on 黃宏勝的部落格 | hshuang.com</description>
-    <generator>Hugo</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Thu, 30 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://hshuang.com/tags/%E6%96%B0%E7%AB%B9/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>新竹先導公車</title>
-      <link>https://hshuang.com/posts/hsinchu-lead-bus-a/</link>
-      <pubDate>Sat, 05 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://hshuang.com/posts/hsinchu-lead-bus-a/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://media.secologies.com/Hsinchu_Lead_Bus_A-cover.webp&#34; alt=&#34;Hsinchu_Lead_Bus_A-cover&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;今天終於坐到了新竹市政府2024年月底推出新的電動先導公車&lt;/p&gt;&#xA;&lt;p&gt;不過平常去新竹高鐵站搭乘182客運公車的時間實在太慢了，不如騎youbike去北新竹車站，再從北新竹坐區間車到六家車站搭高鐵絕對比較快(&lt;strong&gt;但下雨天就會很麻煩&lt;/strong&gt;)，所以還是值得慶幸從學校到高鐵站路線又更多選擇了&lt;/p&gt;</description>
-    </item>
-  </channel>
+<channel>
+<title>新竹 on 黃宏勝的部落格 | hshuang.com</title>
+<link>https://hshuang.com/tags/%E6%96%B0%E7%AB%B9/</link>
+<description>Recent content in 新竹 on 黃宏勝的部落格 | hshuang.com</description><generator>Hugo -- gohugo.io</generator>
+<language>zh-tw</language>
+<lastBuildDate>Sat, 05 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://hshuang.com/tags/%E6%96%B0%E7%AB%B9/index.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>新竹先導公車</title>
+<link>https://hshuang.com/posts/hsinchu-lead-bus-a/</link>
+<pubDate>Sat, 05 Apr 2025 00:00:00 +0000</pubDate>
+<guid>https://hshuang.com/posts/hsinchu-lead-bus-a/</guid>
+<description>&lt;p&gt;&lt;img src=&#34;https://media.secologies.com/Hsinchu_Lead_Bus_A-cover.webp&#34; alt=&#34;Hsinchu_Lead_Bus_A-cover&#34;&gt;&lt;/p&gt;
+&lt;p&gt;今天終於坐到了新竹市政府2024年月底推出新的電動先導公車&lt;/p&gt;
+&lt;p&gt;不過平常去新竹高鐵站搭乘182客運公車的時間實在太慢了，不如騎youbike去北新竹車站，再從北新竹坐區間車到六家車站搭高鐵絕對比較快(&lt;strong&gt;但下雨天就會很麻煩&lt;/strong&gt;)，所以還是值得慶幸從學校到高鐵站路線又更多選擇了&lt;/p&gt;</description>
+</item>
+
+</channel>
 </rss>

@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>晨型人 on 黃宏勝的部落格 | hshuang.com</title>
-    <link>https://hshuang.com/tags/%E6%99%A8%E5%9E%8B%E4%BA%BA/</link>
-    <description>Recent content in 晨型人 on 黃宏勝的部落格 | hshuang.com</description>
-    <generator>Hugo</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Tue, 18 Mar 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://hshuang.com/tags/%E6%99%A8%E5%9E%8B%E4%BA%BA/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>你是早鳥還是夜貓子？</title>
-      <link>https://hshuang.com/posts/are-you-early-birds-or-night-owls/</link>
-      <pubDate>Mon, 17 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://hshuang.com/posts/are-you-early-birds-or-night-owls/</guid>
-      <description>雖然你我的身體時鐘是運行二十四小時作息，但總會發現有些人早上精神較好，有些人則是晚上才會生龍活虎</description>
-    </item>
-  </channel>
+<channel>
+<title>晨型人 on 黃宏勝的部落格 | hshuang.com</title>
+<link>https://hshuang.com/tags/%E6%99%A8%E5%9E%8B%E4%BA%BA/</link>
+<description>Recent content in 晨型人 on 黃宏勝的部落格 | hshuang.com</description><generator>Hugo -- gohugo.io</generator>
+<language>zh-tw</language>
+<lastBuildDate>Mon, 17 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://hshuang.com/tags/%E6%99%A8%E5%9E%8B%E4%BA%BA/index.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>你是早鳥還是夜貓子？</title>
+<link>https://hshuang.com/posts/are-you-early-birds-or-night-owls/</link>
+<pubDate>Mon, 17 Mar 2025 00:00:00 +0000</pubDate>
+<guid>https://hshuang.com/posts/are-you-early-birds-or-night-owls/</guid>
+<description>雖然你我的身體時鐘是運行二十四小時作息，但總會發現有些人早上精神較好，有些人則是晚上才會生龍活虎</description>
+</item>
+
+</channel>
 </rss>

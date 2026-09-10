@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>加工食品 on 黃宏勝的部落格 | hshuang.com</title>
-    <link>https://hshuang.com/tags/%E5%8A%A0%E5%B7%A5%E9%A3%9F%E5%93%81/</link>
-    <description>Recent content in 加工食品 on 黃宏勝的部落格 | hshuang.com</description>
-    <generator>Hugo</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Wed, 24 Sep 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://hshuang.com/tags/%E5%8A%A0%E5%B7%A5%E9%A3%9F%E5%93%81/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>越吃越累，是吃錯了！</title>
-      <link>https://hshuang.com/posts/more-eat-more-tired/</link>
-      <pubDate>Sun, 07 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://hshuang.com/posts/more-eat-more-tired/</guid>
-      <description>外食族想要吃得對，其實沒那麼難！</description>
-    </item>
-  </channel>
+<channel>
+<title>加工食品 on 黃宏勝的部落格 | hshuang.com</title>
+<link>https://hshuang.com/tags/%E5%8A%A0%E5%B7%A5%E9%A3%9F%E5%93%81/</link>
+<description>Recent content in 加工食品 on 黃宏勝的部落格 | hshuang.com</description><generator>Hugo -- gohugo.io</generator>
+<language>zh-tw</language>
+<lastBuildDate>Sun, 07 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://hshuang.com/tags/%E5%8A%A0%E5%B7%A5%E9%A3%9F%E5%93%81/index.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>越吃越累，是吃錯了！</title>
+<link>https://hshuang.com/posts/more-eat-more-tired/</link>
+<pubDate>Sun, 07 Sep 2025 00:00:00 +0000</pubDate>
+<guid>https://hshuang.com/posts/more-eat-more-tired/</guid>
+<description>外食族想要吃得對，其實沒那麼難！</description>
+</item>
+
+</channel>
 </rss>

@@ -1,82 +1,90 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>健康 on 黃宏勝的部落格 | hshuang.com</title>
-    <link>https://hshuang.com/tags/%E5%81%A5%E5%BA%B7/</link>
-    <description>Recent content in 健康 on 黃宏勝的部落格 | hshuang.com</description>
-    <generator>Hugo</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Sat, 07 Mar 2026 10:17:00 +0800</lastBuildDate>
-    <atom:link href="https://hshuang.com/tags/%E5%81%A5%E5%BA%B7/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>《我想念我自己》讀後心得</title>
-      <link>https://hshuang.com/posts/still-alice/</link>
-      <pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://hshuang.com/posts/still-alice/</guid>
-      <description>失去了過往而未來也不再期待，因為能夠體驗的只有這個當下，該具備何種勇氣才能繼續走下去？</description>
-    </item>
-    <item>
-      <title>越吃越累，是吃錯了！</title>
-      <link>https://hshuang.com/posts/more-eat-more-tired/</link>
-      <pubDate>Sun, 07 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://hshuang.com/posts/more-eat-more-tired/</guid>
-      <description>外食族想要吃得對，其實沒那麼難！</description>
-    </item>
-    <item>
-      <title>代謝力才是你的生命力</title>
-      <link>https://hshuang.com/posts/metabolic-power-is-key-of-health/</link>
-      <pubDate>Thu, 04 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://hshuang.com/posts/metabolic-power-is-key-of-health/</guid>
-      <description>代謝猶如人體發電系統，是你我身體健康的根源</description>
-    </item>
-    <item>
-      <title>閱讀、寫信、玩遊戲將失智症延後五年</title>
-      <link>https://hshuang.com/posts/cognitive-reserve/</link>
-      <pubDate>Mon, 11 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://hshuang.com/posts/cognitive-reserve/</guid>
-      <description>關鍵因素在於你如何處理資訊，任何能刺激心智，對智力有挑戰的活動都有辦法讓認知能力水平下降速度減緩</description>
-    </item>
-    <item>
-      <title>運動三十五天逆轉大腦老化</title>
-      <link>https://hshuang.com/posts/reverse-brain-aging/</link>
-      <pubDate>Sun, 10 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://hshuang.com/posts/reverse-brain-aging/</guid>
-      <description>三十五天才能體驗到認知能力的顯著改善</description>
-    </item>
-    <item>
-      <title>久坐摧毀你的記憶力！</title>
-      <link>https://hshuang.com/posts/sedentary-destroy-your-memory/</link>
-      <pubDate>Sat, 09 Aug 2025 00:00:00 +0800</pubDate>
-      <guid>https://hshuang.com/posts/sedentary-destroy-your-memory/</guid>
-      <description>從久坐不動的世界中站起來吧，為了你的大腦健康，你必須這麼做</description>
-    </item>
-    <item>
-      <title>活化大腦的十種方法</title>
-      <link>https://hshuang.com/posts/ten-ways-to-activate-your-brain/</link>
-      <pubDate>Mon, 21 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>https://hshuang.com/posts/ten-ways-to-activate-your-brain/</guid>
-      <description>神經科學家威勒米爾（Kristen Willeumier)在亞曼診所(Amen Clinics)看過許多的精密大腦影像，並且經由研究過後推斷出只要改變生活習慣以及持之以恆，就能夠大幅度的改變大腦的健康狀況</description>
-    </item>
-    <item>
-      <title>睡眠不足對於身體的各種危害</title>
-      <link>https://hshuang.com/posts/lack-of-sleep-harm/</link>
-      <pubDate>Tue, 15 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://hshuang.com/posts/lack-of-sleep-harm/</guid>
-      <description>人生中健康的三大支柱，有些人排序成「飲食」、「運動」，最後是「睡眠」，但從研究結果來看「睡眠」才是另外兩項條件的基底</description>
-    </item>
-    <item>
-      <title>理性思考最後才成熟</title>
-      <link>https://hshuang.com/posts/rational-thinking/</link>
-      <pubDate>Sat, 29 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://hshuang.com/posts/rational-thinking/</guid>
-      <description>你會不會覺得十六歲的青少年腦中總是少根筋？然而從腦神經科學中發現其實這是正常的</description>
-    </item>
-    <item>
-      <title>你是早鳥還是夜貓子？</title>
-      <link>https://hshuang.com/posts/are-you-early-birds-or-night-owls/</link>
-      <pubDate>Mon, 17 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://hshuang.com/posts/are-you-early-birds-or-night-owls/</guid>
-      <description>雖然你我的身體時鐘是運行二十四小時作息，但總會發現有些人早上精神較好，有些人則是晚上才會生龍活虎</description>
-    </item>
-  </channel>
+<channel>
+<title>健康 on 黃宏勝的部落格 | hshuang.com</title>
+<link>https://hshuang.com/tags/%E5%81%A5%E5%BA%B7/</link>
+<description>Recent content in 健康 on 黃宏勝的部落格 | hshuang.com</description><generator>Hugo -- gohugo.io</generator>
+<language>zh-tw</language>
+<lastBuildDate>Wed, 29 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://hshuang.com/tags/%E5%81%A5%E5%BA%B7/index.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>《我想念我自己》讀後心得</title>
+<link>https://hshuang.com/posts/still-alice/</link>
+<pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
+<guid>https://hshuang.com/posts/still-alice/</guid>
+<description>失去了過往而未來也不再期待，因為能夠體驗的只有這個當下，該具備何種勇氣才能繼續走下去？</description>
+</item>
+
+<item>
+<title>越吃越累，是吃錯了！</title>
+<link>https://hshuang.com/posts/more-eat-more-tired/</link>
+<pubDate>Sun, 07 Sep 2025 00:00:00 +0000</pubDate>
+<guid>https://hshuang.com/posts/more-eat-more-tired/</guid>
+<description>外食族想要吃得對，其實沒那麼難！</description>
+</item>
+
+<item>
+<title>代謝力才是你的生命力</title>
+<link>https://hshuang.com/posts/metabolic-power-is-key-of-health/</link>
+<pubDate>Thu, 04 Sep 2025 00:00:00 +0000</pubDate>
+<guid>https://hshuang.com/posts/metabolic-power-is-key-of-health/</guid>
+<description>代謝猶如人體發電系統，是你我身體健康的根源</description>
+</item>
+
+<item>
+<title>閱讀、寫信、玩遊戲將失智症延後五年</title>
+<link>https://hshuang.com/posts/cognitive-reserve/</link>
+<pubDate>Mon, 11 Aug 2025 00:00:00 +0000</pubDate>
+<guid>https://hshuang.com/posts/cognitive-reserve/</guid>
+<description>關鍵因素在於你如何處理資訊，任何能刺激心智，對智力有挑戰的活動都有辦法讓認知能力水平下降速度減緩</description>
+</item>
+
+<item>
+<title>運動三十五天逆轉大腦老化</title>
+<link>https://hshuang.com/posts/reverse-brain-aging/</link>
+<pubDate>Sun, 10 Aug 2025 00:00:00 +0000</pubDate>
+<guid>https://hshuang.com/posts/reverse-brain-aging/</guid>
+<description>三十五天才能體驗到認知能力的顯著改善</description>
+</item>
+
+<item>
+<title>久坐摧毀你的記憶力！</title>
+<link>https://hshuang.com/posts/sedentary-destroy-your-memory/</link>
+<pubDate>Sat, 09 Aug 2025 00:00:00 +0800</pubDate>
+<guid>https://hshuang.com/posts/sedentary-destroy-your-memory/</guid>
+<description>從久坐不動的世界中站起來吧，為了你的大腦健康，你必須這麼做</description>
+</item>
+
+<item>
+<title>活化大腦的十種方法</title>
+<link>https://hshuang.com/posts/ten-ways-to-activate-your-brain/</link>
+<pubDate>Mon, 21 Jul 2025 00:00:00 +0000</pubDate>
+<guid>https://hshuang.com/posts/ten-ways-to-activate-your-brain/</guid>
+<description>神經科學家威勒米爾（Kristen Willeumier)在亞曼診所(Amen Clinics)看過許多的精密大腦影像，並且經由研究過後推斷出只要改變生活習慣以及持之以恆，就能夠大幅度的改變大腦的健康狀況</description>
+</item>
+
+<item>
+<title>睡眠不足對於身體的各種危害</title>
+<link>https://hshuang.com/posts/lack-of-sleep-harm/</link>
+<pubDate>Tue, 15 Apr 2025 00:00:00 +0000</pubDate>
+<guid>https://hshuang.com/posts/lack-of-sleep-harm/</guid>
+<description>人生中健康的三大支柱，有些人排序成「飲食」、「運動」，最後是「睡眠」，但從研究結果來看「睡眠」才是另外兩項條件的基底</description>
+</item>
+
+<item>
+<title>理性思考最後才成熟</title>
+<link>https://hshuang.com/posts/rational-thinking/</link>
+<pubDate>Sat, 29 Mar 2025 00:00:00 +0000</pubDate>
+<guid>https://hshuang.com/posts/rational-thinking/</guid>
+<description>你會不會覺得十六歲的青少年腦中總是少根筋？然而從腦神經科學中發現其實這是正常的</description>
+</item>
+
+<item>
+<title>你是早鳥還是夜貓子？</title>
+<link>https://hshuang.com/posts/are-you-early-birds-or-night-owls/</link>
+<pubDate>Mon, 17 Mar 2025 00:00:00 +0000</pubDate>
+<guid>https://hshuang.com/posts/are-you-early-birds-or-night-owls/</guid>
+<description>雖然你我的身體時鐘是運行二十四小時作息，但總會發現有些人早上精神較好，有些人則是晚上才會生龍活虎</description>
+</item>
+
+</channel>
 </rss>

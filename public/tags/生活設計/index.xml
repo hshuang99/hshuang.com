@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>生活設計 on 黃宏勝的部落格 | hshuang.com</title>
-    <link>https://hshuang.com/tags/%E7%94%9F%E6%B4%BB%E8%A8%AD%E8%A8%88/</link>
-    <description>Recent content in 生活設計 on 黃宏勝的部落格 | hshuang.com</description>
-    <generator>Hugo</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Tue, 24 Mar 2026 13:54:00 +0800</lastBuildDate>
-    <atom:link href="https://hshuang.com/tags/%E7%94%9F%E6%B4%BB%E8%A8%AD%E8%A8%88/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>為什麼我想寫部落格？</title>
-      <link>https://hshuang.com/posts/why-i-build-a-blog/</link>
-      <pubDate>Thu, 17 Jul 2025 08:00:00 +0800</pubDate>
-      <guid>https://hshuang.com/posts/why-i-build-a-blog/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://media.secologies.com/why-I-build-a-blog-cover.webp&#34; alt=&#34;why-I-build-a-blog-cover&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;所以我想在網路上有個空間紀錄我的所見所聞，至少比起我的大腦還來的可信吧，當我在進行寫作的過程會回憶起當時的情境，雛形寫完後潤飾文章看看我有沒有對我自己的記憶動了手腳，其次透過寫作可以慢慢地梳理我的生活，所以我想透過部落格培養我的寫作技能&lt;/p&gt;</description>
-    </item>
-  </channel>
+<channel>
+<title>生活設計 on 黃宏勝的部落格 | hshuang.com</title>
+<link>https://hshuang.com/tags/%E7%94%9F%E6%B4%BB%E8%A8%AD%E8%A8%88/</link>
+<description>Recent content in 生活設計 on 黃宏勝的部落格 | hshuang.com</description><generator>Hugo -- gohugo.io</generator>
+<language>zh-tw</language>
+<lastBuildDate>Thu, 17 Jul 2025 08:00:00 +0800</lastBuildDate><atom:link href="https://hshuang.com/tags/%E7%94%9F%E6%B4%BB%E8%A8%AD%E8%A8%88/index.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>為什麼我想寫部落格？</title>
+<link>https://hshuang.com/posts/why-i-build-a-blog/</link>
+<pubDate>Thu, 17 Jul 2025 08:00:00 +0800</pubDate>
+<guid>https://hshuang.com/posts/why-i-build-a-blog/</guid>
+<description>&lt;p&gt;&lt;img src=&#34;https://media.secologies.com/why-I-build-a-blog-cover.webp&#34; alt=&#34;why-I-build-a-blog-cover&#34;&gt;&lt;/p&gt;
+&lt;p&gt;所以我想在網路上有個空間紀錄我的所見所聞，至少比起我的大腦還來的可信吧，當我在進行寫作的過程會回憶起當時的情境，雛形寫完後潤飾文章看看我有沒有對我自己的記憶動了手腳，其次透過寫作可以慢慢地梳理我的生活，所以我想透過部落格培養我的寫作技能&lt;/p&gt;</description>
+</item>
+
+</channel>
 </rss>

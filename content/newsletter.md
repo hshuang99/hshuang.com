@@ -1,6 +1,8 @@
----
-title: "勝報"
-layout: "newsletter"
-description: "留下你的信箱，讀讀我最近在想些什麼"
-date: "2026-09-06T14:58:00+08:00"
----
++++
+title = "訂閱勝報"
+slug = "newsletter"
+description = "接受勝報，讀讀站長最近的心情"
+layout = "newsletter"
++++
+
+透過 Email 訂閱

@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>雜談 on 黃宏勝的部落格 | hshuang.com</title>
-    <link>https://hshuang.com/tags/%E9%9B%9C%E8%AB%87/</link>
-    <description>Recent content in 雜談 on 黃宏勝的部落格 | hshuang.com</description>
-    <generator>Hugo</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Sat, 05 Sep 2026 15:03:00 +0800</lastBuildDate>
-    <atom:link href="https://hshuang.com/tags/%E9%9B%9C%E8%AB%87/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>我洪記的啦</title>
-      <link>https://hshuang.com/posts/september-2026-small-talk-1/</link>
-      <pubDate>Sat, 05 Sep 2026 15:02:00 +0800</pubDate>
-      <guid>https://hshuang.com/posts/september-2026-small-talk-1/</guid>
-      <description>桂冠，桂冠你沒聽過？我家開的</description>
-    </item>
-  </channel>
+<channel>
+<title>雜談 on 黃宏勝的部落格 | hshuang.com</title>
+<link>https://hshuang.com/tags/%E9%9B%9C%E8%AB%87/</link>
+<description>Recent content in 雜談 on 黃宏勝的部落格 | hshuang.com</description><generator>Hugo -- gohugo.io</generator>
+<language>zh-tw</language>
+<lastBuildDate>Sat, 05 Sep 2026 15:02:00 +0800</lastBuildDate><atom:link href="https://hshuang.com/tags/%E9%9B%9C%E8%AB%87/index.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>我洪記的啦</title>
+<link>https://hshuang.com/posts/september-2026-small-talk-1/</link>
+<pubDate>Sat, 05 Sep 2026 15:02:00 +0800</pubDate>
+<guid>https://hshuang.com/posts/september-2026-small-talk-1/</guid>
+<description>桂冠，桂冠你沒聽過？我家開的</description>
+</item>
+
+</channel>
 </rss>

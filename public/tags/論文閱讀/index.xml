@@ -1,19 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>論文閱讀 on 黃宏勝的部落格 | hshuang.com</title>
-    <link>https://hshuang.com/tags/%E8%AB%96%E6%96%87%E9%96%B1%E8%AE%80/</link>
-    <description>Recent content in 論文閱讀 on 黃宏勝的部落格 | hshuang.com</description>
-    <generator>Hugo</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Sat, 07 Mar 2026 14:15:00 +0800</lastBuildDate>
-    <atom:link href="https://hshuang.com/tags/%E8%AB%96%E6%96%87%E9%96%B1%E8%AE%80/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Keshav教授的閱讀論文守則</title>
-      <link>https://hshuang.com/posts/keshav-read-paper-method/</link>
-      <pubDate>Sat, 11 Jan 2025 13:20:00 +0800</pubDate>
-      <guid>https://hshuang.com/posts/keshav-read-paper-method/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://media.secologies.com/HowToReadAPaperCover.webp&#34; alt=&#34;HowToReadAPaperCover&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;由 Canada University of Waterloo School of Computer Science professor S. Keshav 帶給大家主要使用 IEEE journal template 的架構來做說明&lt;/p&gt;&#xA;&lt;p&gt;採取以下的方法審核&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Abstract&lt;/li&gt;&#xA;&lt;li&gt;Introduction&lt;/li&gt;&#xA;&lt;li&gt;Literature Survey Methodology&lt;/li&gt;&#xA;&lt;li&gt;Literature Survey&lt;/li&gt;&#xA;&lt;li&gt;Related Work&lt;/li&gt;&#xA;&lt;li&gt;References&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;當今天拿到一篇 paper 時，我們該如何快速的進入狀態呢？主要目的是想建立讀者在建構自己的新想法時能夠有些路徑探索&lt;/p&gt;</description>
-    </item>
-  </channel>
+<channel>
+<title>論文閱讀 on 黃宏勝的部落格 | hshuang.com</title>
+<link>https://hshuang.com/tags/%E8%AB%96%E6%96%87%E9%96%B1%E8%AE%80/</link>
+<description>Recent content in 論文閱讀 on 黃宏勝的部落格 | hshuang.com</description><generator>Hugo -- gohugo.io</generator>
+<language>zh-tw</language>
+<lastBuildDate>Sat, 11 Jan 2025 13:20:00 +0800</lastBuildDate><atom:link href="https://hshuang.com/tags/%E8%AB%96%E6%96%87%E9%96%B1%E8%AE%80/index.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>Keshav教授的閱讀論文守則</title>
+<link>https://hshuang.com/posts/keshav-read-paper-method/</link>
+<pubDate>Sat, 11 Jan 2025 13:20:00 +0800</pubDate>
+<guid>https://hshuang.com/posts/keshav-read-paper-method/</guid>
+<description>&lt;p&gt;&lt;img src=&#34;https://media.secologies.com/HowToReadAPaperCover.webp&#34; alt=&#34;HowToReadAPaperCover&#34;&gt;&lt;/p&gt;
+&lt;p&gt;由 Canada University of Waterloo School of Computer Science professor S. Keshav 帶給大家主要使用 IEEE journal template 的架構來做說明&lt;/p&gt;
+&lt;p&gt;採取以下的方法審核&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Abstract&lt;/li&gt;
+&lt;li&gt;Introduction&lt;/li&gt;
+&lt;li&gt;Literature Survey Methodology&lt;/li&gt;
+&lt;li&gt;Literature Survey&lt;/li&gt;
+&lt;li&gt;Related Work&lt;/li&gt;
+&lt;li&gt;References&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;當今天拿到一篇 paper 時，我們該如何快速的進入狀態呢？主要目的是想建立讀者在建構自己的新想法時能夠有些路徑探索&lt;/p&gt;</description>
+</item>
+
+</channel>
 </rss>

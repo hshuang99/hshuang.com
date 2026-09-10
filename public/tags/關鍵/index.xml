@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>關鍵 on 黃宏勝的部落格 | hshuang.com</title>
-    <link>https://hshuang.com/tags/%E9%97%9C%E9%8D%B5/</link>
-    <description>Recent content in 關鍵 on 黃宏勝的部落格 | hshuang.com</description>
-    <generator>Hugo</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Tue, 12 Aug 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://hshuang.com/tags/%E9%97%9C%E9%8D%B5/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>用研究審稿員的視角閱讀文獻</title>
-      <link>https://hshuang.com/posts/research-literature-keypoints/</link>
-      <pubDate>Tue, 12 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://hshuang.com/posts/research-literature-keypoints/</guid>
-      <description>在這個連Agent都可以幫你梳理paper的時代，我們該如何看得比AI還深入？</description>
-    </item>
-  </channel>
+<channel>
+<title>關鍵 on 黃宏勝的部落格 | hshuang.com</title>
+<link>https://hshuang.com/tags/%E9%97%9C%E9%8D%B5/</link>
+<description>Recent content in 關鍵 on 黃宏勝的部落格 | hshuang.com</description><generator>Hugo -- gohugo.io</generator>
+<language>zh-tw</language>
+<lastBuildDate>Tue, 12 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://hshuang.com/tags/%E9%97%9C%E9%8D%B5/index.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>用研究審稿員的視角閱讀文獻</title>
+<link>https://hshuang.com/posts/research-literature-keypoints/</link>
+<pubDate>Tue, 12 Aug 2025 00:00:00 +0000</pubDate>
+<guid>https://hshuang.com/posts/research-literature-keypoints/</guid>
+<description>在這個連Agent都可以幫你梳理paper的時代，我們該如何看得比AI還深入？</description>
+</item>
+
+</channel>
 </rss>

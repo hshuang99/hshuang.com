@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>修復 on 黃宏勝的部落格 | hshuang.com</title>
-    <link>https://hshuang.com/tags/%E4%BF%AE%E5%BE%A9/</link>
-    <description>Recent content in 修復 on 黃宏勝的部落格 | hshuang.com</description>
-    <generator>Hugo</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Thu, 25 Sep 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://hshuang.com/tags/%E4%BF%AE%E5%BE%A9/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>修復悲傷</title>
-      <link>https://hshuang.com/posts/fix-grief/</link>
-      <pubDate>Thu, 25 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://hshuang.com/posts/fix-grief/</guid>
-      <description>當重大悲傷來臨，我們該如何走過這黑暗，重新拾起希望？</description>
-    </item>
-  </channel>
+<channel>
+<title>修復 on 黃宏勝的部落格 | hshuang.com</title>
+<link>https://hshuang.com/tags/%E4%BF%AE%E5%BE%A9/</link>
+<description>Recent content in 修復 on 黃宏勝的部落格 | hshuang.com</description><generator>Hugo -- gohugo.io</generator>
+<language>zh-tw</language>
+<lastBuildDate>Thu, 25 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://hshuang.com/tags/%E4%BF%AE%E5%BE%A9/index.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>修復悲傷</title>
+<link>https://hshuang.com/posts/fix-grief/</link>
+<pubDate>Thu, 25 Sep 2025 00:00:00 +0000</pubDate>
+<guid>https://hshuang.com/posts/fix-grief/</guid>
+<description>當重大悲傷來臨，我們該如何走過這黑暗，重新拾起希望？</description>
+</item>
+
+</channel>
 </rss>

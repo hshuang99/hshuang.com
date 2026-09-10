@@ -1,19 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>故事 on 黃宏勝的部落格 | hshuang.com</title>
-    <link>https://hshuang.com/tags/%E6%95%85%E4%BA%8B/</link>
-    <description>Recent content in 故事 on 黃宏勝的部落格 | hshuang.com</description>
-    <generator>Hugo</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Thu, 27 Aug 2026 18:17:00 +0800</lastBuildDate>
-    <atom:link href="https://hshuang.com/tags/%E6%95%85%E4%BA%8B/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>部落格問題挑戰</title>
-      <link>https://hshuang.com/posts/blog-questions-challenge/</link>
-      <pubDate>Sat, 18 Oct 2025 14:19:00 +0800</pubDate>
-      <guid>https://hshuang.com/posts/blog-questions-challenge/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://media.secologies.com/blog-questions-challenges-cover.webp&#34; alt=&#34;blog-questions-challenges-cover&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;在廢文小天地RSS看到部落格挑戰&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;，源自Kev Quirk的Blog Questions Challenge&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;，看到題目蠻有興趣的，所以決定也寫一篇來回應各項問題&lt;/p&gt;&#xA;&lt;p&gt;主要的問題有8題，總共是：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;你當初為什麼開始寫部落格？&lt;/li&gt;&#xA;&lt;li&gt;你使用什麼平台來管理你的部落格？為什麼選擇它？&lt;/li&gt;&#xA;&lt;li&gt;你之前有在其他平台上寫過部落格文章嗎？&lt;/li&gt;&#xA;&lt;li&gt;你如何撰寫文章？例如，使用本地編輯工具，還是在部落格的後台／控制面板中編寫？&lt;/li&gt;&#xA;&lt;li&gt;你什麼時候最有寫作靈感？&lt;/li&gt;&#xA;&lt;li&gt;你會在寫完後立即發布，還是會先存成草稿醞釀一下？&lt;/li&gt;&#xA;&lt;li&gt;你部落格上最喜歡的文章是哪一篇？&lt;/li&gt;&#xA;&lt;li&gt;你對部落格有什麼未來計畫嗎？例如重新設計、搬到另一個平台，或是加入新功能？&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;你當初為什麼開始寫部落格&#34;&gt;你當初為什麼開始寫部落格？&lt;/h2&gt;&#xA;&lt;p&gt;大學時期為了紀錄課程筆記，以及需要一個展示空間給轉學考的委員可以看我的作品，所以架了一個Github Page網站po一些學習上的心得，後來去實習後覺得可以經營自己的品牌，所以開始寫一些工作上的學習筆記&lt;/p&gt;</description>
-    </item>
-  </channel>
+<channel>
+<title>故事 on 黃宏勝的部落格 | hshuang.com</title>
+<link>https://hshuang.com/tags/%E6%95%85%E4%BA%8B/</link>
+<description>Recent content in 故事 on 黃宏勝的部落格 | hshuang.com</description><generator>Hugo -- gohugo.io</generator>
+<language>zh-tw</language>
+<lastBuildDate>Sat, 18 Oct 2025 14:19:00 +0800</lastBuildDate><atom:link href="https://hshuang.com/tags/%E6%95%85%E4%BA%8B/index.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>部落格問題挑戰</title>
+<link>https://hshuang.com/posts/blog-questions-challenge/</link>
+<pubDate>Sat, 18 Oct 2025 14:19:00 +0800</pubDate>
+<guid>https://hshuang.com/posts/blog-questions-challenge/</guid>
+<description>&lt;p&gt;&lt;img src=&#34;https://media.secologies.com/blog-questions-challenges-cover.webp&#34; alt=&#34;blog-questions-challenges-cover&#34;&gt;&lt;/p&gt;
+&lt;p&gt;在廢文小天地RSS看到部落格挑戰&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;，源自Kev Quirk的Blog Questions Challenge&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;，看到題目蠻有興趣的，所以決定也寫一篇來回應各項問題&lt;/p&gt;
+&lt;p&gt;主要的問題有8題，總共是：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;你當初為什麼開始寫部落格？&lt;/li&gt;
+&lt;li&gt;你使用什麼平台來管理你的部落格？為什麼選擇它？&lt;/li&gt;
+&lt;li&gt;你之前有在其他平台上寫過部落格文章嗎？&lt;/li&gt;
+&lt;li&gt;你如何撰寫文章？例如，使用本地編輯工具，還是在部落格的後台／控制面板中編寫？&lt;/li&gt;
+&lt;li&gt;你什麼時候最有寫作靈感？&lt;/li&gt;
+&lt;li&gt;你會在寫完後立即發布，還是會先存成草稿醞釀一下？&lt;/li&gt;
+&lt;li&gt;你部落格上最喜歡的文章是哪一篇？&lt;/li&gt;
+&lt;li&gt;你對部落格有什麼未來計畫嗎？例如重新設計、搬到另一個平台，或是加入新功能？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;你當初為什麼開始寫部落格&#34;&gt;你當初為什麼開始寫部落格？&lt;/h2&gt;
+&lt;p&gt;大學時期為了紀錄課程筆記，以及需要一個展示空間給轉學考的委員可以看我的作品，所以架了一個Github Page網站po一些學習上的心得，後來去實習後覺得可以經營自己的品牌，所以開始寫一些工作上的學習筆記&lt;/p&gt;</description>
+</item>
+
+</channel>
 </rss>

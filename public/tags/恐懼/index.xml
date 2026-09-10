@@ -1,33 +1,34 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>恐懼 on 黃宏勝的部落格 | hshuang.com</title>
-    <link>https://hshuang.com/tags/%E6%81%90%E6%87%BC/</link>
-    <description>Recent content in 恐懼 on 黃宏勝的部落格 | hshuang.com</description>
-    <generator>Hugo</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Sat, 29 Aug 2026 12:10:00 +0800</lastBuildDate>
-    <atom:link href="https://hshuang.com/tags/%E6%81%90%E6%87%BC/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>我只是個失敗了一次又一次的人</title>
-      <link>https://hshuang.com/posts/i-am-just-a-failure/</link>
-      <pubDate>Sat, 29 Aug 2026 10:54:00 +0800</pubDate>
-      <guid>https://hshuang.com/posts/i-am-just-a-failure/</guid>
-      <description>我是個永遠都會失敗的人</description>
-    </item>
-    <item>
-      <title>究竟存不存在理想中的日常</title>
-      <link>https://hshuang.com/posts/whether-exist-a-perfect-days/</link>
-      <pubDate>Sun, 08 Mar 2026 16:24:00 +0800</pubDate>
-      <guid>https://hshuang.com/posts/whether-exist-a-perfect-days/</guid>
-      <description>人生就像是鐘擺來回於痛苦和無聊之間，其實這兩者就是每日生命的終極要素</description>
-    </item>
-    <item>
-      <title>生活的壓力</title>
-      <link>https://hshuang.com/posts/stress-of-life/</link>
-      <pubDate>Mon, 04 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://hshuang.com/posts/stress-of-life/</guid>
-      <description>生命中的難題不斷地堆疊起來</description>
-    </item>
-  </channel>
+<channel>
+<title>恐懼 on 黃宏勝的部落格 | hshuang.com</title>
+<link>https://hshuang.com/tags/%E6%81%90%E6%87%BC/</link>
+<description>Recent content in 恐懼 on 黃宏勝的部落格 | hshuang.com</description><generator>Hugo -- gohugo.io</generator>
+<language>zh-tw</language>
+<lastBuildDate>Sat, 29 Aug 2026 10:54:00 +0800</lastBuildDate><atom:link href="https://hshuang.com/tags/%E6%81%90%E6%87%BC/index.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>我只是個失敗了一次又一次的人</title>
+<link>https://hshuang.com/posts/i-am-just-a-failure/</link>
+<pubDate>Sat, 29 Aug 2026 10:54:00 +0800</pubDate>
+<guid>https://hshuang.com/posts/i-am-just-a-failure/</guid>
+<description>我是個永遠都會失敗的人</description>
+</item>
+
+<item>
+<title>究竟存不存在理想中的日常</title>
+<link>https://hshuang.com/posts/whether-exist-a-perfect-days/</link>
+<pubDate>Sun, 08 Mar 2026 16:24:00 +0800</pubDate>
+<guid>https://hshuang.com/posts/whether-exist-a-perfect-days/</guid>
+<description>人生就像是鐘擺來回於痛苦和無聊之間，其實這兩者就是每日生命的終極要素</description>
+</item>
+
+<item>
+<title>生活的壓力</title>
+<link>https://hshuang.com/posts/stress-of-life/</link>
+<pubDate>Mon, 04 Aug 2025 00:00:00 +0000</pubDate>
+<guid>https://hshuang.com/posts/stress-of-life/</guid>
+<description>生命中的難題不斷地堆疊起來</description>
+</item>
+
+</channel>
 </rss>

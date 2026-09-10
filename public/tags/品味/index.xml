@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>品味 on 黃宏勝的部落格 | hshuang.com</title>
-    <link>https://hshuang.com/tags/%E5%93%81%E5%91%B3/</link>
-    <description>Recent content in 品味 on 黃宏勝的部落格 | hshuang.com</description>
-    <generator>Hugo</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Thu, 20 Nov 2025 22:41:00 +0800</lastBuildDate>
-    <atom:link href="https://hshuang.com/tags/%E5%93%81%E5%91%B3/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>你有品味嗎？</title>
-      <link>https://hshuang.com/posts/do-you-have-good-taste/</link>
-      <pubDate>Thu, 20 Nov 2025 22:41:00 +0800</pubDate>
-      <guid>https://hshuang.com/posts/do-you-have-good-taste/</guid>
-      <description>所謂提問，指的是如何表現裁剪後的現實，講求銳利的裁剪角度和鮮明的切入點</description>
-    </item>
-  </channel>
+<channel>
+<title>品味 on 黃宏勝的部落格 | hshuang.com</title>
+<link>https://hshuang.com/tags/%E5%93%81%E5%91%B3/</link>
+<description>Recent content in 品味 on 黃宏勝的部落格 | hshuang.com</description><generator>Hugo -- gohugo.io</generator>
+<language>zh-tw</language>
+<lastBuildDate>Thu, 20 Nov 2025 22:41:00 +0800</lastBuildDate><atom:link href="https://hshuang.com/tags/%E5%93%81%E5%91%B3/index.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>你有品味嗎？</title>
+<link>https://hshuang.com/posts/do-you-have-good-taste/</link>
+<pubDate>Thu, 20 Nov 2025 22:41:00 +0800</pubDate>
+<guid>https://hshuang.com/posts/do-you-have-good-taste/</guid>
+<description>所謂提問，指的是如何表現裁剪後的現實，講求銳利的裁剪角度和鮮明的切入點</description>
+</item>
+
+</channel>
 </rss>

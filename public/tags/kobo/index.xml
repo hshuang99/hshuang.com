@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Kobo on 黃宏勝的部落格 | hshuang.com</title>
-    <link>https://hshuang.com/tags/kobo/</link>
-    <description>Recent content in Kobo on 黃宏勝的部落格 | hshuang.com</description>
-    <generator>Hugo</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Wed, 14 Jan 2026 10:45:00 +0800</lastBuildDate>
-    <atom:link href="https://hshuang.com/tags/kobo/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>電子書閱讀器改變了我的人生</title>
-      <link>https://hshuang.com/posts/ebook-ereader-changes-me/</link>
-      <pubDate>Thu, 27 Nov 2025 16:28:00 +0800</pubDate>
-      <guid>https://hshuang.com/posts/ebook-ereader-changes-me/</guid>
-      <description>放下會毒害自己大腦的社群媒體，擁抱單純的閱讀拯救自己的大腦吧</description>
-    </item>
-  </channel>
+<channel>
+<title>Kobo on 黃宏勝的部落格 | hshuang.com</title>
+<link>https://hshuang.com/tags/kobo/</link>
+<description>Recent content in Kobo on 黃宏勝的部落格 | hshuang.com</description><generator>Hugo -- gohugo.io</generator>
+<language>zh-tw</language>
+<lastBuildDate>Thu, 27 Nov 2025 16:28:00 +0800</lastBuildDate><atom:link href="https://hshuang.com/tags/kobo/index.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>電子書閱讀器改變了我的人生</title>
+<link>https://hshuang.com/posts/ebook-ereader-changes-me/</link>
+<pubDate>Thu, 27 Nov 2025 16:28:00 +0800</pubDate>
+<guid>https://hshuang.com/posts/ebook-ereader-changes-me/</guid>
+<description>放下會毒害自己大腦的社群媒體，擁抱單純的閱讀拯救自己的大腦吧</description>
+</item>
+
+</channel>
 </rss>

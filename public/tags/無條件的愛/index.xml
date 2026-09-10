@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>無條件的愛 on 黃宏勝的部落格 | hshuang.com</title>
-    <link>https://hshuang.com/tags/%E7%84%A1%E6%A2%9D%E4%BB%B6%E7%9A%84%E6%84%9B/</link>
-    <description>Recent content in 無條件的愛 on 黃宏勝的部落格 | hshuang.com</description>
-    <generator>Hugo</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Sun, 22 Mar 2026 10:13:00 +0800</lastBuildDate>
-    <atom:link href="https://hshuang.com/tags/%E7%84%A1%E6%A2%9D%E4%BB%B6%E7%9A%84%E6%84%9B/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>我所恐懼那「有條件的愛」</title>
-      <link>https://hshuang.com/posts/conditional-love/</link>
-      <pubDate>Sun, 22 Mar 2026 10:12:00 +0800</pubDate>
-      <guid>https://hshuang.com/posts/conditional-love/</guid>
-      <description>究竟你們口中那要我「過得好過得快樂」就好，背後到底隱含多少心情呢？</description>
-    </item>
-  </channel>
+<channel>
+<title>無條件的愛 on 黃宏勝的部落格 | hshuang.com</title>
+<link>https://hshuang.com/tags/%E7%84%A1%E6%A2%9D%E4%BB%B6%E7%9A%84%E6%84%9B/</link>
+<description>Recent content in 無條件的愛 on 黃宏勝的部落格 | hshuang.com</description><generator>Hugo -- gohugo.io</generator>
+<language>zh-tw</language>
+<lastBuildDate>Sun, 22 Mar 2026 10:12:00 +0800</lastBuildDate><atom:link href="https://hshuang.com/tags/%E7%84%A1%E6%A2%9D%E4%BB%B6%E7%9A%84%E6%84%9B/index.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>我所恐懼那「有條件的愛」</title>
+<link>https://hshuang.com/posts/conditional-love/</link>
+<pubDate>Sun, 22 Mar 2026 10:12:00 +0800</pubDate>
+<guid>https://hshuang.com/posts/conditional-love/</guid>
+<description>究竟你們口中那要我「過得好過得快樂」就好，背後到底隱含多少心情呢？</description>
+</item>
+
+</channel>
 </rss>

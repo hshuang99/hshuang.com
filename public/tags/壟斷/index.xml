@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>壟斷 on 黃宏勝的部落格 | hshuang.com</title>
-    <link>https://hshuang.com/tags/%E5%A3%9F%E6%96%B7/</link>
-    <description>Recent content in 壟斷 on 黃宏勝的部落格 | hshuang.com</description>
-    <generator>Hugo</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Thu, 04 Jun 2026 10:16:00 +0800</lastBuildDate>
-    <atom:link href="https://hshuang.com/tags/%E5%A3%9F%E6%96%B7/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>自主選擇乾淨的資訊，回歸RSS的懷抱吧！</title>
-      <link>https://hshuang.com/posts/you-should-use-rss/</link>
-      <pubDate>Fri, 01 Aug 2025 14:23:00 +0800</pubDate>
-      <guid>https://hshuang.com/posts/you-should-use-rss/</guid>
-      <description>在這個注意力被各種事物搶奪的時代，你是否感覺自己在資訊海洋中溺水了？</description>
-    </item>
-  </channel>
+<channel>
+<title>壟斷 on 黃宏勝的部落格 | hshuang.com</title>
+<link>https://hshuang.com/tags/%E5%A3%9F%E6%96%B7/</link>
+<description>Recent content in 壟斷 on 黃宏勝的部落格 | hshuang.com</description><generator>Hugo -- gohugo.io</generator>
+<language>zh-tw</language>
+<lastBuildDate>Fri, 01 Aug 2025 14:23:00 +0800</lastBuildDate><atom:link href="https://hshuang.com/tags/%E5%A3%9F%E6%96%B7/index.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>自主選擇乾淨的資訊，回歸RSS的懷抱吧！</title>
+<link>https://hshuang.com/posts/you-should-use-rss/</link>
+<pubDate>Fri, 01 Aug 2025 14:23:00 +0800</pubDate>
+<guid>https://hshuang.com/posts/you-should-use-rss/</guid>
+<description>在這個注意力被各種事物搶奪的時代，你是否感覺自己在資訊海洋中溺水了？</description>
+</item>
+
+</channel>
 </rss>

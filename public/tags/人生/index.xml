@@ -1,54 +1,59 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>人生 on 黃宏勝的部落格 | hshuang.com</title>
-    <link>https://hshuang.com/tags/%E4%BA%BA%E7%94%9F/</link>
-    <description>Recent content in 人生 on 黃宏勝的部落格 | hshuang.com</description>
-    <generator>Hugo</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Sun, 22 Mar 2026 10:13:00 +0800</lastBuildDate>
-    <atom:link href="https://hshuang.com/tags/%E4%BA%BA%E7%94%9F/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>我所恐懼那「有條件的愛」</title>
-      <link>https://hshuang.com/posts/conditional-love/</link>
-      <pubDate>Sun, 22 Mar 2026 10:12:00 +0800</pubDate>
-      <guid>https://hshuang.com/posts/conditional-love/</guid>
-      <description>究竟你們口中那要我「過得好過得快樂」就好，背後到底隱含多少心情呢？</description>
-    </item>
-    <item>
-      <title>念什麼科系比較好？</title>
-      <link>https://hshuang.com/posts/what-major-should-i-study/</link>
-      <pubDate>Sat, 13 Dec 2025 18:45:00 +0800</pubDate>
-      <guid>https://hshuang.com/posts/what-major-should-i-study/</guid>
-      <description>「你大學選擇的科系，並非100%與你的成就或人生發展有直接關係」</description>
-    </item>
-    <item>
-      <title>電子書閱讀器改變了我的人生</title>
-      <link>https://hshuang.com/posts/ebook-ereader-changes-me/</link>
-      <pubDate>Thu, 27 Nov 2025 16:28:00 +0800</pubDate>
-      <guid>https://hshuang.com/posts/ebook-ereader-changes-me/</guid>
-      <description>放下會毒害自己大腦的社群媒體，擁抱單純的閱讀拯救自己的大腦吧</description>
-    </item>
-    <item>
-      <title>美好生活的意義</title>
-      <link>https://hshuang.com/posts/meaning-of-wonderful-life/</link>
-      <pubDate>Thu, 21 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://hshuang.com/posts/meaning-of-wonderful-life/</guid>
-      <description>如果不好好吃，怎麼好好思考、好好去愛、好好睡覺？</description>
-    </item>
-    <item>
-      <title>從50年職涯中學到的人生課題-下</title>
-      <link>https://hshuang.com/posts/life-lessons-from-the-first-half-century-of-my-career-people-focused-2/</link>
-      <pubDate>Wed, 23 Jul 2025 19:30:00 +0800</pubDate>
-      <guid>https://hshuang.com/posts/life-lessons-from-the-first-half-century-of-my-career-people-focused-2/</guid>
-      <description>2017年圖靈獎得主的電腦科學家David A. Patterson分享了他這50年來從人生中學到一些關於人們應該要在乎的事</description>
-    </item>
-    <item>
-      <title>從50年職涯中學到的人生課題-上</title>
-      <link>https://hshuang.com/posts/life-lessons-from-the-first-half-century-of-my-career-people-focused-1/</link>
-      <pubDate>Tue, 22 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>https://hshuang.com/posts/life-lessons-from-the-first-half-century-of-my-career-people-focused-1/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://media.secologies.com/life-lessons-1-cover.webp&#34; alt=&#34;life-lessons-1&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/David_Patterson_%28computer_scientist%29&#34;&gt;David A. Patterson&lt;/a&gt;博士從UCLA PhD畢業後在UC Berkeley教學與研究了40年的系統設計，同時也協助許多公司的專案，之後幫助google實現AI加速硬體的關鍵基礎底層技術，而這些年來歸納出8件我們生活上應該注意的事情，此篇我先介紹前四件&lt;/p&gt;</description>
-    </item>
-  </channel>
+<channel>
+<title>人生 on 黃宏勝的部落格 | hshuang.com</title>
+<link>https://hshuang.com/tags/%E4%BA%BA%E7%94%9F/</link>
+<description>Recent content in 人生 on 黃宏勝的部落格 | hshuang.com</description><generator>Hugo -- gohugo.io</generator>
+<language>zh-tw</language>
+<lastBuildDate>Sun, 22 Mar 2026 10:12:00 +0800</lastBuildDate><atom:link href="https://hshuang.com/tags/%E4%BA%BA%E7%94%9F/index.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>我所恐懼那「有條件的愛」</title>
+<link>https://hshuang.com/posts/conditional-love/</link>
+<pubDate>Sun, 22 Mar 2026 10:12:00 +0800</pubDate>
+<guid>https://hshuang.com/posts/conditional-love/</guid>
+<description>究竟你們口中那要我「過得好過得快樂」就好，背後到底隱含多少心情呢？</description>
+</item>
+
+<item>
+<title>念什麼科系比較好？</title>
+<link>https://hshuang.com/posts/what-major-should-i-study/</link>
+<pubDate>Sat, 13 Dec 2025 18:45:00 +0800</pubDate>
+<guid>https://hshuang.com/posts/what-major-should-i-study/</guid>
+<description>「你大學選擇的科系，並非100%與你的成就或人生發展有直接關係」</description>
+</item>
+
+<item>
+<title>電子書閱讀器改變了我的人生</title>
+<link>https://hshuang.com/posts/ebook-ereader-changes-me/</link>
+<pubDate>Thu, 27 Nov 2025 16:28:00 +0800</pubDate>
+<guid>https://hshuang.com/posts/ebook-ereader-changes-me/</guid>
+<description>放下會毒害自己大腦的社群媒體，擁抱單純的閱讀拯救自己的大腦吧</description>
+</item>
+
+<item>
+<title>美好生活的意義</title>
+<link>https://hshuang.com/posts/meaning-of-wonderful-life/</link>
+<pubDate>Thu, 21 Aug 2025 00:00:00 +0000</pubDate>
+<guid>https://hshuang.com/posts/meaning-of-wonderful-life/</guid>
+<description>如果不好好吃，怎麼好好思考、好好去愛、好好睡覺？</description>
+</item>
+
+<item>
+<title>從50年職涯中學到的人生課題-下</title>
+<link>https://hshuang.com/posts/life-lessons-from-the-first-half-century-of-my-career-people-focused-2/</link>
+<pubDate>Wed, 23 Jul 2025 19:30:00 +0800</pubDate>
+<guid>https://hshuang.com/posts/life-lessons-from-the-first-half-century-of-my-career-people-focused-2/</guid>
+<description>2017年圖靈獎得主的電腦科學家David A. Patterson分享了他這50年來從人生中學到一些關於人們應該要在乎的事</description>
+</item>
+
+<item>
+<title>從50年職涯中學到的人生課題-上</title>
+<link>https://hshuang.com/posts/life-lessons-from-the-first-half-century-of-my-career-people-focused-1/</link>
+<pubDate>Tue, 22 Jul 2025 00:00:00 +0000</pubDate>
+<guid>https://hshuang.com/posts/life-lessons-from-the-first-half-century-of-my-career-people-focused-1/</guid>
+<description>&lt;p&gt;&lt;img src=&#34;https://media.secologies.com/life-lessons-1-cover.webp&#34; alt=&#34;life-lessons-1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/David_Patterson_%28computer_scientist%29&#34;&gt;David A. Patterson&lt;/a&gt;博士從UCLA PhD畢業後在UC Berkeley教學與研究了40年的系統設計，同時也協助許多公司的專案，之後幫助google實現AI加速硬體的關鍵基礎底層技術，而這些年來歸納出8件我們生活上應該注意的事情，此篇我先介紹前四件&lt;/p&gt;</description>
+</item>
+
+</channel>
 </rss>

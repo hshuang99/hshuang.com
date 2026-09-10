@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Email Routing on 黃宏勝的部落格 | hshuang.com</title>
-    <link>https://hshuang.com/tags/email-routing/</link>
-    <description>Recent content in Email Routing on 黃宏勝的部落格 | hshuang.com</description>
-    <generator>Hugo</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Sat, 03 Jan 2026 11:22:00 +0800</lastBuildDate>
-    <atom:link href="https://hshuang.com/tags/email-routing/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>利用Cloudflare Domain搭配Gmail建立私人電子信箱</title>
-      <link>https://hshuang.com/posts/cloudflare-domain-create-free-private-email-using-gmail/</link>
-      <pubDate>Fri, 26 Dec 2025 15:59:00 +0800</pubDate>
-      <guid>https://hshuang.com/posts/cloudflare-domain-create-free-private-email-using-gmail/</guid>
-      <description>個人化電子郵件信箱讓你看起來更專業，本文向各位介紹如何利用Cloudflare購買的網域搭配免費的Gmail來建立私人信箱</description>
-    </item>
-  </channel>
+<channel>
+<title>Email Routing on 黃宏勝的部落格 | hshuang.com</title>
+<link>https://hshuang.com/tags/email-routing/</link>
+<description>Recent content in Email Routing on 黃宏勝的部落格 | hshuang.com</description><generator>Hugo -- gohugo.io</generator>
+<language>zh-tw</language>
+<lastBuildDate>Fri, 26 Dec 2025 15:59:00 +0800</lastBuildDate><atom:link href="https://hshuang.com/tags/email-routing/index.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>利用Cloudflare Domain搭配Gmail建立私人電子信箱</title>
+<link>https://hshuang.com/posts/cloudflare-domain-create-free-private-email-using-gmail/</link>
+<pubDate>Fri, 26 Dec 2025 15:59:00 +0800</pubDate>
+<guid>https://hshuang.com/posts/cloudflare-domain-create-free-private-email-using-gmail/</guid>
+<description>個人化電子郵件信箱讓你看起來更專業，本文向各位介紹如何利用Cloudflare購買的網域搭配免費的Gmail來建立私人信箱</description>
+</item>
+
+</channel>
 </rss>

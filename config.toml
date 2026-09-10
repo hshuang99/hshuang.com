@@ -19,13 +19,13 @@ defaultContentLanguageInSubdir = false
 
 [languages]
     [languages.zh-tw]
-        languageName = "繁體中文"
+        label           = "繁體中文"
         weight = 1
         title = "黃宏勝的部落格 | hshuang.com"
         [languages.zh-tw.params]
             mainpagetitle = "HSHuang.com | 黃宏勝的部落格"
             mainpagesubtitle = "思考、等待、齋戒、忍耐、傾聽"
-            mainpagedesc = "2026/09/010: 說要戒咖啡因，結果我又去咖啡廳買了咖啡豆回來"
+            mainpagedesc = "2026/09/10: 明明說要戒除咖啡因，結果又去咖啡廳買了咖啡豆"
             copyrightname = "黃宏勝"
             copyrighturl = ""
         [languages.zh-tw.params.copyright]
@@ -38,6 +38,11 @@ defaultContentLanguageInSubdir = false
             name = "貼文"
             url = "/posts/"
             weight = 10
+        [[languages.zh-tw.menu.main]]
+            identifier = "newsletter"
+            name = "勝報"
+            url = "/newsletter/"
+            weight = 15
         [[languages.zh-tw.menu.main]]
             identifier = "about"
             name = "關於"
@@ -69,24 +74,19 @@ defaultContentLanguageInSubdir = false
             url = "/giveaway/"
             weight = 70
         [[languages.zh-tw.menu.main]]
-            identifier = "newsletter"
-            name = "勝報"
-            url = "/newsletter/"
-            weight = 75
-        [[languages.zh-tw.menu.main]]
             identifier = "search"
             name = "搜尋"
             url = "/search/"
             weight = 80
 
     [languages.en]
-        languageName = "English"
+        label           = "English"
         weight = 2
-        title = "Hong-Sheng Huang's Blog | hshuang.com"
+        title = "HSHuang's Blog | hshuang.com"
         # TODO: translate these to taste — placeholders for now.
         [languages.en.params]
             mainpagetitle = "HSHuang.com | Hong-Sheng Huang's Blog"
-            mainpagesubtitle = "Thinking、Waiting、Fasting、Patience、Listening"
+            mainpagesubtitle = "Think, wait, fast, endure, listen"
             mainpagedesc = ""
             copyrightname = "Hong-Sheng Huang"
             copyrighturl = ""

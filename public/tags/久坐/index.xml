@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>久坐 on 黃宏勝的部落格 | hshuang.com</title>
-    <link>https://hshuang.com/tags/%E4%B9%85%E5%9D%90/</link>
-    <description>Recent content in 久坐 on 黃宏勝的部落格 | hshuang.com</description>
-    <generator>Hugo</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Sat, 07 Mar 2026 10:17:00 +0800</lastBuildDate>
-    <atom:link href="https://hshuang.com/tags/%E4%B9%85%E5%9D%90/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>久坐摧毀你的記憶力！</title>
-      <link>https://hshuang.com/posts/sedentary-destroy-your-memory/</link>
-      <pubDate>Sat, 09 Aug 2025 00:00:00 +0800</pubDate>
-      <guid>https://hshuang.com/posts/sedentary-destroy-your-memory/</guid>
-      <description>從久坐不動的世界中站起來吧，為了你的大腦健康，你必須這麼做</description>
-    </item>
-  </channel>
+<channel>
+<title>久坐 on 黃宏勝的部落格 | hshuang.com</title>
+<link>https://hshuang.com/tags/%E4%B9%85%E5%9D%90/</link>
+<description>Recent content in 久坐 on 黃宏勝的部落格 | hshuang.com</description><generator>Hugo -- gohugo.io</generator>
+<language>zh-tw</language>
+<lastBuildDate>Sat, 09 Aug 2025 00:00:00 +0800</lastBuildDate><atom:link href="https://hshuang.com/tags/%E4%B9%85%E5%9D%90/index.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>久坐摧毀你的記憶力！</title>
+<link>https://hshuang.com/posts/sedentary-destroy-your-memory/</link>
+<pubDate>Sat, 09 Aug 2025 00:00:00 +0800</pubDate>
+<guid>https://hshuang.com/posts/sedentary-destroy-your-memory/</guid>
+<description>從久坐不動的世界中站起來吧，為了你的大腦健康，你必須這麼做</description>
+</item>
+
+</channel>
 </rss>

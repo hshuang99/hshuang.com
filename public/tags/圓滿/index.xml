@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>圓滿 on 黃宏勝的部落格 | hshuang.com</title>
-    <link>https://hshuang.com/tags/%E5%9C%93%E6%BB%BF/</link>
-    <description>Recent content in 圓滿 on 黃宏勝的部落格 | hshuang.com</description>
-    <generator>Hugo</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Fri, 09 Jan 2026 13:22:00 +0800</lastBuildDate>
-    <atom:link href="https://hshuang.com/tags/%E5%9C%93%E6%BB%BF/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>我們的心靈是否可以「澄潔且平靜」呢？</title>
-      <link>https://hshuang.com/posts/peace-and-quiet/</link>
-      <pubDate>Fri, 09 Jan 2026 13:18:00 +0800</pubDate>
-      <guid>https://hshuang.com/posts/peace-and-quiet/</guid>
-      <description>這樣安詳寧靜的片刻，給予我生命的意義和深度</description>
-    </item>
-  </channel>
+<channel>
+<title>圓滿 on 黃宏勝的部落格 | hshuang.com</title>
+<link>https://hshuang.com/tags/%E5%9C%93%E6%BB%BF/</link>
+<description>Recent content in 圓滿 on 黃宏勝的部落格 | hshuang.com</description><generator>Hugo -- gohugo.io</generator>
+<language>zh-tw</language>
+<lastBuildDate>Fri, 09 Jan 2026 13:18:00 +0800</lastBuildDate><atom:link href="https://hshuang.com/tags/%E5%9C%93%E6%BB%BF/index.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>我們的心靈是否可以「澄潔且平靜」呢？</title>
+<link>https://hshuang.com/posts/peace-and-quiet/</link>
+<pubDate>Fri, 09 Jan 2026 13:18:00 +0800</pubDate>
+<guid>https://hshuang.com/posts/peace-and-quiet/</guid>
+<description>這樣安詳寧靜的片刻，給予我生命的意義和深度</description>
+</item>
+
+</channel>
 </rss>

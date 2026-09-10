@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>營養與飲食 on 黃宏勝的部落格 | hshuang.com</title>
-    <link>https://hshuang.com/tags/%E7%87%9F%E9%A4%8A%E8%88%87%E9%A3%B2%E9%A3%9F/</link>
-    <description>Recent content in 營養與飲食 on 黃宏勝的部落格 | hshuang.com</description>
-    <generator>Hugo</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Tue, 12 Aug 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://hshuang.com/tags/%E7%87%9F%E9%A4%8A%E8%88%87%E9%A3%B2%E9%A3%9F/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>活化大腦的十種方法</title>
-      <link>https://hshuang.com/posts/ten-ways-to-activate-your-brain/</link>
-      <pubDate>Mon, 21 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>https://hshuang.com/posts/ten-ways-to-activate-your-brain/</guid>
-      <description>神經科學家威勒米爾（Kristen Willeumier)在亞曼診所(Amen Clinics)看過許多的精密大腦影像，並且經由研究過後推斷出只要改變生活習慣以及持之以恆，就能夠大幅度的改變大腦的健康狀況</description>
-    </item>
-  </channel>
+<channel>
+<title>營養與飲食 on 黃宏勝的部落格 | hshuang.com</title>
+<link>https://hshuang.com/tags/%E7%87%9F%E9%A4%8A%E8%88%87%E9%A3%B2%E9%A3%9F/</link>
+<description>Recent content in 營養與飲食 on 黃宏勝的部落格 | hshuang.com</description><generator>Hugo -- gohugo.io</generator>
+<language>zh-tw</language>
+<lastBuildDate>Mon, 21 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://hshuang.com/tags/%E7%87%9F%E9%A4%8A%E8%88%87%E9%A3%B2%E9%A3%9F/index.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>活化大腦的十種方法</title>
+<link>https://hshuang.com/posts/ten-ways-to-activate-your-brain/</link>
+<pubDate>Mon, 21 Jul 2025 00:00:00 +0000</pubDate>
+<guid>https://hshuang.com/posts/ten-ways-to-activate-your-brain/</guid>
+<description>神經科學家威勒米爾（Kristen Willeumier)在亞曼診所(Amen Clinics)看過許多的精密大腦影像，並且經由研究過後推斷出只要改變生活習慣以及持之以恆，就能夠大幅度的改變大腦的健康狀況</description>
+</item>
+
+</channel>
 </rss>

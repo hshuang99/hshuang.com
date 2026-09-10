@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>JOMO on 黃宏勝的部落格 | hshuang.com</title>
-    <link>https://hshuang.com/tags/jomo/</link>
-    <description>Recent content in JOMO on 黃宏勝的部落格 | hshuang.com</description>
-    <generator>Hugo</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Sat, 07 Mar 2026 11:50:00 +0800</lastBuildDate>
-    <atom:link href="https://hshuang.com/tags/jomo/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>從被動到主動：脫離FOMO邁向JOMO</title>
-      <link>https://hshuang.com/posts/from-fomo-to-jomo/</link>
-      <pubDate>Mon, 15 Sep 2025 14:32:00 +0800</pubDate>
-      <guid>https://hshuang.com/posts/from-fomo-to-jomo/</guid>
-      <description>數位原生世代面對FOMO現象更劇烈，有沒有哪些對策可以使用？</description>
-    </item>
-  </channel>
+<channel>
+<title>JOMO on 黃宏勝的部落格 | hshuang.com</title>
+<link>https://hshuang.com/tags/jomo/</link>
+<description>Recent content in JOMO on 黃宏勝的部落格 | hshuang.com</description><generator>Hugo -- gohugo.io</generator>
+<language>zh-tw</language>
+<lastBuildDate>Mon, 15 Sep 2025 14:32:00 +0800</lastBuildDate><atom:link href="https://hshuang.com/tags/jomo/index.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>從被動到主動：脫離FOMO邁向JOMO</title>
+<link>https://hshuang.com/posts/from-fomo-to-jomo/</link>
+<pubDate>Mon, 15 Sep 2025 14:32:00 +0800</pubDate>
+<guid>https://hshuang.com/posts/from-fomo-to-jomo/</guid>
+<description>數位原生世代面對FOMO現象更劇烈，有沒有哪些對策可以使用？</description>
+</item>
+
+</channel>
 </rss>

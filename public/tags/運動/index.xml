@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>運動 on 黃宏勝的部落格 | hshuang.com</title>
-    <link>https://hshuang.com/tags/%E9%81%8B%E5%8B%95/</link>
-    <description>Recent content in 運動 on 黃宏勝的部落格 | hshuang.com</description>
-    <generator>Hugo</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Wed, 05 Nov 2025 17:32:00 +0800</lastBuildDate>
-    <atom:link href="https://hshuang.com/tags/%E9%81%8B%E5%8B%95/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>控制血糖的十招</title>
-      <link>https://hshuang.com/posts/control-blood-glucose-ten-ways/</link>
-      <pubDate>Tue, 04 Nov 2025 09:46:00 +0800</pubDate>
-      <guid>https://hshuang.com/posts/control-blood-glucose-ten-ways/</guid>
-      <description>您有過血糖波動的經驗嗎？是否會在飯後頭昏腦脹呢？而我們又該如何預防這種情況呢？</description>
-    </item>
-    <item>
-      <title>運動三十五天逆轉大腦老化</title>
-      <link>https://hshuang.com/posts/reverse-brain-aging/</link>
-      <pubDate>Sun, 10 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://hshuang.com/posts/reverse-brain-aging/</guid>
-      <description>三十五天才能體驗到認知能力的顯著改善</description>
-    </item>
-  </channel>
+<channel>
+<title>運動 on 黃宏勝的部落格 | hshuang.com</title>
+<link>https://hshuang.com/tags/%E9%81%8B%E5%8B%95/</link>
+<description>Recent content in 運動 on 黃宏勝的部落格 | hshuang.com</description><generator>Hugo -- gohugo.io</generator>
+<language>zh-tw</language>
+<lastBuildDate>Tue, 04 Nov 2025 09:46:00 +0800</lastBuildDate><atom:link href="https://hshuang.com/tags/%E9%81%8B%E5%8B%95/index.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>控制血糖的十招</title>
+<link>https://hshuang.com/posts/control-blood-glucose-ten-ways/</link>
+<pubDate>Tue, 04 Nov 2025 09:46:00 +0800</pubDate>
+<guid>https://hshuang.com/posts/control-blood-glucose-ten-ways/</guid>
+<description>您有過血糖波動的經驗嗎？是否會在飯後頭昏腦脹呢？而我們又該如何預防這種情況呢？</description>
+</item>
+
+<item>
+<title>運動三十五天逆轉大腦老化</title>
+<link>https://hshuang.com/posts/reverse-brain-aging/</link>
+<pubDate>Sun, 10 Aug 2025 00:00:00 +0000</pubDate>
+<guid>https://hshuang.com/posts/reverse-brain-aging/</guid>
+<description>三十五天才能體驗到認知能力的顯著改善</description>
+</item>
+
+</channel>
 </rss>

@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>飲食 on 黃宏勝的部落格 | hshuang.com</title>
-    <link>https://hshuang.com/tags/%E9%A3%B2%E9%A3%9F/</link>
-    <description>Recent content in 飲食 on 黃宏勝的部落格 | hshuang.com</description>
-    <generator>Hugo</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Wed, 24 Sep 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://hshuang.com/tags/%E9%A3%B2%E9%A3%9F/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>越吃越累，是吃錯了！</title>
-      <link>https://hshuang.com/posts/more-eat-more-tired/</link>
-      <pubDate>Sun, 07 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://hshuang.com/posts/more-eat-more-tired/</guid>
-      <description>外食族想要吃得對，其實沒那麼難！</description>
-    </item>
-    <item>
-      <title>美好生活的意義</title>
-      <link>https://hshuang.com/posts/meaning-of-wonderful-life/</link>
-      <pubDate>Thu, 21 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://hshuang.com/posts/meaning-of-wonderful-life/</guid>
-      <description>如果不好好吃，怎麼好好思考、好好去愛、好好睡覺？</description>
-    </item>
-  </channel>
+<channel>
+<title>飲食 on 黃宏勝的部落格 | hshuang.com</title>
+<link>https://hshuang.com/tags/%E9%A3%B2%E9%A3%9F/</link>
+<description>Recent content in 飲食 on 黃宏勝的部落格 | hshuang.com</description><generator>Hugo -- gohugo.io</generator>
+<language>zh-tw</language>
+<lastBuildDate>Sun, 07 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://hshuang.com/tags/%E9%A3%B2%E9%A3%9F/index.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>越吃越累，是吃錯了！</title>
+<link>https://hshuang.com/posts/more-eat-more-tired/</link>
+<pubDate>Sun, 07 Sep 2025 00:00:00 +0000</pubDate>
+<guid>https://hshuang.com/posts/more-eat-more-tired/</guid>
+<description>外食族想要吃得對，其實沒那麼難！</description>
+</item>
+
+<item>
+<title>美好生活的意義</title>
+<link>https://hshuang.com/posts/meaning-of-wonderful-life/</link>
+<pubDate>Thu, 21 Aug 2025 00:00:00 +0000</pubDate>
+<guid>https://hshuang.com/posts/meaning-of-wonderful-life/</guid>
+<description>如果不好好吃，怎麼好好思考、好好去愛、好好睡覺？</description>
+</item>
+
+</channel>
 </rss>

@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>主宰 on 黃宏勝的部落格 | hshuang.com</title>
-    <link>https://hshuang.com/tags/%E4%B8%BB%E5%AE%B0/</link>
-    <description>Recent content in 主宰 on 黃宏勝的部落格 | hshuang.com</description>
-    <generator>Hugo</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Tue, 12 Aug 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://hshuang.com/tags/%E4%B8%BB%E5%AE%B0/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>自身問題的根源</title>
-      <link>https://hshuang.com/posts/root-of-my-problems/</link>
-      <pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://hshuang.com/posts/root-of-my-problems/</guid>
-      <description>我們所面臨的世界究竟是由他人還是自己在掌控著？</description>
-    </item>
-  </channel>
+<channel>
+<title>主宰 on 黃宏勝的部落格 | hshuang.com</title>
+<link>https://hshuang.com/tags/%E4%B8%BB%E5%AE%B0/</link>
+<description>Recent content in 主宰 on 黃宏勝的部落格 | hshuang.com</description><generator>Hugo -- gohugo.io</generator>
+<language>zh-tw</language>
+<lastBuildDate>Tue, 05 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://hshuang.com/tags/%E4%B8%BB%E5%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>自身問題的根源</title>
+<link>https://hshuang.com/posts/root-of-my-problems/</link>
+<pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate>
+<guid>https://hshuang.com/posts/root-of-my-problems/</guid>
+<description>我們所面臨的世界究竟是由他人還是自己在掌控著？</description>
+</item>
+
+</channel>
 </rss>

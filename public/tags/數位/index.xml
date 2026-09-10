@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>數位 on 黃宏勝的部落格 | hshuang.com</title>
-    <link>https://hshuang.com/tags/%E6%95%B8%E4%BD%8D/</link>
-    <description>Recent content in 數位 on 黃宏勝的部落格 | hshuang.com</description>
-    <generator>Hugo</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Tue, 12 Aug 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://hshuang.com/tags/%E6%95%B8%E4%BD%8D/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>數位佃農的下場</title>
-      <link>https://hshuang.com/posts/digital-tenant-farmer/</link>
-      <pubDate>Mon, 28 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>https://hshuang.com/posts/digital-tenant-farmer/</guid>
-      <description>現實中當不起地主，那你可以選擇在網路上試試當地主</description>
-    </item>
-  </channel>
+<channel>
+<title>數位 on 黃宏勝的部落格 | hshuang.com</title>
+<link>https://hshuang.com/tags/%E6%95%B8%E4%BD%8D/</link>
+<description>Recent content in 數位 on 黃宏勝的部落格 | hshuang.com</description><generator>Hugo -- gohugo.io</generator>
+<language>zh-tw</language>
+<lastBuildDate>Mon, 28 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://hshuang.com/tags/%E6%95%B8%E4%BD%8D/index.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>數位佃農的下場</title>
+<link>https://hshuang.com/posts/digital-tenant-farmer/</link>
+<pubDate>Mon, 28 Jul 2025 00:00:00 +0000</pubDate>
+<guid>https://hshuang.com/posts/digital-tenant-farmer/</guid>
+<description>現實中當不起地主，那你可以選擇在網路上試試當地主</description>
+</item>
+
+</channel>
 </rss>
