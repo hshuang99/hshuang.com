@@ -25,7 +25,7 @@ defaultContentLanguageInSubdir = false
         [languages.zh-tw.params]
             mainpagetitle = "HSHuang.com | 黃宏勝的部落格"
             mainpagesubtitle = "思考、等待、齋戒、忍耐、傾聽"
-            mainpagedesc = "2026/09/06: 想換到 GrapheneOS 上了"
+            mainpagedesc = "2026/09/010: 說要戒咖啡因，結果我又去咖啡廳買了咖啡豆回來"
             copyrightname = "黃宏勝"
             copyrighturl = ""
         [languages.zh-tw.params.copyright]
