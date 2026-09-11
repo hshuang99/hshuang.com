@@ -2,6 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://hshuang.com/bucket-list/</loc>
+    <lastmod>2026-09-11T10:14:00+08:00</lastmod>
+  </url><url>
+    <loc>https://hshuang.com/</loc>
+    <lastmod>2026-09-11T10:14:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://hshuang.com/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://hshuang.com/"
+                />
+  </url><url>
     <loc>https://hshuang.com/categories/</loc>
     <lastmod>2026-09-10T16:38:00+08:00</lastmod>
     <xhtml:link
@@ -39,19 +55,6 @@
   </url><url>
     <loc>https://hshuang.com/posts/</loc>
     <lastmod>2026-09-10T16:38:00+08:00</lastmod>
-  </url><url>
-    <loc>https://hshuang.com/</loc>
-    <lastmod>2026-09-10T16:38:00+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://hshuang.com/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-tw"
-                href="https://hshuang.com/"
-                />
   </url><url>
     <loc>https://hshuang.com/tags/%E6%8E%8C%E6%8E%A7/</loc>
     <lastmod>2026-09-10T16:38:00+08:00</lastmod>
@@ -97,9 +100,6 @@
   </url><url>
     <loc>https://hshuang.com/tags/%E5%9B%9E%E9%A1%A7/</loc>
     <lastmod>2026-08-31T19:28:00+08:00</lastmod>
-  </url><url>
-    <loc>https://hshuang.com/bucket-list/</loc>
-    <lastmod>2026-08-30T18:58:00+08:00</lastmod>
   </url><url>
     <loc>https://hshuang.com/use/</loc>
     <lastmod>2026-08-30T18:53:00+08:00</lastmod>
