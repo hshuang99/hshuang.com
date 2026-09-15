@@ -16,13 +16,28 @@
 
         <h4 class="post-end-links">
             <a href="{{ "/" | relLangURL }}">{{ i18n "backtohome" }}</a>
+            <a href="#" class="random-post-btn" data-random-json="{{ "posts/index.random.json" | relLangURL }}">
+                {{ i18n "randompost" }}
+            </a>
         </h4>
+
+        <ul class="pager">
+            {{ with .PrevInSection }}
+            <li class="previous"><a href="{{ .Permalink }}">&larr; {{ i18n "prevpost" | default "Previous" }}: {{ .Title }}</a></li>
+            {{ end }}
+            {{ with .NextInSection }}
+            <li class="next"><a href="{{ .Permalink }}">{{ i18n "nextpost" | default "Next" }}: {{ .Title }} &rarr;</a></li>
+            {{ end }}
+        </ul>
     </div>
 </div>
 
 <style>
     .newsletter-embed #mc_embed_signup {
         margin-top: 20px;
+    }
+    .post-end-links a {
+        margin-right: 20px;
     }
 </style>
 
