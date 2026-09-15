@@ -87,11 +87,11 @@ defaultContentLanguageInSubdir = false
     [languages.en]
         label           = "English"
         weight = 2
-        title = "HSHuang's Blog | hshuang.com"
+        title = "Hong-Sheng Huang's Blog | hshuang.com"
         # TODO: translate these to taste — placeholders for now.
         [languages.en.params]
             mainpagetitle = "HSHuang.com | Hong-Sheng Huang's Blog"
-            mainpagesubtitle = "Think, wait, fast, endure, listen"
+            mainpagesubtitle = "Thinking、Waiting、Fasting、Patience、Listening"
             mainpagedesc = ""
             copyrightname = "Hong-Sheng Huang"
             copyrighturl = ""
