@@ -1,7 +1,7 @@
 ---
 title: "Hugo 靜態部落格簡易留言板實作"
 date: 2026-04-24T23:06:00+08:00
-lastmod: 2026-05-24T14:02:00+08:00
+lastmod: 2026-09-15T11:49:00+08:00
 author: "黃宏勝"
 categories:
   - 科技
@@ -1059,21 +1059,7 @@ cp themes/blowfish/layouts/partials/search.html layouts/partials/search.html
 請注意 Cloudflare Turnstile 在 Hugo 測試模式下無法正常驗證，所以確認完內容無誤可以先部署到正式的環境中再測試
 {{< /alert >}}
 
-## 實驗 2026-Apr-24 ~ 2026-May-24
-經過一個月的測試下來，每天除了看信箱還得檢查 Google Sheets 或其他雲端空間，好累，我想我應該把時間花在思考文章跟人生上，而不是一直查看有沒有新留言，所以經過這一個月的實驗下來，我還是決定要把留言區關掉，下面我把這一個月有留言的內容都保留起來
-
-| 留言者    | 留言內容 | 留言時間 | 站長回覆 |
-| -------- | ------- | ------- | ------- |
-| [廢文小天地](https://trashposts.com/)  | 安安～簽到搶頭香！ | 2026-04-14T06:51:06.145Z | 太狠了老哥，隨時都在海巡 |
-| [Eddie Lv](https://eddielv.com) | 簽到！     | 2026-04-15T18:29:37.117Z | 歡迎|
-| [Marcus](https://immarcus.com)    | 訂閱讀者來冒泡留言～    | 2026-04-24T15:43:50.064Z | 歡迎，我每天也固定要看你的文章！謝謝你總是帶來有趣的思考角度 |
-| [shuojen](https://shuojen.com) | 大推，原本也想紀錄過程的，現在不用自己寫一篇了，耶，而且我也無法介紹的比你更詳細嘿嘿嘿。(｡>﹏<｡) | 2026-04-25T00:27:25.236Z | 謝謝，但每個人使用的模板不同，我的方法還不算通用款，所以可能還算不上最詳細的|
-| [LQ7](https://lq7.tw) | Re: 留言板\n太詳盡地整理了！感覺該收錄至 BlogBlog 的資源裡面，我會向 Wiwi 推薦這篇文章 XD| 2026-04-25T04:32:20.750Z | 謝謝，但也要感謝你們已經先走過一些路，實證這個方法可行我才能弄出來的|
-| [資工小廢物 - JN](https://blog.giveanornot.com) | 我來晚了 XDDD\n教學文章超詳細，超級佩服！我真的沒有耐心把這麼長的圖文步驟寫完。| 2026-04-25T07:20:15.304Z | 歡迎，我也是把好幾天的卡片盒筆記組合起來的，一次寫完太耗時間了|
-| [右衣](https://yoe1.bearblog.dev) | 最近看到你的文章〈現代社會何其複雜〉。我想到之前有人為了討論類似的主題，寫了萬字長文。名為[〈人性与暴力〉](https://yangzhiping.com/essays/20211014/)。| 2026-05-01T11:27:55.286Z | 感謝你給的這篇文章，確實對於這不確定的世界提出了一些更實際的方法來應對 |
-
 對了，如果對於要用 Google Sheets 當作儲存空間有點感冒，可以參考碩人哥的[留言板系統全新改版](https://shuojen.com/blog/2026/05/09/guestbook_v2)，改用 Cloudflare D1 搭配 Worker 啟動的更快
-
 
 [^1]: JN, "留言板上線啦！（以及我怎麼挑選我的留言板系統）," 2025-07-30, 資工小廢物 - JN, [https://blog.giveanornot.com/comment-system-launched/](https://blog.giveanornot.com/comment-system-launched/)
 [^2]: Wiwi Kuan, "留言區," 2024年10月26日, Wiwi.Blog｜官大為的部落格, [https://wiwi.blog/blog/social-media-feedback/](https://wiwi.blog/blog/social-media-feedback/).
