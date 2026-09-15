@@ -5,7 +5,15 @@
 <link>https://hshuang.com/</link>
 <description>2026/09/10: 明明說要戒除咖啡因，結果又去咖啡廳買了咖啡豆</description><generator>Hugo -- gohugo.io</generator>
 <language>zh-tw</language>
-<lastBuildDate>Sat, 12 Sep 2026 15:41:00 +0800</lastBuildDate><atom:link href="https://hshuang.com/index.xml" rel="self" type="application/rss+xml" />
+<lastBuildDate>Tue, 15 Sep 2026 13:35:00 +0800</lastBuildDate><atom:link href="https://hshuang.com/index.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>留言板</title>
+<link>https://hshuang.com/guestbook/</link>
+<pubDate>Tue, 15 Sep 2026 13:35:00 +0800</pubDate>
+<guid>https://hshuang.com/guestbook/</guid>
+<description>&lt;p&gt;歡迎在下面留言，我會不定期回覆。也可以切換到「全站留言」看看大家在其他文章底下都聊了些什麼。&lt;/p&gt;</description>
+</item>
+
 <item>
 <title>風聲</title>
 <link>https://hshuang.com/posts/hong-siann/</link>
@@ -247,7 +255,7 @@
 <item>
 <title>關於</title>
 <link>https://hshuang.com/about/</link>
-<pubDate>Sat, 30 May 2026 00:00:00 +0000</pubDate>
+<pubDate>Sat, 30 May 2026 13:00:00 +0800</pubDate>
 <guid>https://hshuang.com/about/</guid>
 <description>&lt;h2 id=&#34;關於本站&#34;&gt;關於本站&lt;/h2&gt;
 &lt;p&gt;此部落格主要記錄我所有好奇跟想做的事情，因為我沒有使用任何社群媒體，所以架了一個部落格來分享&lt;/p&gt;
@@ -920,14 +928,6 @@
 <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 <guid>https://hshuang.com/newsletter/</guid>
 <description>&lt;p&gt;透過 Email 訂閱&lt;/p&gt;</description>
-</item>
-
-<item>
-<title>留言板</title>
-<link>https://hshuang.com/guestbook/</link>
-<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-<guid>https://hshuang.com/guestbook/</guid>
-<description>&lt;p&gt;歡迎在下面留言，我會不定期回覆。也可以切換到「全站留言」看看大家在其他文章底下都聊了些什麼。&lt;/p&gt;</description>
 </item>
 
 </channel>

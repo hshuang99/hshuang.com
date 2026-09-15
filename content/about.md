@@ -1,7 +1,7 @@
 +++
 title = "關於"
 description = "關於本站與站長"
-date = "2026-05-30"
+date = "2026-05-30T13:00:00+08:00"
 aliases = ["about-site","about-me","contact"]
 author = "黃宏勝" 
 +++
