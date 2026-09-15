@@ -14,6 +14,18 @@
                 href="https://hshuang.com/en/categories/"
                 />
   </url><url>
+    <loc>https://hshuang.com/en/guestbook/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://hshuang.com/guestbook/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://hshuang.com/en/guestbook/"
+                />
+  </url><url>
     <loc>https://hshuang.com/en/</loc>
     <xhtml:link
                 rel="alternate"

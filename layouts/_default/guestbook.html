@@ -1,0 +1,96 @@
+{{/*
+  Guestbook page. Create content/guestbook.md (and guestbook.en.md) with:
+
+      +++
+      title = "留言板"
+      layout = "guestbook"
+      +++
+
+  Two tabs, reader's choice:
+    - "本頁留言"（留言板本身）— a normal comment thread on this page, via
+       the same comments.html partial every post uses (slug = /guestbook/).
+    - "全站留言" — read-only feed of every comment left anywhere on the
+       site, each linking back to its original post.
+*/}}
+{{ define "main" }}
+
+{{ $isEn := eq .Site.Language.Lang "en" }}
+
+<div class="row-fluid navmargin">
+    <div class="page-header">
+        <h1>{{ .Title }}</h1>
+    </div>
+</div>
+
+<div class="row-fluid content-row">
+    <div class="span12 bs-docs-sidebar">
+        {{ with .Params.description }}<p class="lead">{{ . }}</p>{{ end }}
+        <div class="post-content">
+            {{ .Content }}
+        </div>
+
+        <div class="guestbook-tabs" role="tablist">
+            <button type="button" class="btn btn-primary guestbook-tab" id="gb-tab-here" role="tab" aria-selected="true">
+                {{ if $isEn }}This board{{ else }}留言板{{ end }}
+            </button>
+            <button type="button" class="btn guestbook-tab" id="gb-tab-all" role="tab" aria-selected="false">
+                {{ if $isEn }}Every comment on the site{{ else }}全站留言{{ end }}
+            </button>
+        </div>
+
+        <div id="gb-panel-here" class="guestbook-panel">
+            {{ partial "comments.html" . }}
+        </div>
+
+        <div id="gb-panel-all" class="guestbook-panel" style="display:none">
+            {{ partial "sitewide-comments.html" . }}
+        </div>
+    </div>
+</div>
+
+<style>
+    .guestbook-tabs {
+        margin-top: 24px;
+        margin-bottom: 4px;
+    }
+    .guestbook-tabs .btn {
+        margin-right: 8px;
+    }
+    .guestbook-panel {
+        margin-top: 10px;
+    }
+</style>
+
+<script>
+(function () {
+    var tabHere = document.getElementById('gb-tab-here');
+    var tabAll = document.getElementById('gb-tab-all');
+    var panelHere = document.getElementById('gb-panel-here');
+    var panelAll = document.getElementById('gb-panel-all');
+    if (!tabHere || !tabAll) return;
+
+    function show(which) {
+        var showHere = which === 'here';
+        panelHere.style.display = showHere ? '' : 'none';
+        panelAll.style.display = showHere ? 'none' : '';
+        tabHere.className = 'btn guestbook-tab' + (showHere ? ' btn-primary' : '');
+        tabAll.className = 'btn guestbook-tab' + (showHere ? '' : ' btn-primary');
+        tabHere.setAttribute('aria-selected', showHere ? 'true' : 'false');
+        tabAll.setAttribute('aria-selected', showHere ? 'false' : 'true');
+
+        // Sitewide feed loads lazily the first time its tab is opened,
+        // and re-loads each time you switch to it so new comments show up.
+        if (!showHere) {
+            var sw = document.getElementById('sitewide-comments');
+            if (sw && typeof sw.loadSitewideComments === 'function') {
+                sw.loadSitewideComments();
+            }
+        }
+    }
+
+    tabHere.addEventListener('click', function () { show('here'); });
+    tabAll.addEventListener('click', function () { show('all'); });
+})();
+</script>
+
+{{ end }}

@@ -33,6 +33,13 @@
             <li class="next"><a href="{{ .Permalink }}">{{ i18n "nextpost" | default "Next" }}: {{ .Title }} &rarr;</a></li>
             {{ end }}
         </ul>
+
+        {{/* Only real blog posts get a comment box — not About/Now/Books/
+             Use/etc. pages. Adjust "posts" below if your posts section is
+             named differently (check your content/ folder name). */}}
+        {{ if eq .Type "posts" }}
+        {{ partial "comments.html" . }}
+        {{ end }}
     </div>
 
     {{ if $hasToc }}

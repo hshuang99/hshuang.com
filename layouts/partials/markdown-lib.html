@@ -1,0 +1,86 @@
+{{/*
+  Shared Markdown rendering helper for the comment system.
+
+  Exposes window.CmtMD = { ready(), render(text) }:
+    - ready() lazily loads marked (parser) + DOMPurify (sanitizer) from a
+      pinned CDN version, only once per page, only if a comment box is
+      actually on the page. Returns a Promise.
+    - render(text) parses Markdown and sanitizes the result to a safe
+      HTML subset. Falls back to escaped plain text (with newlines as
+      <br>) if the libraries haven't loaded yet or fail to load (e.g.
+      CDN blocked) — comments are never dropped, just shown unformatted.
+
+  Include this once before comments.html / sitewide-comments.html's own
+  <script> block. Safe to include more than once on the same page (e.g.
+  the Guestbook page, which uses both partials) — it no-ops after the
+  first include.
+*/}}
+<script>
+(function () {
+    if (window.CmtMD) return;
+
+    var MARKED_URL = 'https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js';
+    var PURIFY_URL = 'https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js';
+    var libsPromise = null;
+
+    function loadScript(src) {
+        return new Promise(function (resolve, reject) {
+            var s = document.createElement('script');
+            s.src = src;
+            s.onload = resolve;
+            s.onerror = reject;
+            document.head.appendChild(s);
+        });
+    }
+
+    function ensureLibs() {
+        if (libsPromise) return libsPromise;
+        var tasks = [];
+        if (!window.marked) tasks.push(loadScript(MARKED_URL));
+        if (!window.DOMPurify) tasks.push(loadScript(PURIFY_URL));
+        libsPromise = Promise.all(tasks)
+            .then(function () {
+                // Force every link in a rendered comment to open safely in a
+                // new tab, same treatment as the website-link-on-name field.
+                if (window.DOMPurify && !window.DOMPurify.__cmtHooked) {
+                    window.DOMPurify.addHook('afterSanitizeAttributes', function (node) {
+                        if (node.tagName === 'A') {
+                            node.setAttribute('rel', 'nofollow ugc noopener');
+                            node.setAttribute('target', '_blank');
+                        }
+                    });
+                    window.DOMPurify.__cmtHooked = true;
+                }
+            })
+            .catch(function () { /* CDN blocked/offline — render() falls back to plain text */ });
+        return libsPromise;
+    }
+
+    function escapeHtml(str) {
+        var d = document.createElement('div');
+        d.textContent = str;
+        return d.innerHTML;
+    }
+
+    // Deliberately small allow-list: formatting only, no images/iframes/
+    // raw HTML passthrough, no id/class/style attributes.
+    var ALLOWED_TAGS = ['p', 'br', 'strong', 'em', 'del', 'code', 'pre', 'blockquote',
+        'ul', 'ol', 'li', 'a', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'hr',
+        'table', 'thead', 'tbody', 'tr', 'th', 'td'];
+
+    function render(text) {
+        text = text || '';
+        if (window.marked && window.DOMPurify) {
+            try {
+                var raw = window.marked.parse(text, { breaks: true, gfm: true });
+                return window.DOMPurify.sanitize(raw, { ALLOWED_TAGS: ALLOWED_TAGS, ALLOWED_ATTR: ['href'] });
+            } catch (e) {
+                // fall through to plain-text fallback below
+            }
+        }
+        return escapeHtml(text).replace(/\n/g, '<br>');
+    }
+
+    window.CmtMD = { ready: ensureLibs, render: render };
+})();
+</script>

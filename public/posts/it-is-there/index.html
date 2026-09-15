@@ -116,6 +116,15 @@
                     
                         
                             <li>
+                                <a href="/guestbook/">
+                                    
+                                    <span>留言板</span>
+                                </a>
+                            </li>
+                        
+                    
+                        
+                            <li>
                                 <a href="/search/">
                                     
                                     <span>搜尋</span>
@@ -174,6 +183,487 @@
             <li class="next"><a href="https://hshuang.com/posts/over-communication-reduces-productivity/">下一篇: 過度通訊降低生產力 &rarr;</a></li>
             
         </ul>
+
+        
+        
+        
+
+
+
+
+
+
+<script>
+(function () {
+    if (window.CmtMD) return;
+
+    var MARKED_URL = 'https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js';
+    var PURIFY_URL = 'https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js';
+    var libsPromise = null;
+
+    function loadScript(src) {
+        return new Promise(function (resolve, reject) {
+            var s = document.createElement('script');
+            s.src = src;
+            s.onload = resolve;
+            s.onerror = reject;
+            document.head.appendChild(s);
+        });
+    }
+
+    function ensureLibs() {
+        if (libsPromise) return libsPromise;
+        var tasks = [];
+        if (!window.marked) tasks.push(loadScript(MARKED_URL));
+        if (!window.DOMPurify) tasks.push(loadScript(PURIFY_URL));
+        libsPromise = Promise.all(tasks)
+            .then(function () {
+                
+                
+                if (window.DOMPurify && !window.DOMPurify.__cmtHooked) {
+                    window.DOMPurify.addHook('afterSanitizeAttributes', function (node) {
+                        if (node.tagName === 'A') {
+                            node.setAttribute('rel', 'nofollow ugc noopener');
+                            node.setAttribute('target', '_blank');
+                        }
+                    });
+                    window.DOMPurify.__cmtHooked = true;
+                }
+            })
+            .catch(function () {   });
+        return libsPromise;
+    }
+
+    function escapeHtml(str) {
+        var d = document.createElement('div');
+        d.textContent = str;
+        return d.innerHTML;
+    }
+
+    
+    
+    var ALLOWED_TAGS = ['p', 'br', 'strong', 'em', 'del', 'code', 'pre', 'blockquote',
+        'ul', 'ol', 'li', 'a', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'hr',
+        'table', 'thead', 'tbody', 'tr', 'th', 'td'];
+
+    function render(text) {
+        text = text || '';
+        if (window.marked && window.DOMPurify) {
+            try {
+                var raw = window.marked.parse(text, { breaks: true, gfm: true });
+                return window.DOMPurify.sanitize(raw, { ALLOWED_TAGS: ALLOWED_TAGS, ALLOWED_ATTR: ['href'] });
+            } catch (e) {
+                
+            }
+        }
+        return escapeHtml(text).replace(/\n/g, '<br>');
+    }
+
+    window.CmtMD = { ready: ensureLibs, render: render };
+})();
+</script>
+
+
+<div class="comments-section" id="comments" data-api="https://hshuang-comments.hshuang.workers.dev" data-slug="/posts/it-is-there/">
+    <h3 class="comments-heading" id="comments-heading">
+        發表留言
+    </h3>
+
+    <form class="comments-form" id="comments-form">
+        <div class="control-group">
+            <label for="cmt-name">暱稱 *</label>
+            <input type="text" id="cmt-name" name="name" class="input-xlarge" maxlength="60" required
+                   placeholder="怎麼稱呼你？">
+        </div>
+        <div class="control-group">
+            <label for="cmt-website">網站（選填）</label>
+            <input type="url" id="cmt-website" name="website" class="input-xlarge" maxlength="200"
+                   placeholder="https://">
+        </div>
+        <div class="control-group">
+            <label for="cmt-content">留言內容 *</label>
+            <div class="cmt-editor-tabs">
+                <button type="button" class="btn btn-mini cmt-tab-active" id="cmt-tab-edit">
+                    ✏️ 編輯
+                </button>
+                <button type="button" class="btn btn-mini" id="cmt-tab-preview">
+                    👁️ 預覽
+                </button>
+                <span class="cmt-md-hint">支援 Markdown 語法</span>
+            </div>
+            <textarea id="cmt-content" name="content" class="input-xlarge" rows="4" maxlength="4000" required
+                      placeholder="想說點什麼…"></textarea>
+            <div class="cmt-preview markdown-body" id="cmt-preview" style="display:none"></div>
+        </div>
+        
+        <div class="cmt-hp" aria-hidden="true">
+            <label for="cmt-hp-field">請留空</label>
+            <input type="text" id="cmt-hp-field" name="hp" tabindex="-1" autocomplete="off">
+        </div>
+        <button type="submit" class="btn btn-primary" id="cmt-submit">
+            送出留言
+        </button>
+        <span class="cmt-status" id="cmt-status" role="status"></span>
+    </form>
+
+    <div class="cmt-list-wrap">
+        <h4 id="cmt-count">留言</h4>
+        <ul class="cmt-list" id="cmt-list">
+            <li class="cmt-loading">載入中...</li>
+        </ul>
+    </div>
+</div>
+
+<style>
+    .comments-section { margin-top: 40px; }
+    .comments-form .control-group { margin-bottom: 12px; }
+    .comments-form label { font-weight: bold; display: block; margin-bottom: 4px; }
+    .comments-form textarea, .comments-form input[type="text"], .comments-form input[type="url"] {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .cmt-hp {
+        position: absolute;
+        left: -9999px;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+    }
+    .cmt-editor-tabs {
+        margin-bottom: 4px;
+    }
+    .cmt-editor-tabs .btn {
+        margin-right: 4px;
+    }
+    .cmt-editor-tabs .cmt-tab-active {
+        background-color: #dbe8ff;
+        border-color: #99b8e8;
+    }
+    .cmt-md-hint {
+        color: #999;
+        font-size: 0.85em;
+        margin-left: 6px;
+    }
+    .cmt-preview {
+        border: 1px dashed #ccc;
+        border-radius: 4px;
+        padding: 8px 12px;
+        min-height: 60px;
+        background: #fafafa;
+    }
+    .markdown-body p { margin: 0 0 10px; }
+    .markdown-body p:last-child { margin-bottom: 0; }
+    .markdown-body pre {
+        background: #f5f5f5;
+        padding: 8px 10px;
+        border-radius: 4px;
+        overflow-x: auto;
+    }
+    .markdown-body code {
+        background: #f5f5f5;
+        padding: 1px 4px;
+        border-radius: 3px;
+    }
+    .markdown-body pre code { background: none; padding: 0; }
+    .markdown-body blockquote {
+        margin: 0 0 10px;
+        padding-left: 12px;
+        border-left: 3px solid #ddd;
+        color: #666;
+    }
+    .markdown-body ul, .markdown-body ol { margin: 0 0 10px 20px; }
+    .markdown-body table { border-collapse: collapse; }
+    .markdown-body th, .markdown-body td {
+        border: 1px solid #ddd;
+        padding: 4px 8px;
+    }
+    .cmt-status { margin-left: 10px; font-size: 0.9em; }
+    .cmt-status.cmt-error { color: #b94a48; }
+    .cmt-status.cmt-ok { color: #468847; }
+
+    .cmt-list { list-style: none; margin: 0; padding: 0; }
+    .cmt-item {
+        border-top: 1px solid #eee;
+        padding: 14px 0;
+    }
+    .cmt-item:first-child { border-top: none; }
+    .cmt-item-head { margin-bottom: 4px; }
+    .cmt-name { font-weight: bold; }
+    .cmt-date { color: #999; font-size: 0.85em; margin-left: 8px; }
+    .cmt-content { word-wrap: break-word; }
+    .cmt-reply {
+        margin-top: 10px;
+        margin-left: 20px;
+        padding: 8px 12px;
+        background: #f7f7f7;
+        border-left: 3px solid #ccc;
+    }
+    .cmt-reply-label { font-weight: bold; font-size: 0.85em; color: #666; }
+    .cmt-admin-actions { margin-top: 6px; }
+    .cmt-admin-actions button {
+        font-size: 0.8em;
+        margin-right: 8px;
+    }
+    .cmt-loading, .cmt-empty { color: #999; }
+</style>
+
+<script>
+(function () {
+    var root = document.getElementById('comments');
+    if (!root) return;
+
+    var API = root.getAttribute('data-api');
+    var SLUG = root.getAttribute('data-slug');
+    var listEl = document.getElementById('cmt-list');
+    var countEl = document.getElementById('cmt-count');
+    var form = document.getElementById('comments-form');
+    var statusEl = document.getElementById('cmt-status');
+    var submitBtn = document.getElementById('cmt-submit');
+    var headingEl = document.getElementById('comments-heading');
+    var textarea = document.getElementById('cmt-content');
+    var previewEl = document.getElementById('cmt-preview');
+    var tabEdit = document.getElementById('cmt-tab-edit');
+    var tabPreview = document.getElementById('cmt-tab-preview');
+
+    var LABELS = {
+        empty: '還沒有留言，搶頭香！',
+        countPrefix: '留言',
+        reply: '回覆',
+        delete: '刪除',
+        deleted: '留言已刪除。',
+        confirmDelete: '確定要刪除這則留言嗎？',
+        promptReply: '輸入回覆內容：',
+        promptKey: '管理員金鑰：',
+        loadError: '留言載入失敗。',
+        sendError: '送出失敗，請再試一次。',
+        sending: '送出中...',
+        sent: '留言成功！',
+        adminOn: '已進入管理者模式。',
+        adminBadKey: '金鑰錯誤，仍為一般模式。'
+    };
+
+    function getAdminKey() {
+        try { return localStorage.getItem('cmtAdminKey') || ''; } catch (e) { return ''; }
+    }
+    function setAdminKey(k) {
+        try { localStorage.setItem('cmtAdminKey', k); } catch (e) {}
+    }
+    function isAdmin() { return !!getAdminKey(); }
+
+    function fmtDate(iso) {
+        try {
+            var d = new Date(iso);
+            return d.toLocaleString('zh-TW', {
+                year: 'numeric', month: '2-digit', day: '2-digit',
+                hour: '2-digit', minute: '2-digit'
+            });
+        } catch (e) { return iso; }
+    }
+
+    function el(tag, cls, text) {
+        var e = document.createElement(tag);
+        if (cls) e.className = cls;
+        if (text !== undefined) e.textContent = text;
+        return e;
+    }
+
+    function markdownEl(cls, text) {
+        var e = document.createElement('div');
+        e.className = cls;
+        e.innerHTML = window.CmtMD.render(text);
+        return e;
+    }
+
+    function renderComment(c) {
+        var li = el('li', 'cmt-item');
+        li.setAttribute('data-id', c.id);
+
+        var head = el('div', 'cmt-item-head');
+        var nameEl;
+        if (c.website) {
+            nameEl = el('a', 'cmt-name', c.name);
+            nameEl.href = c.website;
+            nameEl.rel = 'nofollow ugc';
+            nameEl.target = '_blank';
+        } else {
+            nameEl = el('span', 'cmt-name', c.name);
+        }
+        head.appendChild(nameEl);
+        head.appendChild(el('span', 'cmt-date', fmtDate(c.created_at)));
+        li.appendChild(head);
+
+        li.appendChild(markdownEl('cmt-content markdown-body', c.content));
+
+        if (c.admin_reply) {
+            var reply = el('div', 'cmt-reply');
+            reply.appendChild(el('div', 'cmt-reply-label', '版主回覆'));
+            reply.appendChild(markdownEl('cmt-content markdown-body', c.admin_reply));
+            li.appendChild(reply);
+        }
+
+        if (isAdmin()) {
+            var actions = el('div', 'cmt-admin-actions');
+            var replyBtn = el('button', 'btn btn-mini', LABELS.reply);
+            replyBtn.type = 'button';
+            replyBtn.addEventListener('click', function () { doReply(c.id); });
+            var delBtn = el('button', 'btn btn-mini btn-danger', LABELS.delete);
+            delBtn.type = 'button';
+            delBtn.addEventListener('click', function () { doDelete(c.id, li); });
+            actions.appendChild(replyBtn);
+            actions.appendChild(delBtn);
+            li.appendChild(actions);
+        }
+
+        return li;
+    }
+
+    function renderList(comments) {
+        listEl.innerHTML = '';
+        countEl.textContent = LABELS.countPrefix + '（' + comments.length + '）';
+        if (!comments.length) {
+            listEl.appendChild(el('li', 'cmt-empty', LABELS.empty));
+            return;
+        }
+        comments.forEach(function (c) { listEl.appendChild(renderComment(c)); });
+    }
+
+    function authHeaders() {
+        var h = { 'Content-Type': 'application/json' };
+        if (isAdmin()) h['X-Admin-Key'] = getAdminKey();
+        return h;
+    }
+
+    function loadComments() {
+        if (!API) {
+            listEl.innerHTML = '';
+            listEl.appendChild(el('li', 'cmt-empty', 'commentsapi not configured'));
+            return;
+        }
+        Promise.all([
+            fetch(API + '/api/comments?slug=' + encodeURIComponent(SLUG), { headers: authHeaders() })
+                .then(function (r) { if (!r.ok) throw new Error('bad status'); return r.json(); }),
+            window.CmtMD.ready()
+        ])
+            .then(function (results) { renderList(results[0].comments || []); })
+            .catch(function () {
+                listEl.innerHTML = '';
+                listEl.appendChild(el('li', 'cmt-empty', LABELS.loadError));
+            });
+    }
+
+    function doReply(id) {
+        var text = window.prompt(LABELS.promptReply);
+        if (!text) return;
+        fetch(API + '/api/comments/' + id, {
+            method: 'PATCH',
+            headers: authHeaders(),
+            body: JSON.stringify({ reply: text })
+        })
+            .then(function (r) { if (!r.ok) throw new Error('bad status'); return loadComments(); })
+            .catch(function () { window.alert(LABELS.sendError); });
+    }
+
+    function doDelete(id, liEl) {
+        if (!window.confirm(LABELS.confirmDelete)) return;
+        fetch(API + '/api/comments/' + id, {
+            method: 'DELETE',
+            headers: authHeaders()
+        })
+            .then(function (r) { if (!r.ok) throw new Error('bad status'); liEl.remove(); })
+            .catch(function () { window.alert(LABELS.sendError); });
+    }
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!API) return;
+        submitBtn.disabled = true;
+        statusEl.className = 'cmt-status';
+        statusEl.textContent = LABELS.sending;
+
+        var payload = {
+            slug: SLUG,
+            name: document.getElementById('cmt-name').value,
+            website: document.getElementById('cmt-website').value,
+            content: document.getElementById('cmt-content').value,
+            hp: document.getElementById('cmt-hp-field').value
+        };
+
+        fetch(API + '/api/comments', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        })
+            .then(function (r) {
+                if (!r.ok) return r.json().then(function (d) { throw new Error(d.error || 'error'); });
+                return r.json();
+            })
+            .then(function () {
+                statusEl.className = 'cmt-status cmt-ok';
+                statusEl.textContent = LABELS.sent;
+                textarea.value = '';
+                if (tabEdit && tabPreview) {
+                    previewEl.style.display = 'none';
+                    previewEl.innerHTML = '';
+                    textarea.style.display = '';
+                    tabEdit.className = 'btn btn-mini cmt-tab-active';
+                    tabPreview.className = 'btn btn-mini';
+                }
+                loadComments();
+            })
+            .catch(function (err) {
+                statusEl.className = 'cmt-status cmt-error';
+                statusEl.textContent = err.message === 'please wait a few seconds before commenting again'
+                    ? err.message
+                    : LABELS.sendError;
+            })
+            .finally(function () { submitBtn.disabled = false; });
+    });
+
+    
+    
+    if (headingEl) {
+        var clicks = 0, clickTimer = null;
+        headingEl.style.cursor = 'default';
+        headingEl.addEventListener('click', function () {
+            clicks++;
+            clearTimeout(clickTimer);
+            clickTimer = setTimeout(function () { clicks = 0; }, 1500);
+            if (clicks >= 5) {
+                clicks = 0;
+                var key = window.prompt(LABELS.promptKey);
+                if (key) {
+                    setAdminKey(key);
+                    window.alert(LABELS.adminOn);
+                    loadComments();
+                }
+            }
+        });
+    }
+
+    if (tabEdit && tabPreview) {
+        tabEdit.addEventListener('click', function () {
+            previewEl.style.display = 'none';
+            textarea.style.display = '';
+            tabEdit.className = 'btn btn-mini cmt-tab-active';
+            tabPreview.className = 'btn btn-mini';
+        });
+        tabPreview.addEventListener('click', function () {
+            window.CmtMD.ready().then(function () {
+                previewEl.innerHTML = window.CmtMD.render(textarea.value) ||
+                    ('<span class="cmt-loading">' + (textarea.value ? '' : ('還沒有內容可以預覽。')) + '</span>');
+                previewEl.style.display = '';
+                textarea.style.display = 'none';
+                tabPreview.className = 'btn btn-mini cmt-tab-active';
+                tabEdit.className = 'btn btn-mini';
+            });
+        });
+    }
+
+    loadComments();
+})();
+</script>
+
+        
     </div>
 
     

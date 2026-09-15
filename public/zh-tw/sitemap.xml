@@ -1158,5 +1158,17 @@
     <lastmod>2026-03-30T15:16:00+08:00</lastmod>
   </url><url>
     <loc>https://hshuang.com/newsletter/</loc>
+  </url><url>
+    <loc>https://hshuang.com/guestbook/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://hshuang.com/en/guestbook/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://hshuang.com/guestbook/"
+                />
   </url>
 </urlset>

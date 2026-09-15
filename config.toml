@@ -74,6 +74,11 @@ defaultContentLanguageInSubdir = false
             url = "/giveaway/"
             weight = 70
         [[languages.zh-tw.menu.main]]
+            identifier = "guestbook"
+            name = "留言板"
+            url = "/guestbook/"
+            weight = 75
+        [[languages.zh-tw.menu.main]]
             identifier = "search"
             name = "搜尋"
             url = "/search/"
@@ -126,6 +131,11 @@ defaultContentLanguageInSubdir = false
         #    url = "/en/use/"
         #    weight = 60
         #[[languages.en.menu.main]]
+        #    identifier = "guestbook"
+        #    name = "Guestbook"
+        #    url = "/en/guestbook/"
+        #    weight = 75
+        #[[languages.en.menu.main]]
         #    identifier = "search"
         #    name = "Search"
         #    url = "/en/search/"
@@ -134,6 +144,11 @@ defaultContentLanguageInSubdir = false
 [params]
     # Show the "built on Hugo" disclaimer
     showhugo = false
+
+    # Cloudflare Worker URL for the comment system (Workers + D1).
+    # Replace with your actual *.workers.dev URL (or custom domain) after
+    # running `wrangler deploy` — see cf-comments-worker/README.md.
+    commentsapi = "https://hshuang-comments.hshuang.workers.dev"
 
     # Urls for social networks
     facebook = ""

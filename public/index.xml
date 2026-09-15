@@ -922,5 +922,13 @@
 <description>&lt;p&gt;透過 Email 訂閱&lt;/p&gt;</description>
 </item>
 
+<item>
+<title>留言板</title>
+<link>https://hshuang.com/guestbook/</link>
+<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+<guid>https://hshuang.com/guestbook/</guid>
+<description>&lt;p&gt;歡迎在下面留言，我會不定期回覆。也可以切換到「全站留言」看看大家在其他文章底下都聊了些什麼。&lt;/p&gt;</description>
+</item>
+
 </channel>
 </rss>
