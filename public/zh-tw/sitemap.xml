@@ -2,11 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://hshuang.com/now/</loc>
-    <lastmod>2026-09-15T13:57:00+08:00</lastmod>
-  </url><url>
     <loc>https://hshuang.com/</loc>
-    <lastmod>2026-09-15T13:57:00+08:00</lastmod>
+    <lastmod>2026-09-16T11:50:00+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -17,6 +14,12 @@
                 hreflang="zh-tw"
                 href="https://hshuang.com/"
                 />
+  </url><url>
+    <loc>https://hshuang.com/about/</loc>
+    <lastmod>2026-09-16T11:50:00+08:00</lastmod>
+  </url><url>
+    <loc>https://hshuang.com/now/</loc>
+    <lastmod>2026-09-15T13:57:00+08:00</lastmod>
   </url><url>
     <loc>https://hshuang.com/guestbook/</loc>
     <lastmod>2026-09-15T13:35:00+08:00</lastmod>
@@ -224,9 +227,6 @@
   </url><url>
     <loc>https://hshuang.com/tags/%E5%BD%B1%E9%9F%B3%E7%B6%B2%E7%AB%99/</loc>
     <lastmod>2026-07-01T15:43:00+08:00</lastmod>
-  </url><url>
-    <loc>https://hshuang.com/about/</loc>
-    <lastmod>2026-05-30T13:00:00+08:00</lastmod>
   </url><url>
     <loc>https://hshuang.com/tags/%E4%B8%AD%E5%B9%B4%E8%BD%89%E6%8F%9B%E6%9C%9F/</loc>
     <lastmod>2026-05-20T14:26:00+08:00</lastmod>
