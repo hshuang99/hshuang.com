@@ -2,8 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://hshuang.com/categories/</loc>
+    <lastmod>2026-09-17T10:49:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://hshuang.com/en/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://hshuang.com/categories/"
+                />
+  </url><url>
+    <loc>https://hshuang.com/tags/index/</loc>
+    <lastmod>2026-09-17T10:49:00+08:00</lastmod>
+  </url><url>
+    <loc>https://hshuang.com/tags/</loc>
+    <lastmod>2026-09-17T10:49:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://hshuang.com/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://hshuang.com/tags/"
+                />
+  </url><url>
+    <loc>https://hshuang.com/tags/%E5%85%AC%E8%BB%8A/</loc>
+    <lastmod>2026-09-17T10:49:00+08:00</lastmod>
+  </url><url>
+    <loc>https://hshuang.com/categories/%E7%94%9F%E6%B4%BB/</loc>
+    <lastmod>2026-09-17T10:49:00+08:00</lastmod>
+  </url><url>
+    <loc>https://hshuang.com/posts/</loc>
+    <lastmod>2026-09-17T10:49:00+08:00</lastmod>
+  </url><url>
     <loc>https://hshuang.com/</loc>
-    <lastmod>2026-09-16T11:50:00+08:00</lastmod>
+    <lastmod>2026-09-17T10:49:00+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -14,6 +52,18 @@
                 hreflang="zh-tw"
                 href="https://hshuang.com/"
                 />
+  </url><url>
+    <loc>https://hshuang.com/tags/%E6%B5%B7%E7%9B%9C%E8%88%B9/</loc>
+    <lastmod>2026-09-17T10:49:00+08:00</lastmod>
+  </url><url>
+    <loc>https://hshuang.com/posts/bus-pendulum-rides/</loc>
+    <lastmod>2026-09-17T10:49:00+08:00</lastmod>
+  </url><url>
+    <loc>https://hshuang.com/tags/%E6%9C%80%E5%BE%8C%E5%BA%A7/</loc>
+    <lastmod>2026-09-17T10:49:00+08:00</lastmod>
+  </url><url>
+    <loc>https://hshuang.com/tags/%E6%B8%9B%E9%80%9F%E4%B8%98/</loc>
+    <lastmod>2026-09-17T10:49:00+08:00</lastmod>
   </url><url>
     <loc>https://hshuang.com/about/</loc>
     <lastmod>2026-09-16T11:50:00+08:00</lastmod>
@@ -34,46 +84,11 @@
                 href="https://hshuang.com/guestbook/"
                 />
   </url><url>
-    <loc>https://hshuang.com/categories/</loc>
-    <lastmod>2026-09-15T11:49:00+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://hshuang.com/en/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-tw"
-                href="https://hshuang.com/categories/"
-                />
-  </url><url>
-    <loc>https://hshuang.com/tags/index/</loc>
-    <lastmod>2026-09-15T11:49:00+08:00</lastmod>
-  </url><url>
-    <loc>https://hshuang.com/tags/</loc>
-    <lastmod>2026-09-15T11:49:00+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://hshuang.com/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-tw"
-                href="https://hshuang.com/tags/"
-                />
-  </url><url>
     <loc>https://hshuang.com/tags/%E4%B8%83%E6%98%9F%E4%B8%AD%E6%B7%A1/</loc>
-    <lastmod>2026-09-12T16:32:00+08:00</lastmod>
-  </url><url>
-    <loc>https://hshuang.com/categories/%E7%94%9F%E6%B4%BB/</loc>
     <lastmod>2026-09-12T16:32:00+08:00</lastmod>
   </url><url>
     <loc>https://hshuang.com/tags/%E4%BC%AF%E6%9C%97%E5%92%96%E5%95%A1/</loc>
     <lastmod>2026-09-12T16:32:00+08:00</lastmod>
-  </url><url>
-    <loc>https://hshuang.com/posts/</loc>
-    <lastmod>2026-09-15T11:49:00+08:00</lastmod>
   </url><url>
     <loc>https://hshuang.com/tags/%E6%B4%BB%E8%91%97/</loc>
     <lastmod>2026-09-12T16:32:00+08:00</lastmod>
@@ -115,9 +130,6 @@
     <lastmod>2026-09-06T10:19:00+08:00</lastmod>
   </url><url>
     <loc>https://hshuang.com/tags/%E4%B9%9D%E6%9C%88/</loc>
-    <lastmod>2026-09-05T15:03:00+08:00</lastmod>
-  </url><url>
-    <loc>https://hshuang.com/tags/%E5%85%AC%E8%BB%8A/</loc>
     <lastmod>2026-09-05T15:03:00+08:00</lastmod>
   </url><url>
     <loc>https://hshuang.com/posts/september-2026-small-talk-1/</loc>
