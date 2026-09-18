@@ -10,7 +10,9 @@
     <div class="span9 bs-docs-sidebar">
         <p class="lead">{{ .Site.Params.mainpagesubtitle }}</p>
         <p></p>
-        <p>{{ .Site.Params.mainpagedesc }}</p>
+        {{ with .Site.Params.mainpagedesc }}
+        <div class="mainpagedesc">{{ $.RenderString (dict "display" "block") . }}</div>
+        {{ end }}
         <p></p>
         <hr class="soften">
         <p></p>

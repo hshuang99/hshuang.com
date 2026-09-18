@@ -15,7 +15,7 @@
 <channel>
 <title>{{ if eq .Title .Site.Title }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{.}} on {{ end }}{{ .Site.Title }}{{ end }}</title>
 <link>{{ .Permalink }}</link>
-<description>{{ if .IsHome }}{{ with .Site.Params.mainpagedesc }}{{ . }}{{ else }}Recent content on {{ .Site.Title }}{{ end }}{{ else }}Recent content {{ with .Title }}in {{.}} {{ end }}on {{ .Site.Title }}{{ end }}</description>
+<description>{{ if .IsHome }}{{ with .Site.Params.mainpagedesc }}{{ . | markdownify | plainify }}{{ else }}Recent content on {{ .Site.Title }}{{ end }}{{ else }}Recent content {{ with .Title }}in {{.}} {{ end }}on {{ .Site.Title }}{{ end }}</description>
 {{- $authorEmail := .Site.Params.author.email -}}
 {{- $authorName := .Site.Params.author.name -}}
 <generator>Hugo -- gohugo.io</generator>{{ with .Site.Language.Locale }}
