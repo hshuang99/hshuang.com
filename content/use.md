@@ -65,12 +65,14 @@ author = "黃宏勝"
 
 ### 🗃 電子書平台
 - [Kobo](https://r10.to/hklN84) - 市占率非常高的電子書平台，滿足我需要繁體中文書以及英文書的需求，每日都有 99 元優惠。而且可以下載電子書，再用工具把 DRM 去掉儲存在我的電腦上
+- [Readmoo 讀墨](https://moo.im/a/1iknoH) - 繁體中文市場市占率最高的平台，跟 Kobo 一樣都有每日優惠書籍，雖然沒辦法下載書檔去 DRM，但我想支持臺灣國內的廠商
 
 ## 🎶 音樂相關
 - [YAMAHA P-125a](https://tw.yamaha.com/zh/products/musical_instruments/pianos/p_series/p-125a/index.html) - 我學琴用的數位電鋼琴
+- [Yamaha HPH-50](https://tw.yamaha.com/zh/audio/headphones/products/headphones/hph-50/) - 練琴時的耳機
 
 ## 🎙️ 錄音相關
 - [Audacity](https://www.audacityteam.org/) - 錄音用軟體，直接對音軌做編輯很方便
 - [Audient Evo 4](https://evo.audio/products/audio-interfaces/evo-4/overview/) - 入門級錄音介面，如果只是單人的 Podcast 節目就很夠用了
 - Shure MV7 - 許多 Podcaster 推薦的動圈式麥克風
-- [Yamaha HPH-50](https://tw.yamaha.com/zh/audio/headphones/products/headphones/hph-50/) - 練琴時的耳機，因為有 6.3mm 所以也拿來當監聽耳機
+- [Sony WH-1000XM5](https://store.sony.com.tw/product/show/ff808081804a3fc00180acca4a051c47) - 我只有工作環境很吵時才會戴著降噪，但想說原廠有副線材，買了個 3.5mm 轉 6.3mm 的轉接頭接上 Evo 4 用來監聽，雖然不像專門混音監聽的耳機那麼專業，但用來聽我自己的聲音夠用了
