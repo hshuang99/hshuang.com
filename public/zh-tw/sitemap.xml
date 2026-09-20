@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://hshuang.com/categories/</loc>
-    <lastmod>2026-09-18T16:15:00+08:00</lastmod>
+    <lastmod>2026-09-20T11:39:00+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -16,10 +16,10 @@
                 />
   </url><url>
     <loc>https://hshuang.com/tags/index/</loc>
-    <lastmod>2026-09-18T16:15:00+08:00</lastmod>
+    <lastmod>2026-09-20T11:39:00+08:00</lastmod>
   </url><url>
     <loc>https://hshuang.com/tags/</loc>
-    <lastmod>2026-09-18T16:15:00+08:00</lastmod>
+    <lastmod>2026-09-20T11:39:00+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -31,23 +31,26 @@
                 href="https://hshuang.com/tags/"
                 />
   </url><url>
+    <loc>https://hshuang.com/tags/%E5%8F%8D%E7%9C%81/</loc>
+    <lastmod>2026-09-20T11:39:00+08:00</lastmod>
+  </url><url>
     <loc>https://hshuang.com/categories/%E7%94%9F%E6%B4%BB/</loc>
-    <lastmod>2026-09-18T16:15:00+08:00</lastmod>
+    <lastmod>2026-09-20T11:39:00+08:00</lastmod>
   </url><url>
-    <loc>https://hshuang.com/tags/%E8%87%AA%E5%88%B6%E5%8A%9B/</loc>
-    <lastmod>2026-09-18T16:15:00+08:00</lastmod>
+    <loc>https://hshuang.com/tags/%E6%B1%BA%E5%BF%83/</loc>
+    <lastmod>2026-09-20T11:39:00+08:00</lastmod>
   </url><url>
-    <loc>https://hshuang.com/tags/%E8%A1%8C%E5%8B%95%E7%9B%AE%E6%A8%99/</loc>
-    <lastmod>2026-09-18T16:15:00+08:00</lastmod>
-  </url><url>
-    <loc>https://hshuang.com/posts/action-objective/</loc>
-    <lastmod>2026-09-18T16:15:00+08:00</lastmod>
+    <loc>https://hshuang.com/tags/%E4%BA%8B%E5%AF%A6/</loc>
+    <lastmod>2026-09-20T11:39:00+08:00</lastmod>
   </url><url>
     <loc>https://hshuang.com/posts/</loc>
-    <lastmod>2026-09-18T16:15:00+08:00</lastmod>
+    <lastmod>2026-09-20T11:39:00+08:00</lastmod>
+  </url><url>
+    <loc>https://hshuang.com/tags/%E5%BE%8C%E6%82%94/</loc>
+    <lastmod>2026-09-20T11:39:00+08:00</lastmod>
   </url><url>
     <loc>https://hshuang.com/</loc>
-    <lastmod>2026-09-18T16:15:00+08:00</lastmod>
+    <lastmod>2026-09-20T11:39:00+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -58,6 +61,27 @@
                 hreflang="zh-tw"
                 href="https://hshuang.com/"
                 />
+  </url><url>
+    <loc>https://hshuang.com/tags/%E6%84%9F%E5%8F%97/</loc>
+    <lastmod>2026-09-20T11:39:00+08:00</lastmod>
+  </url><url>
+    <loc>https://hshuang.com/tags/%E5%AF%AB%E4%B8%8B%E4%BE%86/</loc>
+    <lastmod>2026-09-20T11:39:00+08:00</lastmod>
+  </url><url>
+    <loc>https://hshuang.com/tags/%E8%94%A1%E6%A0%BC%E5%B0%BC%E6%95%88%E6%87%89/</loc>
+    <lastmod>2026-09-20T11:39:00+08:00</lastmod>
+  </url><url>
+    <loc>https://hshuang.com/posts/scotch-i-should-have-done-that-back-then/</loc>
+    <lastmod>2026-09-20T11:39:00+08:00</lastmod>
+  </url><url>
+    <loc>https://hshuang.com/tags/%E8%87%AA%E5%88%B6%E5%8A%9B/</loc>
+    <lastmod>2026-09-18T16:15:00+08:00</lastmod>
+  </url><url>
+    <loc>https://hshuang.com/tags/%E8%A1%8C%E5%8B%95%E7%9B%AE%E6%A8%99/</loc>
+    <lastmod>2026-09-18T16:15:00+08:00</lastmod>
+  </url><url>
+    <loc>https://hshuang.com/posts/action-objective/</loc>
+    <lastmod>2026-09-18T16:15:00+08:00</lastmod>
   </url><url>
     <loc>https://hshuang.com/tags/%E7%BF%92%E6%85%A3/</loc>
     <lastmod>2026-09-18T16:15:00+08:00</lastmod>

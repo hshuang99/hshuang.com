@@ -25,7 +25,7 @@ defaultContentLanguageInSubdir = false
         [languages.zh-tw.params]
             mainpagetitle = "HSHuang.com | 黃宏勝的部落格"
             mainpagesubtitle = "思考、等待、齋戒、忍耐、傾聽"
-            mainpagedesc = "2026/09/18：在看到[預測不了](https://wiwi.blog/blog/all-predictions-are-wrong/)跟 [Desire Path](https://trashposts.com/blog/desire-path/) 之前就已經寫完今天[這篇](https://hshuang.com/posts/action-objective/)了，這是什麼量子糾纏？"
+            mainpagedesc = ""
             copyrightname = "黃宏勝"
             copyrighturl = ""
         [languages.zh-tw.params.copyright]
