@@ -2,6 +2,7 @@
 title = "人生清單"
 description = "制訂我自己的夢想清單"
 date = "2026-09-11T10:14:00+08:00"
+lastmod = "2026-09-21T10:46:00+08:00"
 aliases = ["Bucket-List"]
 author = "黃宏勝" 
 +++
@@ -10,7 +11,7 @@ author = "黃宏勝"
 
 不定期更新
 
-## 個人
+## 😶‍🌫️ 個人
 | 狀態  | 目標 | 進度    |
 | :----        |    :----   |  :----- |
 | ❌ | 早上不賴床  |   |
@@ -19,11 +20,11 @@ author = "黃宏勝"
 | ❌ | 寫子彈筆記日誌 365 天，並且每個月寫一篇回顧文章  | 1/12 |
 | ✅ | 將社群媒體帳號刪掉  |  我已經將 Facebook, Instagram, Threads, Linkedin, X, Twitch 帳號都刪掉了，[戒除社群媒體](https://hshuang.com/posts/sayonara-zuckerberg/)讓自己邁向更理想的生活 |
 
-## 工作
+## 🔬 工作
 | 狀態  | 目標 | 進度    |
 | :----        |    :----   |  :----- |
 | ❌ | 把 Obsidian 過去的文獻筆記通通整理好成永久筆記 |  |
-| ❌ | 製作 12 期電子報 | 1/12 |
+| ❌ | 製作 12 期電子報 | 3/12 |
 | ❌ | 錄製 Podcast 節目 |  |
 | ❌ | 讀完 Introduction to Cryptography: Principles and Applications |  |
 | ❌ | 讀完 Privacy-Preserving Machine Learning |  |
@@ -35,7 +36,7 @@ author = "黃宏勝"
 | ✅ | 參加 IACR RWC 研討會 | [IACR RWC 2026 參與心得](https://secologies.com/posts/iacr-rwc-2026-experience/)  |
 | ✅ | 參加 IACR PQCrypto 研討會 | [PQCrypto 2025 參加心得](https://secologies.com/posts/pqcrypto-2025-conference-experience/) |
 
-## 學習
+## 📝 學習
 | 狀態  | 目標 | 進度    |
 | :----        |    :----   |  :----- |
 | ❌ | 取得多益金色證書 |   |
@@ -49,7 +50,7 @@ author = "黃宏勝"
 | ❌ | 學習刺繡  |   |
 | ❌ | 製作部落格徽章  |   |
 
-## 健康
+## 🫀 健康
 | 狀態  | 目標 | 進度    |
 | :----        |    :----   |  :----- |
 | ❌ | 不報復性熬夜 365 天  |   |
@@ -59,7 +60,7 @@ author = "黃宏勝"
 | ❌ | 每天喝足 2000 cc 的水 365 天  |   |
 | ❌ | 每天好好刷牙，養成使用牙線的習慣 365 天  |   |
 
-## 關係
+## 👥 關係
 | 狀態  | 目標 | 進度    |
 | :----        |    :----   |  :----- |
 | ❌ | 更喜歡現在的自己一點點  |   |
@@ -68,7 +69,7 @@ author = "黃宏勝"
 | ❌ | 練習傾聽不插嘴  |   |
 | ❌ | 試著不去跟他人作比較  |   |
 
-## 財務
+## 💰 財務
 | 狀態  | 目標 | 進度    |
 | :----        |    :----   |  :----- |
 | ❌ | 增加被動收入  |   |
