@@ -6,18 +6,18 @@ aliases = ["about-site","about-me","contact"]
 author = "黃宏勝" 
 +++
 
-## 關於本站
-此部落格主要記錄我所有好奇跟想做的事情，因為我沒有使用任何社群媒體，所以架了一個部落格來分享
+## 😺 關於本站
+此部落格主要記錄我所有好奇跟想做的事情，因為我沒有使用任何社群媒體，所以架了一個部落格來分享生活大小事
 
 訂閱本站 RSS 的話請用這個連結：[RSS](https://hshuang.com/index.xml)
 
-另外我還有經營一個技術網站：[Secologies](https://secologies.com)
+我還有經營一個技術網站：[Secologies](https://secologies.com)
 
 任何問題可以寄到信箱內：me at hshuang dot com
 
 另外如果讀者在社群平台或奇怪的 APP 上看到我，皆是假冒的
 
-## 關於我
+## 🤡 關於我
 
 [黃宏勝](https://secologies.com/hong-sheng-huang/)可能是個...
 - 臺東人
