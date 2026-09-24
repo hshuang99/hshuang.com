@@ -13,7 +13,7 @@ author = "黃宏勝"
 
 我還有經營一個技術網站：[Secologies](https://secologies.com)
 
-任何問題可以寄到信箱內：me at hshuang dot com
+想私下問問題的可以寄到信箱內：me at hshuang dot com
 
 另外如果讀者在社群平台或奇怪的 APP 上看到我，皆是假冒的
 

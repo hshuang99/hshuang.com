@@ -1,8 +1,8 @@
 +++
 title = "使用"
 description = "本頁顯示站長目前愛用的"
-date = "2026-08-30T18:53:00+08:00"
-lastmod = "2026-09-14T15:17:00+08:00"
+date = "2026-09-24T13:26:00+08:00"
+lastmod = "2026-09-24T13:27:00+08:00"
 aliases = ["use"]
 author = "黃宏勝" 
 +++
@@ -69,10 +69,10 @@ author = "黃宏勝"
 
 ## 🎶 音樂相關
 - [YAMAHA P-125a](https://tw.yamaha.com/zh/products/musical_instruments/pianos/p_series/p-125a/index.html) - 我學琴用的數位電鋼琴
-- [Yamaha HPH-50](https://tw.yamaha.com/zh/audio/headphones/products/headphones/hph-50/) - 練琴時的耳機
+- [Novation Launchkey 61 MK4](https://novationmusic.com/products/launchkey-61) - 我的 MIDI 鍵盤
 
 ## 🎙️ 錄音相關
 - [Audacity](https://www.audacityteam.org/) - 錄音用軟體，直接對音軌做編輯很方便
 - [Audient Evo 4](https://evo.audio/products/audio-interfaces/evo-4/overview/) - 入門級錄音介面，如果只是單人的 Podcast 節目就很夠用了
 - Shure MV7 - 許多 Podcaster 推薦的動圈式麥克風
-- [Sony WH-1000XM5](https://store.sony.com.tw/product/show/ff808081804a3fc00180acca4a051c47) - 我只有工作環境很吵時才會戴著降噪，但想說原廠有副線材，買了個 3.5mm 轉 6.3mm 的轉接頭接上 Evo 4 用來監聽，雖然不像專門混音監聽的耳機那麼專業，但用來聽我自己的聲音夠用了
+- [Sony WH-1000XM5](https://store.sony.com.tw/product/show/ff808081804a3fc00180acca4a051c47) - 我只有工作環境很吵時才會戴著降噪，但想說原廠有附線材，買了個 3.5mm 轉 6.3mm 的轉接頭接上 Evo 4 用來監聽，雖然不像專門混音監聽的耳機那麼專業，但用來聽我自己的聲音夠用了
