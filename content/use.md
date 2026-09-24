@@ -9,7 +9,7 @@ author = "黃宏勝"
 
 ## 🖥️ 軟體
 ### 💾 作業系統
-- [Ubuntu Desktop 24.04 LTS](https://ubuntu.com/download/desktop) - 裝在主力工作模組化筆電 [Framework Laptop 16](https://frame.work/tw/en/laptop16) 上
+- [Ubuntu Desktop 24.04 LTS](https://ubuntu.com/download/desktop) - 運作在工作筆電上
 
 ### 🌏 瀏覽器
 - [Brave](https://brave.com/) - 內建廣告封鎖、阻擋追蹤程式的瀏覽器，設定得當的話可以預防惡意網站的跳轉
@@ -40,7 +40,9 @@ author = "黃宏勝"
 - [Astro](https://astro.build/) - 用於建構快速、以內容為中心之靜態網站的現代 JavaScript 網頁框架，傳送極少量的 JavaScript 到客戶端，大幅提升網站載入速度，目前主要是 Cloudflare 開發與維護，代表未來可以支援 x402 協定，[Secologies](https://secologies.com) 就是用這個製成的
 
 ## ⚙️ 硬體
-### 📜 電子紙產品
+
+### 🥼 工作用
+- [Framework Laptop 16](https://frame.work/tw/en/laptop16) - 模組化筆電，說實話這品牌挺冷門的，所以要替換料的話也很難找二手，幾乎只有官網的通路，我只能期待這家公司不要那麼快就倒
 - [reMarkable Paper Pro](https://remarkable.com/products/remarkable-paper/pro) - 工作時除了用白板紀錄之外，我還需要一台有原廠鍵盤的電子筆記設備，並且我想盡可能的少接觸藍光，但我的環境不允許使用文石 Tab X C，所以退而求其次選 11.8 吋的 rMPP，雖然規格比不上開放式的機器，但到目前使用起來都還挺順的，尤其他們家的鍵盤手感還不錯，很像 Apple 巧控鍵盤的質感，另外買了鎮紙 Paperweight 中文輸入法插件，因為看起來原廠完全沒有做中文介面的打算
 - [Kobo Clara BW](https://r10.to/hkkbYN) - Kobo 最小尺寸 6 吋黑白機器，外出時非常好用，我的褲子口袋剛好可以完美裝進去
 - [Readmoo Mooink Pro 2C](https://moo.im/a/luyzKS) - Readmoo 讀墨推出的 13.3 吋彩色電子書閱讀器，柔性螢幕讓機器非常輕薄，讓我在看 paper 時可以手持走動，也可以在教課時一手握著另一手寫黑板，做研究時的好夥伴，可以看[《讀墨 Readmoo mooInk Pro 2C 13.3吋 彩色電子書閱讀器 閱讀PDF檔案的應許之機》](https://hshuang.com/posts/readmoo-mooink-pro-2c/)這篇來詳細瞭解
@@ -69,7 +71,7 @@ author = "黃宏勝"
 
 ## 🎶 音樂相關
 - [YAMAHA P-125a](https://tw.yamaha.com/zh/products/musical_instruments/pianos/p_series/p-125a/index.html) - 我學琴用的數位電鋼琴
-- [Novation Launchkey 61 MK4](https://novationmusic.com/products/launchkey-61) - 我的 MIDI 鍵盤
+- [Novation Launchkey 61 MK4](https://novationmusic.com/products/launchkey-61) - 主要使用的 MIDI 鍵盤
 
 ## 🎙️ 錄音相關
 - [Audacity](https://www.audacityteam.org/) - 錄音用軟體，直接對音軌做編輯很方便
