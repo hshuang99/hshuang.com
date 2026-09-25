@@ -12,7 +12,7 @@ tags:
   - 恐懼
   - 完美主義
   - 杏仁核
-  - BlogBlog同樂會
+  - BlogBlog 同樂會
 keywords:
   - 生活
   - 失敗
@@ -21,7 +21,7 @@ keywords:
   - 恐懼
   - 完美主義
   - 杏仁核
-  - BlogBlog同樂會
+  - BlogBlog 同樂會
 summary: "我是個永遠都會失敗的人"
 description: "我是個永遠都會失敗的人"
 featureimage: "https://media.secologies.com/failure.webp"
