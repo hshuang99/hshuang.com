@@ -2,11 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://hshuang.com/tags/blogblog-%E5%90%8C%E6%A8%82%E6%9C%83/</loc>
-    <lastmod>2026-09-24T21:09:00+08:00</lastmod>
-  </url><url>
     <loc>https://hshuang.com/categories/</loc>
-    <lastmod>2026-09-24T21:09:00+08:00</lastmod>
+    <lastmod>2026-09-25T20:03:00+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -18,23 +15,11 @@
                 href="https://hshuang.com/categories/"
                 />
   </url><url>
-    <loc>https://hshuang.com/tags/gash-%E9%BB%9E%E6%95%B8%E5%8D%A1/</loc>
-    <lastmod>2026-09-24T21:09:00+08:00</lastmod>
-  </url><url>
     <loc>https://hshuang.com/tags/index/</loc>
-    <lastmod>2026-09-24T21:09:00+08:00</lastmod>
-  </url><url>
-    <loc>https://hshuang.com/tags/playsafe-%E6%95%B8%E4%BD%8D%E5%AE%89%E5%85%A8%E5%8D%A1/</loc>
-    <lastmod>2026-09-24T21:09:00+08:00</lastmod>
-  </url><url>
-    <loc>https://hshuang.com/tags/ps-vita/</loc>
-    <lastmod>2026-09-24T21:09:00+08:00</lastmod>
-  </url><url>
-    <loc>https://hshuang.com/tags/rc/</loc>
-    <lastmod>2026-09-24T21:09:00+08:00</lastmod>
+    <lastmod>2026-09-25T20:03:00+08:00</lastmod>
   </url><url>
     <loc>https://hshuang.com/tags/</loc>
-    <lastmod>2026-09-24T21:09:00+08:00</lastmod>
+    <lastmod>2026-09-25T20:03:00+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -46,26 +31,20 @@
                 href="https://hshuang.com/tags/"
                 />
   </url><url>
-    <loc>https://hshuang.com/tags/twitch/</loc>
-    <lastmod>2026-09-24T21:09:00+08:00</lastmod>
-  </url><url>
     <loc>https://hshuang.com/tags/%E4%BA%BA%E7%94%9F/</loc>
-    <lastmod>2026-09-24T21:09:00+08:00</lastmod>
+    <lastmod>2026-09-25T20:03:00+08:00</lastmod>
   </url><url>
     <loc>https://hshuang.com/categories/%E7%94%9F%E6%B4%BB/</loc>
-    <lastmod>2026-09-24T21:09:00+08:00</lastmod>
-  </url><url>
-    <loc>https://hshuang.com/tags/%E6%88%90%E7%99%AE/</loc>
-    <lastmod>2026-09-24T21:09:00+08:00</lastmod>
-  </url><url>
-    <loc>https://hshuang.com/tags/%E5%8D%B3%E6%99%82%E9%80%9A/</loc>
-    <lastmod>2026-09-24T21:09:00+08:00</lastmod>
+    <lastmod>2026-09-25T20:03:00+08:00</lastmod>
   </url><url>
     <loc>https://hshuang.com/posts/</loc>
-    <lastmod>2026-09-24T21:09:00+08:00</lastmod>
+    <lastmod>2026-09-25T20:03:00+08:00</lastmod>
+  </url><url>
+    <loc>https://hshuang.com/posts/wonderful-life/</loc>
+    <lastmod>2026-09-25T20:03:00+08:00</lastmod>
   </url><url>
     <loc>https://hshuang.com/</loc>
-    <lastmod>2026-09-24T21:09:00+08:00</lastmod>
+    <lastmod>2026-09-25T20:03:00+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -76,6 +55,42 @@
                 hreflang="zh-tw"
                 href="https://hshuang.com/"
                 />
+  </url><url>
+    <loc>https://hshuang.com/tags/%E5%93%A5%E5%BE%B7%E5%B7%B4%E8%B5%AB%E7%8C%9C%E6%83%B3/</loc>
+    <lastmod>2026-09-25T20:03:00+08:00</lastmod>
+  </url><url>
+    <loc>https://hshuang.com/tags/%E5%AF%84%E8%A8%97/</loc>
+    <lastmod>2026-09-25T20:03:00+08:00</lastmod>
+  </url><url>
+    <loc>https://hshuang.com/tags/%E8%91%9B%E6%9C%97%E8%87%BA/</loc>
+    <lastmod>2026-09-25T20:03:00+08:00</lastmod>
+  </url><url>
+    <loc>https://hshuang.com/tags/%E9%BB%8E%E6%9B%BC%E7%8C%9C%E6%83%B3/</loc>
+    <lastmod>2026-09-25T20:03:00+08:00</lastmod>
+  </url><url>
+    <loc>https://hshuang.com/tags/blogblog-%E5%90%8C%E6%A8%82%E6%9C%83/</loc>
+    <lastmod>2026-09-24T21:09:00+08:00</lastmod>
+  </url><url>
+    <loc>https://hshuang.com/tags/gash-%E9%BB%9E%E6%95%B8%E5%8D%A1/</loc>
+    <lastmod>2026-09-24T21:09:00+08:00</lastmod>
+  </url><url>
+    <loc>https://hshuang.com/tags/playsafe-%E6%95%B8%E4%BD%8D%E5%AE%89%E5%85%A8%E5%8D%A1/</loc>
+    <lastmod>2026-09-24T21:09:00+08:00</lastmod>
+  </url><url>
+    <loc>https://hshuang.com/tags/ps-vita/</loc>
+    <lastmod>2026-09-24T21:09:00+08:00</lastmod>
+  </url><url>
+    <loc>https://hshuang.com/tags/rc/</loc>
+    <lastmod>2026-09-24T21:09:00+08:00</lastmod>
+  </url><url>
+    <loc>https://hshuang.com/tags/twitch/</loc>
+    <lastmod>2026-09-24T21:09:00+08:00</lastmod>
+  </url><url>
+    <loc>https://hshuang.com/tags/%E6%88%90%E7%99%AE/</loc>
+    <lastmod>2026-09-24T21:09:00+08:00</lastmod>
+  </url><url>
+    <loc>https://hshuang.com/tags/%E5%8D%B3%E6%99%82%E9%80%9A/</loc>
+    <lastmod>2026-09-24T21:09:00+08:00</lastmod>
   </url><url>
     <loc>https://hshuang.com/tags/%E6%A5%93%E4%B9%8B%E8%B0%B7/</loc>
     <lastmod>2026-09-24T21:09:00+08:00</lastmod>
