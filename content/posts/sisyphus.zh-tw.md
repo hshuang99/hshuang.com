@@ -5,6 +5,7 @@ lastmod: 2026-09-27T14:50:00+08:00
 author: "黃宏勝"
 categories:
   - 生活
+  - 藝術
 tags:
   - 薛西佛斯
   - 意義
