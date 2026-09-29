@@ -25,7 +25,7 @@ defaultContentLanguageInSubdir = false
         [languages.zh-tw.params]
             mainpagetitle = "HSHuang.com | 黃宏勝的部落格"
             mainpagesubtitle = "思考、等待、齋戒、忍耐、傾聽"
-            mainpagedesc = "2026/09/29：最近在想要不要辦個新竹格友桌遊見面會，想說一起吃飯有點尷尬，至少一起玩桌遊來破冰，但不知道誰會有興趣。有興趣的寫個信過來唄。"
+            mainpagedesc = "2026/09/29：最近在想要不要辦個新竹格友桌遊見面會，想說只有吃飯有點尷尬，至少一起玩桌遊來破冰，但不知道誰會有興趣。座標應該是找光復路二段上的桌遊店，有興趣的寫個信過來唄。"
             copyrightname = "黃宏勝"
             copyrighturl = ""
         [languages.zh-tw.params.copyright]
