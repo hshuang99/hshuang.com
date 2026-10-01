@@ -1,21 +1,23 @@
 +++
 title = "近況"
 description = "本頁顯示站長近況"
-date = "2026-09-15T13:57:00+08:00"
+date = "2026-10-01T15:24:00+08:00"
 aliases = ["now"]
 author = "黃宏勝" 
 +++
 
 ## 🏡 最近的狀態
-- 🏠 搬離台北回新竹了，也從學校宿舍搬出去到外面住，新竹住東區的公車班次對我這沒機車的還算方便
-- 🛏 睡眠：獨自一人住外面有時注意不到時間，沒有室友可以提醒該睡覺了
-- 🏃 運動：一直沒辦法好好決定到底要繼續做事還是先去運動，常常想到有東西可以改就忘記去運動了🥲
+- 🏠 新竹東區
+- 🛏 睡眠：刷完牙十一點多就睡了
+- 🏃 運動：晚上會去跑個十圈，然而現在調整完跑步姿勢後隔天腓腸肌會痠痛到跑不動
 - 🥬 飲食：有自助餐優先自助餐，沒自助餐就選可以自己夾菜的便當，其次是不給夾菜的便當，最後則是那些菜超級少的飯麵
 
 ## 🌐 最近網路上的狀態
 - 🗓 個人部落格：文章底下以及留言板功能復活，會是由我真人跟你互動，不是 AI 客服
 
 ## 🍳 最近吃的/喝的
+- 🧃 福樂自然零原味優酪乳 920 ml
+- 🥣 福樂自然零優酪 100gx4 入-原味，當早餐
 
 ## 📚 最近讀的/聽的
-- 艾美．艾德蒙森(Amy Edmondson), "正確犯錯：哈佛學者揭開成長心態的關鍵，分辨失敗類型與應對方式，駕馭不確定的未來," 2024/04/02, 天下雜誌, https://www.books.com.tw/exep/assp.php/hshuang1999/products/0010985600?utm_source=hshuang1999&utm_medium=ap-books&utm_content=recommend&utm_campaign=ap-202608
+-  維杰．費德( Vijay Vad), 戴夫‧艾倫(Dave Allen), "完全跑步聖經【暢銷10週年紀念版】：輕鬆持久跑，運動傷害OUT," 2025/06/04, 天下生活 , [https://www.books.com.tw/exep/assp.php/hshuang1999/products/0011021364?utm_source=hshuang1999&utm_medium=ap-books&utm_content=recommend&utm_campaign=ap-202610](https://www.books.com.tw/exep/assp.php/hshuang1999/products/0011021364?utm_source=hshuang1999&utm_medium=ap-books&utm_content=recommend&utm_campaign=ap-202610)
