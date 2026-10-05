@@ -45,7 +45,9 @@ author = "黃宏勝"
 | ❌ | 讀完 OffSec PWK Pen-200 教材 |  |
 | ❌ | 讀完《深度學習的數學地圖》 |  |
 | ❌ | 學習毛線編織  |   |
+| ❌ | 德語歌德檢定 A2  |   |
 | ❌ | 上完 Google Cybersecurity Professional Certificate 線上課程 |  |
+| ❌ | 荷蘭語 CNaVT A2 |  |
 | ❌ | 學習素描  |   |
 | ❌ | 學習刺繡  |   |
 | ❌ | 製作部落格徽章  |   |
