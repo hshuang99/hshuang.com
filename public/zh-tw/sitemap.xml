@@ -2,11 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://hshuang.com/tags/bonk/</loc>
-    <lastmod>2026-10-12T19:27:00+08:00</lastmod>
-  </url><url>
     <loc>https://hshuang.com/categories/</loc>
-    <lastmod>2026-10-12T19:27:00+08:00</lastmod>
+    <lastmod>2026-10-13T19:18:00+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -19,10 +16,13 @@
                 />
   </url><url>
     <loc>https://hshuang.com/tags/index/</loc>
-    <lastmod>2026-10-12T19:27:00+08:00</lastmod>
+    <lastmod>2026-10-13T19:18:00+08:00</lastmod>
+  </url><url>
+    <loc>https://hshuang.com/tags/ps4/</loc>
+    <lastmod>2026-10-13T19:18:00+08:00</lastmod>
   </url><url>
     <loc>https://hshuang.com/tags/</loc>
-    <lastmod>2026-10-12T19:27:00+08:00</lastmod>
+    <lastmod>2026-10-13T19:18:00+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -34,20 +34,26 @@
                 href="https://hshuang.com/tags/"
                 />
   </url><url>
-    <loc>https://hshuang.com/tags/%E5%85%AC%E8%BB%8A/</loc>
-    <lastmod>2026-10-12T19:27:00+08:00</lastmod>
+    <loc>https://hshuang.com/tags/vpn/</loc>
+    <lastmod>2026-10-13T19:18:00+08:00</lastmod>
   </url><url>
-    <loc>https://hshuang.com/tags/%E6%89%8B%E6%A9%9F/</loc>
-    <lastmod>2026-10-12T19:27:00+08:00</lastmod>
+    <loc>https://hshuang.com/tags/%E6%9C%88%E8%B2%BB%E5%88%B6/</loc>
+    <lastmod>2026-10-13T19:18:00+08:00</lastmod>
   </url><url>
     <loc>https://hshuang.com/categories/%E7%94%9F%E6%B4%BB/</loc>
-    <lastmod>2026-10-12T19:27:00+08:00</lastmod>
+    <lastmod>2026-10-13T19:18:00+08:00</lastmod>
+  </url><url>
+    <loc>https://hshuang.com/tags/%E5%9B%A4%E7%A9%8D%E7%97%87/</loc>
+    <lastmod>2026-10-13T19:18:00+08:00</lastmod>
+  </url><url>
+    <loc>https://hshuang.com/posts/will-i-regret-it/</loc>
+    <lastmod>2026-10-13T19:18:00+08:00</lastmod>
   </url><url>
     <loc>https://hshuang.com/posts/</loc>
-    <lastmod>2026-10-12T19:27:00+08:00</lastmod>
+    <lastmod>2026-10-13T19:18:00+08:00</lastmod>
   </url><url>
     <loc>https://hshuang.com/</loc>
-    <lastmod>2026-10-12T19:27:00+08:00</lastmod>
+    <lastmod>2026-10-13T19:18:00+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -58,6 +64,24 @@
                 hreflang="zh-tw"
                 href="https://hshuang.com/"
                 />
+  </url><url>
+    <loc>https://hshuang.com/tags/%E8%A7%A3%E8%97%A5/</loc>
+    <lastmod>2026-10-13T19:18:00+08:00</lastmod>
+  </url><url>
+    <loc>https://hshuang.com/tags/%E7%B7%9A%E4%B8%8A%E9%81%8A%E6%88%B2/</loc>
+    <lastmod>2026-10-13T19:18:00+08:00</lastmod>
+  </url><url>
+    <loc>https://hshuang.com/tags/%E9%AD%94%E7%89%A9%E7%8D%B5%E4%BA%BA-frontier/</loc>
+    <lastmod>2026-10-13T19:18:00+08:00</lastmod>
+  </url><url>
+    <loc>https://hshuang.com/tags/bonk/</loc>
+    <lastmod>2026-10-12T19:27:00+08:00</lastmod>
+  </url><url>
+    <loc>https://hshuang.com/tags/%E5%85%AC%E8%BB%8A/</loc>
+    <lastmod>2026-10-12T19:27:00+08:00</lastmod>
+  </url><url>
+    <loc>https://hshuang.com/tags/%E6%89%8B%E6%A9%9F/</loc>
+    <lastmod>2026-10-12T19:27:00+08:00</lastmod>
   </url><url>
     <loc>https://hshuang.com/posts/waiting-for-the-bus/</loc>
     <lastmod>2026-10-12T19:27:00+08:00</lastmod>
@@ -435,9 +459,6 @@
     <lastmod>2026-09-24T21:09:00+08:00</lastmod>
   </url><url>
     <loc>https://hshuang.com/tags/%E7%86%AC%E5%A4%9C/</loc>
-    <lastmod>2026-09-24T21:09:00+08:00</lastmod>
-  </url><url>
-    <loc>https://hshuang.com/tags/%E7%B7%9A%E4%B8%8A%E9%81%8A%E6%88%B2/</loc>
     <lastmod>2026-09-24T21:09:00+08:00</lastmod>
   </url><url>
     <loc>https://hshuang.com/tags/%E8%AE%8A%E8%BA%AB%E7%9A%84%E6%84%89%E6%82%85/</loc>
