@@ -1,15 +1,15 @@
 +++
 title = "使用"
 description = "本頁顯示站長目前愛用的"
-date = "2026-09-24T13:26:00+08:00"
-lastmod = "2026-09-24T13:27:00+08:00"
+date = "2026-10-13T19:20:00+08:00"
+lastmod = "2026-10-13T19:20:00+08:00"
 aliases = ["use"]
 author = "黃宏勝" 
 +++
 
 ## 🖥️ 軟體
 ### 💾 作業系統
-- [Ubuntu Desktop 24.04 LTS](https://ubuntu.com/download/desktop) - 運作在工作筆電上，平時作為開發環境
+- [Ubuntu Desktop 26.04 LTS](https://ubuntu.com/download/desktop) - 運作在工作筆電上，平時作為開發環境
 
 ### 🌏 瀏覽器
 - [Brave](https://brave.com/) - 內建廣告封鎖、阻擋追蹤程式的瀏覽器，設定得當的話可以預防惡意網站的跳轉

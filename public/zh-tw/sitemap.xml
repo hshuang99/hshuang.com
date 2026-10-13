@@ -2,6 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://hshuang.com/use/</loc>
+    <lastmod>2026-10-13T19:20:00+08:00</lastmod>
+  </url><url>
+    <loc>https://hshuang.com/</loc>
+    <lastmod>2026-10-13T19:20:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://hshuang.com/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://hshuang.com/"
+                />
+  </url><url>
     <loc>https://hshuang.com/categories/</loc>
     <lastmod>2026-10-13T19:18:00+08:00</lastmod>
     <xhtml:link
@@ -51,19 +67,6 @@
   </url><url>
     <loc>https://hshuang.com/posts/</loc>
     <lastmod>2026-10-13T19:18:00+08:00</lastmod>
-  </url><url>
-    <loc>https://hshuang.com/</loc>
-    <lastmod>2026-10-13T19:18:00+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://hshuang.com/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-tw"
-                href="https://hshuang.com/"
-                />
   </url><url>
     <loc>https://hshuang.com/tags/%E8%A7%A3%E8%97%A5/</loc>
     <lastmod>2026-10-13T19:18:00+08:00</lastmod>
@@ -463,9 +466,6 @@
   </url><url>
     <loc>https://hshuang.com/tags/%E8%AE%8A%E8%BA%AB%E7%9A%84%E6%84%89%E6%82%85/</loc>
     <lastmod>2026-09-24T21:09:00+08:00</lastmod>
-  </url><url>
-    <loc>https://hshuang.com/use/</loc>
-    <lastmod>2026-09-24T13:27:00+08:00</lastmod>
   </url><url>
     <loc>https://hshuang.com/posts/damned-fool-things-i-have-done-1/</loc>
     <lastmod>2026-09-23T16:23:00+08:00</lastmod>
