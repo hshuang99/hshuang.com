@@ -24,13 +24,13 @@ author = "黃宏勝"
 | 狀態  | 目標 | 進度    |
 | :----        |    :----   |  :----- |
 | ❌ | 把 Obsidian 過去的文獻筆記通通整理好成永久筆記 |  |
-| ❌ | 製作 12 期電子報 | 3/12 |
-| ❌ | 錄製 Podcast 節目 |  |
-| ❌ | 讀完 Introduction to Cryptography: Principles and Applications |  |
-| ❌ | 讀完 Privacy-Preserving Machine Learning |  |
-| ❌ | 取得博士學位 |  |
-| ❌ | 自己投稿一篇密碼學論文 |  |
-| ✅ | 取得碩士學位 |  |
+| ❌ | 12 期電子報 | 3/12 |
+| ❌ | Podcast 節目 |  |
+| ❌ | Introduction to Cryptography: Principles and Applications |  |
+| ❌ | Privacy-Preserving Machine Learning |  |
+| ❌ | 博士學位 |  |
+| ❌ | 一篇密碼學論文 |  |
+| ✅ | 碩士學位 |  |
 | ✅ | 將 E-mail 收件夾裡沒用的促銷或電子報通通退掉跟刪除 | 把目前經常用的服務信箱通通換到我的商業信箱裡，開始慢慢從 Google Gmail 退出，而其他沒在用的服務也退出訂閱了 |
 | ✅ | 把電腦跟手機裡沒用的 APP 刪掉 | notion 作為資料庫跟看板確實不錯，但功能實在太複雜了，對我工作上來說是個阻礙，所以還是刪了 |
 | ✅ | 參加 IACR RWC 研討會 | [IACR RWC 2026 參與心得](https://secologies.com/posts/iacr-rwc-2026-experience/)  |
@@ -39,18 +39,18 @@ author = "黃宏勝"
 ## 📝 學習
 | 狀態  | 目標 | 進度    |
 | :----        |    :----   |  :----- |
-| ❌ | 取得多益金色證書 |   |
-| ❌ | 托福 iBT 考超過 100 分  |   |
-| ❌ | 上完 Flowkey 的鋼琴課程  |   |
-| ❌ | 讀完 OffSec PWK Pen-200 教材 |  |
-| ❌ | 讀完《深度學習的數學地圖》 |  |
-| ❌ | 學習毛線編織  |   |
+| ❌ | 多益金色證書 |   |
+| ❌ | 托福 iBT 超過 100 分  |   |
+| ❌ | Flowkey 鋼琴課程  |   |
+| ❌ | OffSec PWK Pen-200 教材 |  |
+| ❌ | 深度學習的數學地圖 |  |
+| ❌ | 毛線編織  |   |
 | ❌ | 德語歌德檢定 A2  |   |
-| ❌ | 上完 Google Cybersecurity Professional Certificate 線上課程 |  |
+| ❌ | Google Cybersecurity Professional Certificate 線上課程 |  |
 | ❌ | 荷蘭語 CNaVT A2 |  |
-| ❌ | 學習素描  |   |
-| ❌ | 學習刺繡  |   |
-| ❌ | 製作部落格徽章  |   |
+| ❌ | 素描  |   |
+| ❌ | 刺繡  |   |
+| ❌ | 部落格徽章  |   |
 
 ## 🫀 健康
 | 狀態  | 目標 | 進度    |
