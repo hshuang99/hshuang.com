@@ -5,6 +5,7 @@ lastmod: 2026-10-14T18:41:00+08:00
 author: "黃宏勝"
 categories:
   - 生活
+  - 藝術
 tags:
   - 俗頭
   - 油畫
