@@ -18,6 +18,17 @@
         <div class="post-content">
             {{ .Content }}
         </div>
+        {{/* Add tags section here */}}
+        {{ if .Params.tags }}
+        <div class="post-tags">
+          <h4>{{ i18n "tags" | default "Tags" }}</h4>
+            <ul>
+              {{ range .Params.tags }}
+              <li><a href="{{ "tags" | relLangURL }}/{{ . | urlize }}">{{ . }}</a></li>
+              {{ end }}
+            </ul>
+        </div>
+        {{ end }}
         <h4 class="post-end-links">
             <a href="{{ "/" | relLangURL }}">{{ i18n "backtohome" }}</a>
             <a href="#" class="random-post-btn" data-random-json="{{ "posts/index.random.json" | relLangURL }}">
