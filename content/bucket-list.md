@@ -27,7 +27,6 @@ author = "黃宏勝"
 | ❌ | 12 期電子報 | 3/12 |
 | ❌ | Podcast 節目 |  |
 | ❌ | Introduction to Cryptography: Principles and Applications |  |
-| ❌ | Privacy-Preserving Machine Learning |  |
 | ❌ | 博士學位 |  |
 | ❌ | 一篇密碼學論文 |  |
 | ✅ | 碩士學位 |  |
