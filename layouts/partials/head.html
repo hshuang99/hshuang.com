@@ -1,31 +1,129 @@
+{{- $langTag := partial "langtag.html" .Site.Language.Lang -}}
+{{- $siteHost := (urls.Parse .Site.Home.Permalink).Host -}}
 <head>
-    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
-    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-    <meta content="utf-8" http-equiv="encoding">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no" />
     <meta name="theme-color" content="#000084" />
+
+    {{/* ---------- Title ----------
+         Home: "<site title>".  Other pages: "<page title> | hshuang.com"
+         (short suffix instead of the full, long site title). */}}
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ $siteHost }}{{ end }}</title>
+
     <link rel="icon" href="{{ "img/favicon.png" | absURL }}">
     <link rel="canonical" href="{{ .Permalink }}">
 
-    {{ $description := .Params.description | default .Summary | default .Site.Params.description }}
-    {{ with $description }}
-    <meta name="description" content="{{ . | plainify }}">
+    {{/* ---------- Robots ----------
+         Per-page override: put  robots = "noindex, follow"  in front matter.
+         Search and guestbook pages (thin / user-generated) default to noindex. */}}
+    {{ $robots := .Params.robots }}
+    {{ if or (eq .Layout "search") (eq .Layout "guestbook") }}{{ $robots = $robots | default "noindex, follow" }}{{ end }}
+    {{ with $robots }}<meta name="robots" content="{{ . }}">{{ end }}
+
+    {{/* ---------- Language alternates (hreflang) ----------
+         .AllTranslations includes the current page itself (required by
+         Google). x-default points at the zh-tw version, which is the
+         unprefixed default language. URLs come from .Permalink, so zh-tw
+         stays prefix-free and en keeps its /en/ prefix. */}}
+    {{ range .AllTranslations }}
+    <link rel="alternate" hreflang="{{ partial "langtag.html" .Language.Lang }}" href="{{ .Permalink }}">
+    {{ if eq .Language.Lang "zh-tw" }}<link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">{{ end }}
     {{ end }}
 
+    {{/* ---------- RSS autodiscovery ---------- */}}
+    {{ with .Site.Home.OutputFormats.Get "rss" }}
+    <link rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" href="{{ .Permalink }}">
+    {{ end }}
+
+    {{/* ---------- Description ----------
+         Pages: description (front matter) -> first ~150 chars of the summary
+         -> site description.  Home: site description. */}}
+    {{ $description := "" }}
+    {{ if not .IsHome }}
+        {{ $description = .Params.description }}
+        {{ if not $description }}
+            {{ $summary := .Summary | plainify | htmlUnescape | chomp }}
+            {{ if gt (strings.RuneCount $summary) 150 }}{{ $summary = substr $summary 0 150 }}{{ end }}
+            {{ $description = $summary }}
+        {{ end }}
+    {{ end }}
+    {{ $description = $description | default .Site.Params.description }}
+
+    {{/* ---------- Social image ---------- */}}
     {{ $ogImage := .Params.featureimage | default .Site.Params.defaultImage }}
+    {{ $ogLocale := cond (eq .Site.Language.Lang "zh-tw") "zh_TW" "en_US" }}
+    {{ $pageTitle := cond .IsHome .Site.Title .Title }}
+
+    {{ with $description }}<meta name="description" content="{{ . | plainify }}">{{ end }}
+    {{ with .Params.author }}<meta name="author" content="{{ . }}">{{ end }}
 
     <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
-    <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+    <meta property="og:title" content="{{ $pageTitle }}">
     {{ with $description }}<meta property="og:description" content="{{ . | plainify }}">{{ end }}
     <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:locale" content="{{ $ogLocale }}">
+    {{ range .AllTranslations }}{{ if ne .Language.Lang $.Site.Language.Lang }}<meta property="og:locale:alternate" content="{{ cond (eq .Language.Lang "zh-tw") "zh_TW" "en_US" }}">{{ end }}{{ end }}
     {{ with $ogImage }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
     {{ with .Site.Title }}<meta property="og:site_name" content="{{ . }}">{{ end }}
+    {{ if and .IsPage (eq .Type "posts") }}
+    <meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+    {{ if not .Lastmod.IsZero }}<meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">{{ end }}
+    {{ range .Params.tags }}<meta property="article:tag" content="{{ . }}">
+    {{ end }}
+    {{ end }}
 
     <meta name="twitter:card" content="{{ if $ogImage }}summary_large_image{{ else }}summary{{ end }}">
-    <meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+    <meta name="twitter:title" content="{{ $pageTitle }}">
     {{ with $description }}<meta name="twitter:description" content="{{ . | plainify }}">{{ end }}
     {{ with $ogImage }}<meta name="twitter:image" content="{{ . | absURL }}">{{ end }}
+
+    {{/* ---------- Structured data (JSON-LD) ---------- */}}
+    {{ if .IsHome }}
+    {{ $site := dict "@context" "https://schema.org" "@type" "WebSite" "name" .Site.Title "url" .Site.Home.Permalink "inLanguage" $langTag }}
+    {{ with $description }}{{ $site = merge $site (dict "description" (. | plainify)) }}{{ end }}
+    <script type="application/ld+json">{{ $site | jsonify | safeJS }}</script>
+    {{ else if and .IsPage (eq .Type "posts") }}
+    {{ $authorName := .Params.author | default .Site.Params.copyright.name }}
+    {{ $modified := .Lastmod }}
+    {{ if $modified.IsZero }}{{ $modified = .Date }}{{ end }}
+    {{ $post := dict
+        "@context" "https://schema.org"
+        "@type" "BlogPosting"
+        "headline" .Title
+        "datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00")
+        "dateModified" ($modified.Format "2006-01-02T15:04:05Z07:00")
+        "inLanguage" $langTag
+        "mainEntityOfPage" (dict "@type" "WebPage" "@id" .Permalink)
+        "author" (dict "@type" "Person" "name" $authorName "url" .Site.Home.Permalink)
+        "publisher" (dict "@type" "Person" "name" $authorName)
+    }}
+    {{ with $description }}{{ $post = merge $post (dict "description" (. | plainify)) }}{{ end }}
+    {{ with $ogImage }}{{ $post = merge $post (dict "image" (. | absURL)) }}{{ end }}
+    {{ with .Params.tags }}{{ $post = merge $post (dict "keywords" (delimit . ", ")) }}{{ end }}
+    <script type="application/ld+json">{{ $post | jsonify | safeJS }}</script>
+    {{ $crumbs := slice
+        (dict "@type" "ListItem" "position" 1 "name" .Site.Title "item" .Site.Home.Permalink)
+        (dict "@type" "ListItem" "position" 2 "name" .CurrentSection.Title "item" .CurrentSection.Permalink)
+        (dict "@type" "ListItem" "position" 3 "name" .Title "item" .Permalink)
+    }}
+    {{ $bc := dict "@context" "https://schema.org" "@type" "BreadcrumbList" "itemListElement" $crumbs }}
+    <script type="application/ld+json">{{ $bc | jsonify | safeJS }}</script>
+    {{ end }}
+
+    {{/* ---------- Stylesheets (moved here from scripts.html so styles
+         load before first paint instead of after </body>) ---------- */}}
+    <link rel="stylesheet" href="{{ "css/bootstrap.css" | relURL }}">
+    <link rel="stylesheet" href="{{ "css/bootstrap-responsive.css" | relURL }}">
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+    {{ range .Site.Params.customCSS -}}
+    <link rel="stylesheet" href="{{ . | relURL }}">
+    {{- end }}
+    <style>
+        /* Sidebar section titles were <h1>; they are now <h2> so each page
+           has a single <h1>. Tweak here if they look different from before. */
+        .sidebar-title { margin-top: 0; }
+    </style>
 
     {{/* Don't ask why it's like this. This original theme is a mess... */}}
     <!-- <noscript><style>body { visibility: visible }</style></noscript> -->

@@ -30,3 +30,6 @@ other = "下一篇"
 
 [randompost]
 other = "隨機文章"
+
+[updated]
+other = "更新於"

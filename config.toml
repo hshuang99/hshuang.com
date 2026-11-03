@@ -3,6 +3,11 @@ theme = "hugo.386"
 preserveTaxonomyNames = true
 hasCJKLanguage = true
 
+# Lets Hugo render layouts/robots.txt -> /robots.txt (points crawlers at
+# the sitemap). Hugo already generates /sitemap.xml by itself; with two
+# languages it becomes a sitemap index that lists both.
+enableRobotsTXT = true
+
 # --- Multilingual setup ------------------------------------------------
 # zh-tw is the default language and keeps clean URLs (no "/zh-tw/" prefix).
 # Any other language (en) automatically gets its own URL prefix ("/en/…")
@@ -22,7 +27,12 @@ defaultContentLanguageInSubdir = false
         label           = "繁體中文"
         weight = 1
         title = "黃宏勝的部落格 | hshuang.com"
+        locale = "zh-TW"
         [languages.zh-tw.params]
+            # Used as the homepage <meta description> / og:description and
+            # as the fallback for any page without its own description.
+            # TODO: rewrite in your own words (aim for ~80-120 characters).
+            description = "黃宏勝的個人部落格，記錄思考、等待、齋戒、忍耐與傾聽。分享生活回顧、閱讀、音樂與日常觀察。"
             mainpagetitle = "HSHuang.com | 黃宏勝的部落格"
             mainpagesubtitle = "思考、等待、齋戒、忍耐、傾聽"
             mainpagedesc = ""
@@ -88,10 +98,12 @@ defaultContentLanguageInSubdir = false
         label           = "English"
         weight = 2
         title = "Hong-Sheng Huang's Blog | hshuang.com"
+        locale = "en"
         # TODO: translate these to taste — placeholders for now.
         [languages.en.params]
+            description = "Hong-Sheng Huang's personal blog on thinking, waiting, fasting, patience and listening: monthly reviews, books, music and everyday notes."
             mainpagetitle = "HSHuang.com | Hong-Sheng Huang's Blog"
-            mainpagesubtitle = "Thinking、Waiting、Fasting、Patience、Listening"
+            mainpagesubtitle = "Thinking, Waiting, Fasting, Patience, Listening"
             mainpagedesc = ""
             copyrightname = "Hong-Sheng Huang"
             copyrighturl = ""
@@ -149,6 +161,11 @@ defaultContentLanguageInSubdir = false
     # Replace with your actual *.workers.dev URL (or custom domain) after
     # running `wrangler deploy` — see cf-comments-worker/README.md.
     commentsapi = "https://hshuang-comments.hshuang.workers.dev"
+
+    # Fallback image for og:image / twitter:image when a post has no
+    # `featureimage` in its front matter. Use an absolute URL or a path
+    # under static/ (ideal size 1200x630). Leave empty to emit no image.
+    defaultImage = ""
 
     # Urls for social networks
     facebook = ""

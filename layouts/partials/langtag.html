@@ -1,0 +1,6 @@
+{{- /* Takes a Hugo language key ("zh-tw", "en") and returns a properly
+       cased BCP-47 tag for hreflang / JSON-LD ("zh-TW", "en").
+       Add a line here when you add another language. */ -}}
+{{- $tag := . -}}
+{{- if eq . "zh-tw" }}{{ $tag = "zh-TW" }}{{ end -}}
+{{- return $tag -}}

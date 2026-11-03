@@ -6,7 +6,7 @@
 
 <div class="row-fluid navmargin">
     <div class="page-header">
-        <h1>{{ .Title }} - {{ .Date.Format "Mon, Jan 2, 2006" }}</h1>
+        <h1>{{ .Title }}{{ if not .Date.IsZero }} - <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date | time.Format ":date_long" }}</time>{{ end }}</h1>
     </div>
 </div>
 
@@ -14,7 +14,7 @@
 
 <div class="row-fluid content-row">
     <div class="{{ if $hasToc }}span9{{ else }}span12{{ end }} bs-docs-sidebar">
-        <p class="lead">{{ .Params.description }}</p>
+        {{ with .Params.description }}<p class="lead">{{ . }}</p>{{ end }}
         <div class="post-content">
             {{ .Content }}
         </div>
@@ -24,7 +24,10 @@
           <h4>{{ i18n "tags" | default "Tags" }}</h4>
             <ul>
               {{ range .Params.tags }}
-              <li><a href="{{ "tags" | relLangURL }}/{{ . | urlize }}">{{ . }}</a></li>
+              {{ $term := . }}
+              {{ $url := printf "tags/%s/" ($term | urlize) | relLangURL }}
+              {{ with $.Site.GetPage (printf "/tags/%s" ($term | urlize)) }}{{ $url = .RelPermalink }}{{ end }}
+              <li><a href="{{ $url }}">{{ $term }}</a></li>
               {{ end }}
             </ul>
         </div>
@@ -56,7 +59,7 @@
     {{ if $hasToc }}
     <div class="span3 bs-docs-sidebar">
         <div class="toc-sticky">
-            <h1>{{ i18n "toc" | default "Contents" }}</h1>
+            <h2 class="sidebar-title">{{ i18n "toc" | default "Contents" }}</h2>
             {{ .TableOfContents }}
         </div>
         <script>

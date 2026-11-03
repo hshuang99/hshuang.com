@@ -30,3 +30,6 @@ other = "Next Post"
 
 [randompost]
 other = "Random Post"
+
+[updated]
+other = "Updated"
