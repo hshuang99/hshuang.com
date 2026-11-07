@@ -17,6 +17,8 @@
     </ul>
 </div>
 
+<style>.cmt-replyto { color: #888; font-size: 0.85em; margin-left: 4px; }</style>
+
 <script>
 (function () {
     var root = document.getElementById('sitewide-comments');
@@ -88,15 +90,19 @@
 
         var head = el('div', 'cmt-item-head');
         var nameEl;
-        if (c.website) {
+        var site = /^https?:\/\//i.test(c.website || '') ? c.website : '';
+        if (site) {
             nameEl = el('a', 'cmt-name', c.name);
-            nameEl.href = c.website;
-            nameEl.rel = 'nofollow ugc';
+            nameEl.href = site;
+            nameEl.rel = 'nofollow ugc noopener';
             nameEl.target = '_blank';
         } else {
             nameEl = el('span', 'cmt-name', c.name);
         }
         head.appendChild(nameEl);
+        if (c.parent_name) {
+            head.appendChild(el('span', 'cmt-replyto', ' \u21a9 @' + c.parent_name));
+        }
         head.appendChild(el('span', 'cmt-date', fmtDate(c.created_at)));
 
         var pageLink = el('a', 'cmt-source-link', LABELS.onPage + ' ' + c.slug);

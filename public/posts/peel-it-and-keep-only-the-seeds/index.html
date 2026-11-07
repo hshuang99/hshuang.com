@@ -561,6 +561,33 @@
         margin-right: 8px;
     }
     .cmt-loading, .cmt-empty { color: #999; }
+
+     
+    .cmt-children {
+        list-style: none;
+        margin: 10px 0 0 0;
+        padding: 0 0 0 16px;
+        border-left: 2px solid #e3e3e3;
+    }
+    .cmt-child { border-top: none; padding: 10px 0 4px; }
+    .cmt-replyto { color: #888; font-size: 0.85em; margin-left: 4px; }
+    .cmt-replyform {
+        margin: 10px 0 4px;
+        padding: 10px 12px;
+        background: #f7f7f7;
+        border: 1px solid #e3e3e3;
+        border-radius: 4px;
+    }
+    .cmt-replyform-title { font-weight: bold; margin-bottom: 8px; color: #555; }
+    .cmt-replyform .control-group { margin-bottom: 8px; }
+    .cmt-replyform input[type="text"], .cmt-replyform input[type="url"], .cmt-replyform textarea {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .cmt-flash { background: #fff8d6; transition: background 0.6s; }
+    @media (max-width: 480px) {
+        .cmt-children { padding-left: 10px; }
+    }
 </style>
 
 <script>
@@ -581,10 +608,23 @@
     var tabEdit = document.getElementById('cmt-tab-edit');
     var tabPreview = document.getElementById('cmt-tab-preview');
 
+    (function prefill() {
+        var p = {};
+        try { p = JSON.parse(localStorage.getItem('cmtProfile') || '{}'); } catch (e) {}
+        if (p.name) document.getElementById('cmt-name').value = p.name;
+        if (p.website) document.getElementById('cmt-website').value = p.website;
+    })();
+
     var LABELS = {
         empty: '還沒有留言，搶頭香！',
         countPrefix: '留言',
         reply: '回覆',
+        adminReply: '版主回覆',
+        cancel: '取消',
+        replyTo: '回覆給',
+        replyPlaceholder: '寫下你的回覆…',
+        name: '暱稱',
+        website: '網站（選填）',
         delete: '刪除',
         deleted: '留言已刪除。',
         confirmDelete: '確定要刪除這則留言嗎？',
@@ -630,21 +670,62 @@
         return e;
     }
 
-    function renderComment(c) {
-        var li = el('li', 'cmt-item');
+    
+    
+    
+    
+    var THREADED = false;
+    var MAX_DEPTH = 3;   
+
+    function safeUrl(u) { return /^https?:\/\//i.test(u || '') ? u : ''; }
+
+    function getProfile() {
+        try { return JSON.parse(localStorage.getItem('cmtProfile') || '{}'); } catch (e) { return {}; }
+    }
+    function saveProfile(name, website) {
+        try { localStorage.setItem('cmtProfile', JSON.stringify({ name: name, website: website })); } catch (e) {}
+    }
+
+    function buildTree(list) {
+        var byId = {}, roots = [];
+        list.forEach(function (c) { c._kids = []; c._parent = null; byId[c.id] = c; });
+        list.forEach(function (c) {
+            var p = (c.parent_id !== null && c.parent_id !== undefined) ? byId[c.parent_id] : null;
+            if (p) { c._parent = p; p._kids.push(c); } else { roots.push(c); }
+        });
+        list.forEach(function (c) {
+            c._kids.sort(function (x, y) {
+                return x.created_at < y.created_at ? -1 : x.created_at > y.created_at ? 1 : Number(x.id) - Number(y.id);
+            });
+        });
+        return roots;
+    }
+
+    function descendants(c, out) {
+        c._kids.forEach(function (k) { out.push(k); descendants(k, out); });
+        return out;
+    }
+
+    function renderComment(c, depth, flat) {
+        var li = el('li', 'cmt-item' + (depth ? ' cmt-child' : ''));
+        li.id = 'cmt-' + c.id;
         li.setAttribute('data-id', c.id);
 
         var head = el('div', 'cmt-item-head');
         var nameEl;
-        if (c.website) {
+        var site = safeUrl(c.website);
+        if (site) {
             nameEl = el('a', 'cmt-name', c.name);
-            nameEl.href = c.website;
-            nameEl.rel = 'nofollow ugc';
+            nameEl.href = site;
+            nameEl.rel = 'nofollow ugc noopener';
             nameEl.target = '_blank';
         } else {
             nameEl = el('span', 'cmt-name', c.name);
         }
         head.appendChild(nameEl);
+        if (flat && c._parent) {
+            head.appendChild(el('span', 'cmt-replyto', ' ↩ @' + c._parent.name));
+        }
         head.appendChild(el('span', 'cmt-date', fmtDate(c.created_at)));
         li.appendChild(head);
 
@@ -657,19 +738,35 @@
             li.appendChild(reply);
         }
 
-        if (isAdmin()) {
-            var actions = el('div', 'cmt-admin-actions');
-            var replyBtn = el('button', 'btn btn-mini', LABELS.reply);
+        var actions = el('div', 'cmt-admin-actions');
+        if (THREADED) {
+            var replyBtn = el('button', 'btn btn-mini cmt-reply-btn', LABELS.reply);
             replyBtn.type = 'button';
-            replyBtn.addEventListener('click', function () { doReply(c.id); });
+            replyBtn.addEventListener('click', function () { openReplyForm(c, li); });
+            actions.appendChild(replyBtn);
+        }
+        if (isAdmin()) {
+            var adminBtn = el('button', 'btn btn-mini', LABELS.adminReply);
+            adminBtn.type = 'button';
+            adminBtn.addEventListener('click', function () { doReply(c.id); });
             var delBtn = el('button', 'btn btn-mini btn-danger', LABELS.delete);
             delBtn.type = 'button';
             delBtn.addEventListener('click', function () { doDelete(c.id, li); });
-            actions.appendChild(replyBtn);
+            actions.appendChild(adminBtn);
             actions.appendChild(delBtn);
-            li.appendChild(actions);
         }
+        if (actions.childNodes.length) li.appendChild(actions);
 
+        if (!flat && c._kids.length) {
+            var ul = el('ul', 'cmt-children');
+            if (depth + 1 < MAX_DEPTH) {
+                c._kids.forEach(function (k) { ul.appendChild(renderComment(k, depth + 1, false)); });
+            } else {
+                
+                descendants(c, []).forEach(function (k) { ul.appendChild(renderComment(k, depth + 1, true)); });
+            }
+            li.appendChild(ul);
+        }
         return li;
     }
 
@@ -680,7 +777,104 @@
             listEl.appendChild(el('li', 'cmt-empty', LABELS.empty));
             return;
         }
-        comments.forEach(function (c) { listEl.appendChild(renderComment(c)); });
+        buildTree(comments).forEach(function (c) { listEl.appendChild(renderComment(c, 0, false)); });
+    }
+
+    
+    var openForm = null;
+    function closeReplyForm() {
+        if (openForm && openForm.parentNode) openForm.parentNode.removeChild(openForm);
+        openForm = null;
+    }
+
+    function postComment(payload) {
+        return fetch(API + '/api/comments', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        }).then(function (r) {
+            if (!r.ok) return r.json().then(function (d) { throw new Error(d.error || 'error'); });
+            return r.json();
+        });
+    }
+
+    function field(id, labelText, input) {
+        var g = el('div', 'control-group');
+        var l = el('label', null, labelText);
+        l.setAttribute('for', id);
+        input.id = id;
+        g.appendChild(l);
+        g.appendChild(input);
+        return g;
+    }
+
+    function openReplyForm(c, li) {
+        closeReplyForm();
+        var prof = getProfile();
+        var f = el('form', 'cmt-replyform');
+
+        var nameIn = el('input'); nameIn.type = 'text'; nameIn.maxLength = 60; nameIn.required = true;
+        nameIn.value = prof.name || '';
+        var webIn = el('input'); webIn.type = 'url'; webIn.maxLength = 200; webIn.placeholder = 'https://';
+        webIn.value = prof.website || '';
+        var ta = el('textarea'); ta.rows = 3; ta.maxLength = 4000; ta.required = true;
+        ta.placeholder = LABELS.replyPlaceholder;
+        var hp = el('input'); hp.type = 'text'; hp.tabIndex = -1; hp.autocomplete = 'off';
+        var hpWrap = el('div', 'cmt-hp'); hpWrap.setAttribute('aria-hidden', 'true'); hpWrap.appendChild(hp);
+
+        f.appendChild(el('div', 'cmt-replyform-title', LABELS.replyTo + ' @' + c.name));
+        f.appendChild(field('rp-name-' + c.id, LABELS.name + ' *', nameIn));
+        f.appendChild(field('rp-web-' + c.id, LABELS.website, webIn));
+        f.appendChild(field('rp-txt-' + c.id, '', ta));
+        f.appendChild(hpWrap);
+
+        var send = el('button', 'btn btn-primary btn-small', '送出回覆');
+        send.type = 'submit';
+        var cancel = el('button', 'btn btn-small', LABELS.cancel);
+        cancel.type = 'button';
+        cancel.addEventListener('click', closeReplyForm);
+        var st = el('span', 'cmt-status');
+        st.setAttribute('role', 'status');
+        f.appendChild(send); f.appendChild(document.createTextNode(' ')); f.appendChild(cancel); f.appendChild(st);
+
+        f.addEventListener('submit', function (e) {
+            e.preventDefault();
+            send.disabled = true;
+            st.className = 'cmt-status';
+            st.textContent = LABELS.sending;
+            var payload = {
+                slug: SLUG, parent_id: c.id,
+                name: nameIn.value, website: webIn.value, content: ta.value, hp: hp.value
+            };
+            postComment(payload).then(function (d) {
+                saveProfile(payload.name, payload.website);
+                closeReplyForm();
+                loadComments(d && d.id);
+            }).catch(function (err) {
+                send.disabled = false;
+                st.className = 'cmt-status cmt-error';
+                st.textContent = err.message === 'please wait a few seconds before commenting again'
+                    ? err.message : LABELS.sendError;
+            });
+        });
+
+        
+        var kids = null;
+        for (var i = 0; i < li.children.length; i++) {
+            if (li.children[i].className === 'cmt-children') { kids = li.children[i]; break; }
+        }
+        li.insertBefore(f, kids);
+        openForm = f;
+        ta.focus();
+    }
+
+    function scrollToComment(id) {
+        var target = id ? document.getElementById('cmt-' + id) : null;
+        if (!target && /^#cmt-\d+$/.test(location.hash)) target = document.getElementById(location.hash.slice(1));
+        if (!target) return;
+        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        target.classList.add('cmt-flash');
+        setTimeout(function () { target.classList.remove('cmt-flash'); }, 2500);
     }
 
     function authHeaders() {
@@ -689,7 +883,7 @@
         return h;
     }
 
-    function loadComments() {
+    function loadComments(focusId) {
         if (!API) {
             listEl.innerHTML = '';
             listEl.appendChild(el('li', 'cmt-empty', 'commentsapi not configured'));
@@ -700,7 +894,11 @@
                 .then(function (r) { if (!r.ok) throw new Error('bad status'); return r.json(); }),
             window.CmtMD.ready()
         ])
-            .then(function (results) { renderList(results[0].comments || []); })
+            .then(function (results) {
+                THREADED = results[0].threaded === true;
+                renderList(results[0].comments || []);
+                scrollToComment(focusId);
+            })
             .catch(function () {
                 listEl.innerHTML = '';
                 listEl.appendChild(el('li', 'cmt-empty', LABELS.loadError));
@@ -725,7 +923,7 @@
             method: 'DELETE',
             headers: authHeaders()
         })
-            .then(function (r) { if (!r.ok) throw new Error('bad status'); liEl.remove(); })
+            .then(function (r) { if (!r.ok) throw new Error('bad status'); loadComments(); })
             .catch(function () { window.alert(LABELS.sendError); });
     }
 
@@ -753,9 +951,10 @@
                 if (!r.ok) return r.json().then(function (d) { throw new Error(d.error || 'error'); });
                 return r.json();
             })
-            .then(function () {
+            .then(function (d) {
                 statusEl.className = 'cmt-status cmt-ok';
                 statusEl.textContent = LABELS.sent;
+                saveProfile(payload.name, payload.website);
                 textarea.value = '';
                 if (tabEdit && tabPreview) {
                     previewEl.style.display = 'none';
@@ -764,7 +963,7 @@
                     tabEdit.className = 'btn btn-mini cmt-tab-active';
                     tabPreview.className = 'btn btn-mini';
                 }
-                loadComments();
+                loadComments(d && d.id);
             })
             .catch(function (err) {
                 statusEl.className = 'cmt-status cmt-error';
