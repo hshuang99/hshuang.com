@@ -924,6 +924,17 @@
 
 <style>
     .cmt-replyto { color: #888; font-size: 0.85em; margin-left: 4px; }
+    .cmt-quote { color: #888; font-size: 0.85em; margin: 0 0 4px; padding-left: 8px; border-left: 2px solid #ddd; word-break: break-all; }
+    .cmt-hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+    .cmt-flash { background: #fff8d6; transition: background 0.6s; }
+    .cmt-by-admin > .cmt-item-head .cmt-name { color: #2c5a8c; }
+    .cmt-reply .cmt-reply-btn { margin-top: 6px; }
+    .cmt-status { margin-left: 10px; font-size: 0.9em; }
+    .cmt-status.cmt-error { color: #b94a48; }
+    .cmt-replyform { margin: 10px 0 4px; padding: 10px 12px; background: #f7f7f7; border: 1px solid #e3e3e3; border-radius: 4px; }
+    .cmt-replyform-title { font-weight: bold; margin-bottom: 8px; color: #555; }
+    .cmt-replyform .control-group { margin-bottom: 8px; }
+    .cmt-replyform input[type="text"], .cmt-replyform input[type="url"], .cmt-replyform textarea { width: 100%; box-sizing: border-box; }
     .cmt-badge { display: inline-block; margin-left: 6px; padding: 0 6px; font-size: 0.75em; line-height: 1.6; color: #fff; background: #3a6ea5; border-radius: 3px; vertical-align: middle; }
 </style>
 
@@ -945,8 +956,28 @@
         sendError: 'Could not complete the action — please try again.',
         replyFrom: 'Reply from the author',
         onPage: 'on',
-        badge: 'Author'
+        badge: 'Author',
+        adminReply: 'Author reply',
+        cancel: 'Cancel',
+        replyTo: 'Replying to',
+        replyPlaceholder: 'Write your reply…',
+        name: 'Name',
+        website: 'Website (optional)',
+        sending: 'Sending…',
+        submit: 'Submit',
+        replyAuthor: 'Reply to author',
+        authorName: 'author'
     };
+
+    
+    var THREADED = false;
+
+    function getProfile() {
+        try { return JSON.parse(localStorage.getItem('cmtProfile') || '{}'); } catch (e) { return {}; }
+    }
+    function saveProfile(name, website) {
+        try { localStorage.setItem('cmtProfile', JSON.stringify({ name: name, website: website })); } catch (e) {}
+    }
 
     function getAdminKey() {
         try { return localStorage.getItem('cmtAdminKey') || ''; } catch (e) { return ''; }
@@ -984,7 +1015,8 @@
     }
 
     function renderComment(c) {
-        var li = el('li', 'cmt-item');
+        var li = el('li', 'cmt-item' + (c.is_admin ? ' cmt-by-admin' : ''));
+        li.id = 'swc-' + c.id;
         li.setAttribute('data-id', c.id);
 
         var head = el('div', 'cmt-item-head');
@@ -1006,37 +1038,147 @@
         head.appendChild(el('span', 'cmt-date', fmtDate(c.created_at)));
 
         var pageLink = el('a', 'cmt-source-link', LABELS.onPage + ' ' + c.slug);
-        pageLink.href = c.slug;
+        pageLink.href = c.slug + '#cmt-' + c.id;   
         head.appendChild(document.createTextNode(' \u00b7 '));
         head.appendChild(pageLink);
 
         li.appendChild(head);
+        if (c.parent_name && c.parent_excerpt) {
+            var q = c.parent_excerpt.replace(/\s+/g, ' ');
+            li.appendChild(el('div', 'cmt-quote', '\u21a9 @' + c.parent_name + '\uff1a' + q + (c.parent_excerpt.length >= 80 ? '\u2026' : '')));
+        }
         li.appendChild(markdownEl('cmt-content markdown-body', c.content));
 
         if (c.admin_reply) {
             var reply = el('div', 'cmt-reply');
             reply.appendChild(el('div', 'cmt-reply-label', LABELS.replyFrom));
             reply.appendChild(markdownEl('cmt-content markdown-body', c.admin_reply));
+            if (THREADED) {
+                var rb = el('button', 'btn btn-mini cmt-reply-btn', LABELS.replyAuthor);
+                rb.type = 'button';
+                rb.addEventListener('click', function () { openReplyForm(c, li, LABELS.authorName); });
+                reply.appendChild(rb);
+            }
             li.appendChild(reply);
         }
 
-        if (isAdmin()) {
-            var actions = el('div', 'cmt-admin-actions');
-            var replyBtn = el('button', 'btn btn-mini', LABELS.reply);
+        var actions = el('div', 'cmt-admin-actions');
+        if (THREADED) {
+            var replyBtn = el('button', 'btn btn-mini cmt-reply-btn', LABELS.reply);
             replyBtn.type = 'button';
-            replyBtn.addEventListener('click', function () { doReply(c.id); });
+            replyBtn.addEventListener('click', function () { openReplyForm(c, li); });
+            actions.appendChild(replyBtn);
+        }
+        if (isAdmin()) {
+            var adminBtn = el('button', 'btn btn-mini', LABELS.adminReply);
+            adminBtn.type = 'button';
+            adminBtn.addEventListener('click', function () { doReply(c.id); });
             var delBtn = el('button', 'btn btn-mini btn-danger', LABELS.delete);
             delBtn.type = 'button';
             delBtn.addEventListener('click', function () { doDelete(c.id, li); });
-            actions.appendChild(replyBtn);
+            actions.appendChild(adminBtn);
             actions.appendChild(delBtn);
-            li.appendChild(actions);
         }
+        if (actions.childNodes.length) li.appendChild(actions);
 
         return li;
     }
 
-    function loadAll() {
+    
+    var openForm = null;
+    function closeReplyForm() {
+        if (openForm && openForm.parentNode) openForm.parentNode.removeChild(openForm);
+        openForm = null;
+    }
+
+    function postComment(payload) {
+        return fetch(API + '/api/comments', {
+            method: 'POST',
+            headers: authHeaders(),
+            body: JSON.stringify(payload)
+        }).then(function (r) {
+            if (!r.ok) return r.json().then(function (d) { throw new Error(d.error || 'error'); });
+            return r.json();
+        });
+    }
+
+    function field(id, labelText, input) {
+        var g = el('div', 'control-group');
+        var l = el('label', null, labelText);
+        l.setAttribute('for', id);
+        input.id = id;
+        g.appendChild(l);
+        g.appendChild(input);
+        return g;
+    }
+
+    function openReplyForm(c, li, target) {
+        closeReplyForm();
+        var prof = getProfile();
+        var f = el('form', 'cmt-replyform');
+
+        var nameIn = el('input'); nameIn.type = 'text'; nameIn.maxLength = 60; nameIn.required = true;
+        nameIn.value = prof.name || '';
+        var webIn = el('input'); webIn.type = 'url'; webIn.maxLength = 200; webIn.placeholder = 'https://';
+        webIn.value = prof.website || '';
+        var ta = el('textarea'); ta.rows = 3; ta.maxLength = 4000; ta.required = true;
+        ta.placeholder = LABELS.replyPlaceholder;
+        if (target) ta.value = '@' + target + ' ';
+        var hp = el('input'); hp.type = 'text'; hp.tabIndex = -1; hp.autocomplete = 'off';
+        var hpWrap = el('div', 'cmt-hp'); hpWrap.setAttribute('aria-hidden', 'true'); hpWrap.appendChild(hp);
+
+        f.appendChild(el('div', 'cmt-replyform-title', LABELS.replyTo + ' @' + (target || c.name)));
+        f.appendChild(field('swrp-name-' + c.id, LABELS.name + ' *', nameIn));
+        f.appendChild(field('swrp-web-' + c.id, LABELS.website, webIn));
+        f.appendChild(field('swrp-txt-' + c.id, '', ta));
+        f.appendChild(hpWrap);
+
+        var send = el('button', 'btn btn-primary btn-small', LABELS.submit);
+        send.type = 'submit';
+        var cancel = el('button', 'btn btn-small', LABELS.cancel);
+        cancel.type = 'button';
+        cancel.addEventListener('click', closeReplyForm);
+        var st = el('span', 'cmt-status');
+        st.setAttribute('role', 'status');
+        f.appendChild(send); f.appendChild(document.createTextNode(' ')); f.appendChild(cancel); f.appendChild(st);
+
+        f.addEventListener('submit', function (e) {
+            e.preventDefault();
+            send.disabled = true;
+            st.className = 'cmt-status';
+            st.textContent = LABELS.sending;
+            
+            var payload = {
+                slug: c.slug, parent_id: c.id,
+                name: nameIn.value, website: webIn.value, content: ta.value, hp: hp.value
+            };
+            postComment(payload).then(function (d) {
+                saveProfile(payload.name, payload.website);
+                closeReplyForm();
+                loadAll(d && d.id);
+            }).catch(function (err) {
+                send.disabled = false;
+                st.className = 'cmt-status cmt-error';
+                st.textContent = err.message === 'please wait a few seconds before commenting again'
+                    ? err.message : LABELS.sendError;
+            });
+        });
+
+        li.insertBefore(f, null);   
+        openForm = f;
+        ta.focus();
+        ta.setSelectionRange(ta.value.length, ta.value.length);
+    }
+
+    function flash(id) {
+        var t = id ? document.getElementById('swc-' + id) : null;
+        if (!t) return;
+        t.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        t.classList.add('cmt-flash');
+        setTimeout(function () { t.classList.remove('cmt-flash'); }, 2500);
+    }
+
+    function loadAll(focusId) {
         if (!API) {
             listEl.innerHTML = '';
             listEl.appendChild(el('li', 'cmt-empty', 'commentsapi not configured'));
@@ -1049,12 +1191,14 @@
         ])
             .then(function (results) {
                 var comments = results[0].comments || [];
+                THREADED = results[0].threaded === true;
                 listEl.innerHTML = '';
                 if (!comments.length) {
                     listEl.appendChild(el('li', 'cmt-empty', LABELS.empty));
                     return;
                 }
                 comments.forEach(function (c) { listEl.appendChild(renderComment(c)); });
+                flash(focusId);
             })
             .catch(function () {
                 listEl.innerHTML = '';
@@ -1080,7 +1224,7 @@
             method: 'DELETE',
             headers: authHeaders()
         })
-            .then(function (r) { if (!r.ok) throw new Error('bad status'); liEl.remove(); })
+            .then(function (r) { if (!r.ok) throw new Error('bad status'); loadAll(); })   
             .catch(function () { window.alert(LABELS.sendError); });
     }
 
