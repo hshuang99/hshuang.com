@@ -378,6 +378,19 @@
         box-sizing: border-box;
     }
     .cmt-flash { background: #fff8d6; transition: background 0.6s; }
+    .cmt-badge {
+        display: inline-block;
+        margin-left: 6px;
+        padding: 0 6px;
+        font-size: 0.75em;
+        line-height: 1.6;
+        color: #fff;
+        background: #3a6ea5;
+        border-radius: 3px;
+        vertical-align: middle;
+    }
+    .cmt-by-admin > .cmt-item-head .cmt-name { color: #2c5a8c; }
+    .cmt-reply .cmt-reply-btn { margin-top: 6px; }
     @media (max-width: 480px) {
         .cmt-children { padding-left: 10px; }
     }
@@ -415,6 +428,9 @@
         adminReply: 'Author reply',
         cancel: 'Cancel',
         replyTo: 'Replying to',
+        replyAuthor: 'Reply to author',
+        authorName: 'author',
+        badge: 'Author',
         replyPlaceholder: 'Write your reply…',
         name: 'Name',
         website: 'Website (optional)',
@@ -500,7 +516,7 @@
     }
 
     function renderComment(c, depth, flat) {
-        var li = el('li', 'cmt-item' + (depth ? ' cmt-child' : ''));
+        var li = el('li', 'cmt-item' + (depth ? ' cmt-child' : '') + (c.is_admin ? ' cmt-by-admin' : ''));
         li.id = 'cmt-' + c.id;
         li.setAttribute('data-id', c.id);
 
@@ -516,6 +532,7 @@
             nameEl = el('span', 'cmt-name', c.name);
         }
         head.appendChild(nameEl);
+        if (c.is_admin) head.appendChild(el('span', 'cmt-badge', LABELS.badge));
         if (flat && c._parent) {
             head.appendChild(el('span', 'cmt-replyto', ' ↩ @' + c._parent.name));
         }
@@ -528,6 +545,12 @@
             var reply = el('div', 'cmt-reply');
             reply.appendChild(el('div', 'cmt-reply-label', 'Reply from the author'));
             reply.appendChild(markdownEl('cmt-content markdown-body', c.admin_reply));
+            if (THREADED) {
+                var rb = el('button', 'btn btn-mini cmt-reply-btn', LABELS.replyAuthor);
+                rb.type = 'button';
+                rb.addEventListener('click', function () { openReplyForm(c, li, LABELS.authorName); });
+                reply.appendChild(rb);
+            }
             li.appendChild(reply);
         }
 
@@ -583,7 +606,7 @@
     function postComment(payload) {
         return fetch(API + '/api/comments', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: authHeaders(),
             body: JSON.stringify(payload)
         }).then(function (r) {
             if (!r.ok) return r.json().then(function (d) { throw new Error(d.error || 'error'); });
@@ -601,7 +624,7 @@
         return g;
     }
 
-    function openReplyForm(c, li) {
+    function openReplyForm(c, li, target) {
         closeReplyForm();
         var prof = getProfile();
         var f = el('form', 'cmt-replyform');
@@ -612,10 +635,11 @@
         webIn.value = prof.website || '';
         var ta = el('textarea'); ta.rows = 3; ta.maxLength = 4000; ta.required = true;
         ta.placeholder = LABELS.replyPlaceholder;
+        if (target) ta.value = '@' + target + ' ';
         var hp = el('input'); hp.type = 'text'; hp.tabIndex = -1; hp.autocomplete = 'off';
         var hpWrap = el('div', 'cmt-hp'); hpWrap.setAttribute('aria-hidden', 'true'); hpWrap.appendChild(hp);
 
-        f.appendChild(el('div', 'cmt-replyform-title', LABELS.replyTo + ' @' + c.name));
+        f.appendChild(el('div', 'cmt-replyform-title', LABELS.replyTo + ' @' + (target || c.name)));
         f.appendChild(field('rp-name-' + c.id, LABELS.name + ' *', nameIn));
         f.appendChild(field('rp-web-' + c.id, LABELS.website, webIn));
         f.appendChild(field('rp-txt-' + c.id, '', ta));
@@ -659,6 +683,7 @@
         li.insertBefore(f, kids);
         openForm = f;
         ta.focus();
+        ta.setSelectionRange(ta.value.length, ta.value.length);
     }
 
     function scrollToComment(id) {
@@ -737,7 +762,7 @@
 
         fetch(API + '/api/comments', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: authHeaders(),
             body: JSON.stringify(payload)
         })
             .then(function (r) {
@@ -897,7 +922,10 @@
     </ul>
 </div>
 
-<style>.cmt-replyto { color: #888; font-size: 0.85em; margin-left: 4px; }</style>
+<style>
+    .cmt-replyto { color: #888; font-size: 0.85em; margin-left: 4px; }
+    .cmt-badge { display: inline-block; margin-left: 6px; padding: 0 6px; font-size: 0.75em; line-height: 1.6; color: #fff; background: #3a6ea5; border-radius: 3px; vertical-align: middle; }
+</style>
 
 <script>
 (function () {
@@ -916,7 +944,8 @@
         loadError: 'Could not load comments.',
         sendError: 'Could not complete the action — please try again.',
         replyFrom: 'Reply from the author',
-        onPage: 'on'
+        onPage: 'on',
+        badge: 'Author'
     };
 
     function getAdminKey() {
@@ -970,6 +999,7 @@
             nameEl = el('span', 'cmt-name', c.name);
         }
         head.appendChild(nameEl);
+        if (c.is_admin) head.appendChild(el('span', 'cmt-badge', LABELS.badge));
         if (c.parent_name) {
             head.appendChild(el('span', 'cmt-replyto', ' \u21a9 @' + c.parent_name));
         }

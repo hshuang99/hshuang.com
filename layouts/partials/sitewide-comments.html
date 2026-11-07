@@ -17,7 +17,10 @@
     </ul>
 </div>
 
-<style>.cmt-replyto { color: #888; font-size: 0.85em; margin-left: 4px; }</style>
+<style>
+    .cmt-replyto { color: #888; font-size: 0.85em; margin-left: 4px; }
+    .cmt-badge { display: inline-block; margin-left: 6px; padding: 0 6px; font-size: 0.75em; line-height: 1.6; color: #fff; background: #3a6ea5; border-radius: 3px; vertical-align: middle; }
+</style>
 
 <script>
 (function () {
@@ -36,7 +39,8 @@
         loadError: 'Could not load comments.',
         sendError: 'Could not complete the action — please try again.',
         replyFrom: 'Reply from the author',
-        onPage: 'on'
+        onPage: 'on',
+        badge: 'Author'
     }{{ else }}{
         empty: '目前全站還沒有任何留言。',
         reply: '回覆',
@@ -46,7 +50,8 @@
         loadError: '留言載入失敗。',
         sendError: '操作失敗，請再試一次。',
         replyFrom: '版主回覆',
-        onPage: '於'
+        onPage: '於',
+        badge: '版主'
     }{{ end }};
 
     function getAdminKey() {
@@ -100,6 +105,7 @@
             nameEl = el('span', 'cmt-name', c.name);
         }
         head.appendChild(nameEl);
+        if (c.is_admin) head.appendChild(el('span', 'cmt-badge', LABELS.badge));
         if (c.parent_name) {
             head.appendChild(el('span', 'cmt-replyto', ' \u21a9 @' + c.parent_name));
         }
