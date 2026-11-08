@@ -1,11 +1,12 @@
 ---
 title: "Re:研究所考試"
 date: 2026-11-07T15:26:00+08:00
-lastmod: 2026-11-07T19:04:00+08:00
+lastmod: 2026-11-08T16:29:00+08:00
 author: "黃宏勝"
 categories:
   - 生活
 tags:
+  - 研究所
   - 線性代數
   - 離散數學
   - GPA
@@ -28,7 +29,7 @@ slug: "re-institute-exam"
 ---
 {{< alert >}}
 前情提要：LQ7 哥の《[研究所考試](https://lq7.tw/mood/grad-school-exam/)》、碩人哥の《[中央大學趣事](https://shuojen.com/blog/2026/11/03/ncu)》、雲彩の《[中央大學推甄遊記
-](https://yuncolorblog.com/posts/%E7%94%9F%E6%B4%BB%E6%97%A5%E5%B8%B8/ncu/)》
+](https://yuncolorblog.com/posts/%E7%94%9F%E6%B4%BB%E6%97%A5%E5%B8%B8/ncu/)》、Hsun 哥の《[研究所推甄](https://hsun.bearblog.dev/admission-through-recommendation/)》
 {{</ alert >}}
 
 回憶起來我也是因為大學 GPA 不夠高所以推甄統統石沉大海，由於轉了好幾次學，導致每次到新學校我都很緊張，老想著把每一學期排的滿滿趕緊修完學分畢業。真心推薦不要這麼幹，尤其我有兩、三學年裡好幾個學期都塞 24~30 個學分，課是修完了，但最後學起來的東西少的可憐。
