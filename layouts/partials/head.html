@@ -58,7 +58,7 @@
     {{ with $description }}<meta name="description" content="{{ . | plainify }}">{{ end }}
     {{ with .Params.author }}<meta name="author" content="{{ . }}">{{ end }}
 
-    <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+    <meta property="og:type" content="{{ if and .IsPage (eq .Type "posts") }}article{{ else }}website{{ end }}">
     <meta property="og:title" content="{{ $pageTitle }}">
     {{ with $description }}<meta property="og:description" content="{{ . | plainify }}">{{ end }}
     <meta property="og:url" content="{{ .Permalink }}">

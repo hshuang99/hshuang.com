@@ -16,17 +16,7 @@ tags:
   - 秋天
   - 洋蔥式
   - 柿子
-keywords:
-  - 琵眼超大
-  - 爐石戰記
-  - iPad
-  - GarageBand
-  - Novation Launchkey
-  - 鮭魚餐盒
-  - 竹科工程師
-  - 秋天
-  - 洋蔥式
-  - 柿子 
+  - 回顧
 summary: "哈哈，琵眼派對"
 description: "哈哈，琵眼派對"
 featureimage: "https://media.secologies.com/%E7%90%B5%E7%9C%BC.webp"

@@ -69,6 +69,11 @@ defaultContentLanguageInSubdir = false
             url = "/bucket-list/"
             weight = 40
         [[languages.zh-tw.menu.main]]
+            identifier = "gallery"
+            name = "畫廊"
+            url = "/gallery/"
+            weight = 45
+        [[languages.zh-tw.menu.main]]
             identifier = "books"
             name = "書單"
             url = "/books/"
@@ -133,6 +138,11 @@ defaultContentLanguageInSubdir = false
         #    url = "/en/bucket-list/"
         #    weight = 40
         #[[languages.en.menu.main]]
+        #    identifier = "gallery"
+        #    name = "Gallery"
+        #    url = "/en/gallery/"
+        #    weight = 45
+        #[[languages.en.menu.main]]
         #    identifier = "books"
         #    name = "Books"
         #    url = "/en/books/"
@@ -166,6 +176,13 @@ defaultContentLanguageInSubdir = false
     # `featureimage` in its front matter. Use an absolute URL or a path
     # under static/ (ideal size 1200x630). Leave empty to emit no image.
     defaultImage = ""
+
+    # Gallery page (layouts/_default/gallery.html): optional thumbnail URL for
+    # images hosted on another site. %s is replaced by the full image URL, so
+    # your image host / CDN must be able to resize on the fly, e.g. Cloudflare
+    # Image Resizing:  "https://media.secologies.com/cdn-cgi/image/width=600,format=auto/%s"
+    # Leave empty to use the original image as its own thumbnail.
+    galleryThumbTemplate = ""
 
     # Urls for social networks
     facebook = ""

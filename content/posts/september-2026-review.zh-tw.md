@@ -15,17 +15,7 @@ tags:
   - 優酪乳
   - 跑步
   - 腸胃警報
-keywords:
-  - 生活
-  - 畢業
-  - 完美主義
-  - Ollama
-  - 電子報
-  - Youbike
-  - 合成器
-  - 優酪乳
-  - 跑步
-  - 腸胃警報
+  - 回顧
 summary: "抱歉了錢包君"
 description: "抱歉了錢包君"
 featureimage: "https://media.secologies.com/september-2026-review-1.5.webp"

@@ -8,10 +8,6 @@ categories:
 tags:
   - 回顧
   - 八月
-keywords:
-  - 生活
-  - 回顧
-  - 八月
 summary: "八月正午的陽光都沒你耀眼"
 description: "八月正午的陽光都沒你耀眼"
 featureimage: "https://media.secologies.com/august-2026-review.webp"

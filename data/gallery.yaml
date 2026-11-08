@@ -1,0 +1,46 @@
+# ─────────────────────────────────────────────────────────────
+#  圖庫要顯示哪些圖片，由這個檔案決定（由上到下 = 圖庫裡的順序）。
+#  新增一張圖，就在 images 底下多寫一組：
+#
+#    - url: "https://media.secologies.com/xxx.webp"   # 必填：圖片的外部網址
+#      caption: "這張圖的說明"                          # 選填：燈箱裡顯示的說明
+#      caption_en: "English caption"                  # 選填：英文版圖庫用；沒寫就用 caption
+#      match:                                          # 選填：文章裡用的是別的網址時，補上要比對的字串
+#        - "xxx-small.webp"
+#
+#  「這張圖出現在哪些文章」不用手寫，會自動找：
+#  只要文章內文（或 featureimage）裡含有這個 url，那篇文章就會列在燈箱裡。
+#    * url 請照文章裡寫的「一字不差」貼上（中文檔名通常是 %E7%90%B5... 這種編碼）。
+#    * 沒寫 caption 的話，會自動借用文章裡這張圖的 title／alt 文字。
+#    * 想讓某張圖暫時不顯示：把那一組整段刪掉，或每行前面加 # 變成註解。
+# ─────────────────────────────────────────────────────────────
+images:
+  - url: "https://media.secologies.com/IMG_1171.webp"
+    caption: "歐式麵包"
+    
+  - url: "https://media.secologies.com/IMG_1030.webp"
+    caption: "花蓮的海"
+
+  - url: "https://media.secologies.com/IMG_1026.webp"
+    caption: "變電箱"
+    
+  - url: "https://media.secologies.com/IMG_1023.webp"
+    caption: "橋"
+    
+  - url: "https://media.secologies.com/IMG_1016.webp"
+    caption: "鄉鎮"
+    
+  - url: "https://media.secologies.com/IMG_1014.webp"
+    caption: "雙木"
+    
+  - url: "https://media.secologies.com/IMG_1051.webp"
+    caption: "成功湖"
+
+  - url: "https://media.secologies.com/IMG_1067.webp"
+    caption: "步道"
+    
+  - url: "https://media.secologies.com/IMG_1187.webp"
+    caption: "鴨子"
+    
+  - url: "https://media.secologies.com/IMG_1100.webp"
+    caption: "Faker"

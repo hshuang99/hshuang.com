@@ -1,0 +1,391 @@
+{{/*
+  Masonry gallery of the images YOU choose.
+
+  1. Create content/gallery.md (and gallery.en.md):
+
+         ---
+         title: "圖庫"
+         layout: "gallery"
+         ---
+
+  2. List the pictures in  data/gallery.yaml  (external image URLs, one entry each,
+     shown in the order you write them). See the comments inside that file.
+
+  For every listed image the page automatically finds the posts that use it (their
+  body or `featureimage` contains the URL) and shows them, with the caption, in the
+  lightbox. Nothing else on the site is touched, and there is no comment section.
+*/}}
+{{ define "main" }}
+
+{{ $isEn := eq .Site.Language.Lang "en" }}
+{{ $mdRe := `!\[([^\]]*)\]\(\s*<?([^)\s>]+)>?(?:\s+"([^"]*)")?\s*\)` }}
+{{ $plist := (where .Site.RegularPages "Section" "posts").ByDate.Reverse }}
+
+{{ $entries := slice }}
+{{ with site.Data.gallery }}{{ with .images }}{{ $entries = . }}{{ end }}{{ end }}
+
+{{ $items := slice }}   {{/* what the grid renders */}}
+{{ $data := slice }}    {{/* what the lightbox script needs: f=full url, c=caption, p=posts */}}
+
+{{ range $entries }}
+  {{ $e := . }}
+  {{ $url := trim (string $e.url) " \n\t\r" }}
+  {{ if $url }}
+    {{/* strings to look for inside posts: the url itself + any extra `match` strings */}}
+    {{ $needles := slice $url }}
+    {{ range $e.match }}{{ $needles = $needles | append . }}{{ end }}
+
+    {{ $pages := slice }}
+    {{ $auto := "" }}
+    {{ range $plist }}
+      {{ $p := . }}
+      {{ $feat := string ($p.Params.featureimage | default "") }}
+      {{ $hit := false }}
+      {{ range $needles }}
+        {{ if . }}{{ if or (in $p.RawContent .) (in $feat .) }}{{ $hit = true }}{{ end }}{{ end }}
+      {{ end }}
+      {{ if $hit }}
+        {{ $pages = $pages | append $p }}
+        {{/* fallback caption: the title / alt text the post gave this image */}}
+        {{ if not $auto }}
+          {{ range findRESubmatch $mdRe $p.RawContent }}
+            {{ if and (eq (index . 2) $url) (not $auto) }}{{ $auto = (index . 3) | default (index . 1) }}{{ end }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+
+    {{ $cap := "" }}
+    {{ if $isEn }}{{ $cap = string ($e.caption_en | default $e.caption | default "") }}{{ else }}{{ $cap = string ($e.caption | default "") }}{{ end }}
+    {{ $cap = trim $cap " \n\t\r" }}
+    {{ if not $cap }}{{ $cap = $auto }}{{ end }}
+
+    {{ $plinks := slice }}
+    {{ range $pages }}
+      {{ $plinks = $plinks | append (dict "t" .Title "u" .RelPermalink "d" (.Date.Format "2006-01-02")) }}
+    {{ end }}
+
+    {{ $thumb := $url }}
+    {{ if hasPrefix $url "http" }}{{ with $.Site.Params.galleryThumbTemplate }}{{ $thumb = printf . $url }}{{ end }}{{ end }}
+    {{ $alt := $cap }}
+    {{ if and (not $alt) $pages }}{{ $alt = (index $pages 0).Title }}{{ end }}
+
+    {{ $items = $items | append (dict "f" $url "t" $thumb "a" $alt "n" (len $plinks)) }}
+    {{ $data = $data | append (dict "f" $url "c" $cap "p" $plinks) }}
+  {{ end }}
+{{ end }}
+
+<div class="row-fluid navmargin">
+    <div class="page-header">
+        <h1>{{ .Title }}</h1>
+    </div>
+</div>
+
+<div class="row-fluid content-row">
+    <div class="span12">
+        {{ with .Params.description }}<p class="lead">{{ . }}</p>{{ end }}
+        <div class="post-content">
+            {{ .Content }}
+        </div>
+
+        {{ if $items }}
+        <p class="gallery-meta">
+            {{ if $isEn }}{{ len $items }} images{{ else }}共 {{ len $items }} 張圖片{{ end }}
+        </p>
+
+        <div id="gallery" class="gallery-masonry"
+             data-items="{{ $data | jsonify | printf "%s" }}"
+             data-close="{{ if $isEn }}Close{{ else }}關閉{{ end }}"
+             data-prev="{{ if $isEn }}Previous image{{ else }}上一張{{ end }}"
+             data-next="{{ if $isEn }}Next image{{ else }}下一張{{ end }}"
+             data-mentioned="{{ if $isEn }}Appears in these posts{{ else }}這張圖出現在這些文章{{ end }}"
+             data-original="{{ if $isEn }}Open original image{{ else }}開啟原圖{{ end }}">
+            {{ range $i, $it := $items }}
+            <figure class="gallery-item">
+                <a class="gallery-link" href="{{ $it.f }}" data-i="{{ $i }}" target="_blank" rel="noopener">
+                    <img src="{{ $it.t }}" alt="{{ $it.a }}" loading="lazy" decoding="async">
+                    {{ if $it.n }}<span class="gallery-badge">{{ $it.n }}{{ if $isEn }} {{ if eq $it.n 1 }}post{{ else }}posts{{ end }}{{ else }} 篇{{ end }}</span>{{ end }}
+                </a>
+            </figure>
+            {{ end }}
+        </div>
+        {{ else }}
+        <p class="gallery-empty">{{ if $isEn }}No images yet. Add image URLs to <code>data/gallery.yaml</code>.{{ else }}還沒有圖片。請把圖片網址寫進 <code>data/gallery.yaml</code>。{{ end }}</p>
+        {{ end }}
+    </div>
+</div>
+
+<style>
+    .gallery-meta { color: #888; margin: 0 0 14px; }
+    .gallery-empty { color: #999; }
+
+    /* masonry: CSS columns, no JS library */
+    .gallery-masonry { column-width: 240px; column-gap: 12px; }
+    .gallery-item {
+        display: inline-block;
+        width: 100%;
+        margin: 0 0 12px;
+        -webkit-column-break-inside: avoid;
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+    .gallery-link { display: block; position: relative; line-height: 0; }
+    /* hugo.386 styles every <img> with a retro colour filter; show gallery pictures in their real colours */
+    .gallery-masonry img, .gallery-link img, .lb-img {
+        -webkit-filter: none !important;
+        filter: none !important;
+        mix-blend-mode: normal !important;
+        background-blend-mode: normal !important;
+        image-rendering: auto !important;
+        -webkit-mask-image: none !important;
+        mask-image: none !important;
+        animation: none !important;
+    }
+    .gallery-link img {
+        display: block;
+        width: 100%;
+        height: auto;
+        min-height: 60px;
+        background: #e8e8e8;
+        border-radius: 4px;
+    }
+    .gallery-link:hover img, .gallery-link:focus img { opacity: 0.88; }
+    .gallery-link:focus { outline: 2px solid #3a6ea5; outline-offset: 2px; }
+    .gallery-badge {
+        position: absolute;
+        right: 6px;
+        bottom: 6px;
+        padding: 1px 8px;
+        font-size: 12px;
+        line-height: 1.5;
+        color: #fff;
+        background: rgba(0, 0, 0, 0.6);
+        border-radius: 10px;
+    }
+
+    /* lightbox */
+    .lb {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.93);
+        color: #eee;
+        line-height: 1.5;
+    }
+    .lb.lb-open { display: flex; }
+    .lb-stage {
+        flex: 1 1 auto;
+        min-height: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 48px 56px 8px;
+    }
+    .lb-fig { margin: 0; max-width: 100%; max-height: 100%; display: flex; }
+    .lb-img { max-width: 100%; max-height: 100%; object-fit: contain; }
+    .lb-info {
+        flex: 0 0 auto;
+        max-height: 38vh;
+        overflow-y: auto;
+        padding: 10px 20px 18px;
+        text-align: center;
+    }
+    .lb-cap { font-size: 1.05em; margin-bottom: 8px; word-wrap: break-word; }
+    .lb-posts-title { font-size: 0.85em; color: #aaa; margin-bottom: 4px; }
+    .lb-posts { list-style: none; margin: 0 0 8px; padding: 0; }
+    .lb-posts li { margin: 2px 0; }
+    .lb-posts a, .lb-orig { color: #8ec5ff; }
+    .lb-posts a:hover, .lb-orig:hover { color: #fff; }
+    .lb-date { color: #888; font-size: 0.85em; margin-left: 6px; }
+    .lb-orig { font-size: 0.85em; }
+    .lb-count { position: absolute; top: 14px; left: 18px; font-size: 0.85em; color: #aaa; }
+    .lb-btn {
+        position: absolute;
+        width: 44px;
+        height: 44px;
+        border: none;
+        border-radius: 50%;
+        font-size: 26px;
+        line-height: 44px;
+        text-align: center;
+        color: #fff;
+        background: rgba(255, 255, 255, 0.14);
+        cursor: pointer;
+        padding: 0;
+    }
+    .lb-btn:hover, .lb-btn:focus { background: rgba(255, 255, 255, 0.3); }
+    .lb-close { top: 8px; right: 12px; }
+    .lb-prev { left: 8px; top: 38%; }
+    .lb-next { right: 8px; top: 38%; }
+    @media (max-width: 600px) {
+        .lb-stage { padding: 52px 8px 4px; }
+        .lb-prev, .lb-next { top: auto; bottom: 40vh; width: 38px; height: 38px; line-height: 38px; }
+    }
+</style>
+
+<script>
+(function () {
+    var root = document.getElementById('gallery');
+    if (!root) return;
+
+    var items;
+    try { items = JSON.parse(root.getAttribute('data-items') || '[]'); } catch (e) { items = []; }
+    if (!items.length) return;
+
+    var L = {
+        close: root.getAttribute('data-close') || 'Close',
+        prev: root.getAttribute('data-prev') || 'Previous',
+        next: root.getAttribute('data-next') || 'Next',
+        mentioned: root.getAttribute('data-mentioned') || '',
+        original: root.getAttribute('data-original') || 'Original'
+    };
+
+    function el(tag, cls, text) {
+        var e = document.createElement(tag);
+        if (cls) e.className = cls;
+        if (text !== undefined) e.textContent = text;
+        return e;
+    }
+    function button(cls, label, glyph) {
+        var b = el('button', 'lb-btn ' + cls, glyph);
+        b.type = 'button';
+        b.setAttribute('aria-label', label);
+        return b;
+    }
+
+    // ---- build the lightbox once ------------------------------------------
+    var box = el('div', 'lb');
+    box.setAttribute('role', 'dialog');
+    box.setAttribute('aria-modal', 'true');
+    box.setAttribute('aria-hidden', 'true');
+
+    var closeBtn = button('lb-close', L.close, '\u00d7');
+    var prevBtn = button('lb-prev', L.prev, '\u2039');
+    var nextBtn = button('lb-next', L.next, '\u203a');
+    var counter = el('div', 'lb-count');
+
+    var stage = el('div', 'lb-stage');
+    var fig = el('figure', 'lb-fig');
+    var img = el('img', 'lb-img');
+    fig.appendChild(img);
+    stage.appendChild(fig);
+
+    var info = el('div', 'lb-info');
+    var cap = el('div', 'lb-cap');
+    var postsTitle = el('div', 'lb-posts-title', L.mentioned);
+    var postsUl = el('ul', 'lb-posts');
+    var orig = el('a', 'lb-orig', L.original);
+    orig.target = '_blank';
+    orig.rel = 'noopener';
+    info.appendChild(cap);
+    info.appendChild(postsTitle);
+    info.appendChild(postsUl);
+    info.appendChild(orig);
+
+    [closeBtn, prevBtn, nextBtn, counter, stage, info].forEach(function (n) { box.appendChild(n); });
+    document.body.appendChild(box);
+
+    var idx = -1, openerEl = null, postLinks = [], savedOverflow = '';
+    var multi = items.length > 1;
+    prevBtn.style.display = nextBtn.style.display = multi ? '' : 'none';
+
+    function render(i) {
+        var n = items.length;
+        idx = ((i % n) + n) % n;
+        var it = items[idx];
+        img.src = it.f;
+        img.alt = it.c || '';
+        cap.textContent = it.c || '';
+        cap.style.display = it.c ? '' : 'none';
+        box.setAttribute('aria-label', it.c || document.title);
+
+        postsUl.innerHTML = '';
+        postLinks = [];
+        (it.p || []).forEach(function (p) {
+            var li = el('li');
+            var a = el('a', null, p.t);
+            a.href = p.u;
+            li.appendChild(a);
+            if (p.d) li.appendChild(el('span', 'lb-date', p.d));
+            postsUl.appendChild(li);
+            postLinks.push(a);
+        });
+        postsTitle.style.display = postLinks.length ? '' : 'none';
+        orig.href = it.f;
+        counter.textContent = (idx + 1) + ' / ' + n;
+
+        if (multi) {   // warm the cache for the neighbours
+            [idx + 1, idx - 1].forEach(function (j) {
+                var pre = new Image();
+                pre.src = items[((j % n) + n) % n].f;
+            });
+        }
+    }
+
+    function open(i, opener) {
+        openerEl = opener || null;
+        render(i);
+        box.className = 'lb lb-open';
+        box.setAttribute('aria-hidden', 'false');
+        savedOverflow = document.documentElement.style.overflow;
+        document.documentElement.style.overflow = 'hidden';
+        closeBtn.focus();
+    }
+
+    function close() {
+        box.className = 'lb';
+        box.setAttribute('aria-hidden', 'true');
+        document.documentElement.style.overflow = savedOverflow;
+        img.removeAttribute('src');
+        if (openerEl && openerEl.focus) openerEl.focus();
+        idx = -1;
+    }
+
+    function isOpen() { return idx >= 0; }
+
+    closeBtn.addEventListener('click', close);
+    prevBtn.addEventListener('click', function () { render(idx - 1); });
+    nextBtn.addEventListener('click', function () { render(idx + 1); });
+    stage.addEventListener('click', function (e) { if (e.target === stage) close(); });
+
+    document.addEventListener('keydown', function (e) {
+        if (!isOpen()) return;
+        if (e.key === 'Escape') { e.preventDefault(); close(); }
+        else if (e.key === 'ArrowLeft' && multi) { e.preventDefault(); render(idx - 1); }
+        else if (e.key === 'ArrowRight' && multi) { e.preventDefault(); render(idx + 1); }
+        else if (e.key === 'Tab') {              // keep focus inside the dialog
+            var f = [closeBtn];
+            if (multi) f.push(prevBtn, nextBtn);
+            f = f.concat(postLinks, [orig]);
+            var cur = f.indexOf(document.activeElement);
+            var next = e.shiftKey ? (cur <= 0 ? f.length - 1 : cur - 1) : (cur === f.length - 1 ? 0 : cur + 1);
+            e.preventDefault();
+            f[next].focus();
+        }
+    });
+
+    // swipe left / right on touch screens
+    var tx = 0, ty = 0;
+    stage.addEventListener('touchstart', function (e) {
+        var t = e.changedTouches[0]; tx = t.clientX; ty = t.clientY;
+    });
+    stage.addEventListener('touchend', function (e) {
+        if (!multi) return;
+        var t = e.changedTouches[0], dx = t.clientX - tx, dy = t.clientY - ty;
+        if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) render(dx < 0 ? idx + 1 : idx - 1);
+    });
+
+    // ---- wire up the tiles -------------------------------------------------
+    root.querySelectorAll('.gallery-link').forEach(function (a) {
+        a.addEventListener('click', function (e) {
+            if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button === 1) return; // let "open in new tab" work
+            e.preventDefault();
+            open(parseInt(a.getAttribute('data-i'), 10) || 0, a);
+        });
+    });
+})();
+</script>
+
+{{ end }}
