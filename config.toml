@@ -70,7 +70,7 @@ defaultContentLanguageInSubdir = false
             weight = 40
         [[languages.zh-tw.menu.main]]
             identifier = "gallery"
-            name = "畫廊"
+            name = "圖庫"
             url = "/gallery/"
             weight = 45
         [[languages.zh-tw.menu.main]]
@@ -170,7 +170,12 @@ defaultContentLanguageInSubdir = false
     # Cloudflare Worker URL for the comment system (Workers + D1).
     # Replace with your actual *.workers.dev URL (or custom domain) after
     # running `wrangler deploy` — see cf-comments-worker/README.md.
-    commentsapi = "https://hshuang-comments.hshuang.workers.dev"
+    # NOTE: *.workers.dev is often blocked/unreliable in mainland China, so readers
+    # there may be unable to load or post comments. Put the Worker on your own
+    # domain (see cf-comments-worker README, "中國大陸讀者"), then change this to
+    #   "https://hshuang.com"            (route hshuang.com/api/*   - recommended), or
+    #   "https://comments.hshuang.com"   (custom domain)
+    commentsapi = "https://hshuang.com"
 
     # Fallback image for og:image / twitter:image when a post has no
     # `featureimage` in its front matter. Use an absolute URL or a path

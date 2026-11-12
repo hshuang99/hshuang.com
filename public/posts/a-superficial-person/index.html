@@ -164,7 +164,7 @@
                             <li>
                                 <a href="/gallery/">
                                     
-                                    <span>畫廊</span>
+                                    <span>圖庫</span>
                                 </a>
                             </li>
                         
@@ -328,40 +328,65 @@
 (function () {
     if (window.CmtMD) return;
 
-    var MARKED_URL = 'https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js';
-    var PURIFY_URL = 'https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js';
+    var SOURCES = {
+        marked: [
+            "/js/vendor/marked.min.js",
+            'https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js',
+            'https://fastly.jsdelivr.net/npm/marked@12.0.2/marked.min.js',
+            'https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js'
+        ],
+        purify: [
+            "/js/vendor/purify.min.js",
+            'https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js',
+            'https://fastly.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js',
+            'https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.6/purify.min.js'
+        ]
+    };
+    var ATTEMPT_MS = 4000;
     var libsPromise = null;
 
     function loadScript(src) {
         return new Promise(function (resolve, reject) {
             var s = document.createElement('script');
+            var timer = setTimeout(function () { s.onload = s.onerror = null; s.remove(); reject(new Error('timeout')); }, ATTEMPT_MS);
+            s.onload = function () { clearTimeout(timer); resolve(); };
+            s.onerror = function () { clearTimeout(timer); s.remove(); reject(new Error('error')); };
             s.src = src;
-            s.onload = resolve;
-            s.onerror = reject;
             document.head.appendChild(s);
         });
     }
 
+    
+    function loadFirst(urls, isReady) {
+        if (isReady()) return Promise.resolve(true);
+        return urls.reduce(function (chain, url) {
+            return chain.then(function (ok) {
+                if (ok) return true;
+                return loadScript(url).then(isReady, function () { return false; });
+            });
+        }, Promise.resolve(false));
+    }
+
+    function loaded() { return !!(window.marked && window.DOMPurify); }
+
     function ensureLibs() {
         if (libsPromise) return libsPromise;
-        var tasks = [];
-        if (!window.marked) tasks.push(loadScript(MARKED_URL));
-        if (!window.DOMPurify) tasks.push(loadScript(PURIFY_URL));
-        libsPromise = Promise.all(tasks)
-            .then(function () {
-                
-                
-                if (window.DOMPurify && !window.DOMPurify.__cmtHooked) {
-                    window.DOMPurify.addHook('afterSanitizeAttributes', function (node) {
-                        if (node.tagName === 'A') {
-                            node.setAttribute('rel', 'nofollow ugc noopener');
-                            node.setAttribute('target', '_blank');
-                        }
-                    });
-                    window.DOMPurify.__cmtHooked = true;
-                }
-            })
-            .catch(function () {   });
+        libsPromise = Promise.all([
+            loadFirst(SOURCES.marked, function () { return !!window.marked; }),
+            loadFirst(SOURCES.purify, function () { return !!window.DOMPurify; })
+        ]).then(function () {
+            
+            
+            if (window.DOMPurify && !window.DOMPurify.__cmtHooked) {
+                window.DOMPurify.addHook('afterSanitizeAttributes', function (node) {
+                    if (node.tagName === 'A') {
+                        node.setAttribute('rel', 'nofollow ugc noopener');
+                        node.setAttribute('target', '_blank');
+                    }
+                });
+                window.DOMPurify.__cmtHooked = true;
+            }
+        }).catch(function () {   });
         return libsPromise;
     }
 
@@ -379,7 +404,7 @@
 
     function render(text) {
         text = text || '';
-        if (window.marked && window.DOMPurify) {
+        if (loaded()) {
             try {
                 var raw = window.marked.parse(text, { breaks: true, gfm: true });
                 return window.DOMPurify.sanitize(raw, { ALLOWED_TAGS: ALLOWED_TAGS, ALLOWED_ATTR: ['href'] });
@@ -390,12 +415,12 @@
         return escapeHtml(text).replace(/\n/g, '<br>');
     }
 
-    window.CmtMD = { ready: ensureLibs, render: render };
+    window.CmtMD = { ready: ensureLibs, loaded: loaded, render: render };
 })();
 </script>
 
 
-<div class="comments-section" id="comments" data-api="https://hshuang-comments.hshuang.workers.dev" data-slug="/posts/a-superficial-person/">
+<div class="comments-section" id="comments" data-api="https://hshuang.com" data-slug="/posts/a-superficial-person/">
     <h3 class="comments-heading" id="comments-heading">
         發表留言
     </h3>
@@ -786,7 +811,7 @@
     }
 
     function postComment(payload) {
-        return fetch(API + '/api/comments', {
+        return fetchT(API + '/api/comments', {
             method: 'POST',
             headers: authHeaders(),
             body: JSON.stringify(payload)
@@ -877,6 +902,20 @@
         setTimeout(function () { target.classList.remove('cmt-flash'); }, 2500);
     }
 
+    
+    
+    function fetchT(url, opts, ms) {
+        if (typeof AbortController === 'undefined') return fetch(url, opts);
+        var ctl = new AbortController();
+        var timer = setTimeout(function () { ctl.abort(); }, ms || 15000);
+        opts = opts || {};
+        opts.signal = ctl.signal;
+        return fetch(url, opts).then(
+            function (r) { clearTimeout(timer); return r; },
+            function (e) { clearTimeout(timer); throw e; }
+        );
+    }
+
     function authHeaders() {
         var h = { 'Content-Type': 'application/json' };
         if (isAdmin()) h['X-Admin-Key'] = getAdminKey();
@@ -889,15 +928,18 @@
             listEl.appendChild(el('li', 'cmt-empty', 'commentsapi not configured'));
             return;
         }
-        Promise.all([
-            fetch(API + '/api/comments?slug=' + encodeURIComponent(SLUG), { headers: authHeaders() })
-                .then(function (r) { if (!r.ok) throw new Error('bad status'); return r.json(); }),
-            window.CmtMD.ready()
-        ])
-            .then(function (results) {
-                THREADED = results[0].threaded === true;
-                renderList(results[0].comments || []);
+        fetchT(API + '/api/comments?slug=' + encodeURIComponent(SLUG), { headers: authHeaders() })
+            .then(function (r) { if (!r.ok) throw new Error('bad status'); return r.json(); })
+            .then(function (data) {
+                THREADED = data.threaded === true;
+                var comments = data.comments || [];
+                renderList(comments);              
                 scrollToComment(focusId);
+                if (!window.CmtMD.loaded()) {      
+                    window.CmtMD.ready().then(function () {
+                        if (window.CmtMD.loaded() && !openForm) renderList(comments);
+                    });
+                }
             })
             .catch(function () {
                 listEl.innerHTML = '';
@@ -908,7 +950,7 @@
     function doReply(id) {
         var text = window.prompt(LABELS.promptReply);
         if (!text) return;
-        fetch(API + '/api/comments/' + id, {
+        fetchT(API + '/api/comments/' + id, {
             method: 'PATCH',
             headers: authHeaders(),
             body: JSON.stringify({ reply: text })
@@ -919,7 +961,7 @@
 
     function doDelete(id, liEl) {
         if (!window.confirm(LABELS.confirmDelete)) return;
-        fetch(API + '/api/comments/' + id, {
+        fetchT(API + '/api/comments/' + id, {
             method: 'DELETE',
             headers: authHeaders()
         })
@@ -942,7 +984,7 @@
             hp: document.getElementById('cmt-hp-field').value
         };
 
-        fetch(API + '/api/comments', {
+        fetchT(API + '/api/comments', {
             method: 'POST',
             headers: authHeaders(),
             body: JSON.stringify(payload)

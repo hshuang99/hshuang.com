@@ -124,6 +124,20 @@
         return e;
     }
 
+    // fetch with a timeout, so a blocked / unreachable API shows an error
+    // after a few seconds instead of hanging forever
+    function fetchT(url, opts, ms) {
+        if (typeof AbortController === 'undefined') return fetch(url, opts);
+        var ctl = new AbortController();
+        var timer = setTimeout(function () { ctl.abort(); }, ms || 15000);
+        opts = opts || {};
+        opts.signal = ctl.signal;
+        return fetch(url, opts).then(
+            function (r) { clearTimeout(timer); return r; },
+            function (e) { clearTimeout(timer); throw e; }
+        );
+    }
+
     function authHeaders() {
         var h = { 'Content-Type': 'application/json' };
         if (isAdmin()) h['X-Admin-Key'] = getAdminKey();
@@ -208,7 +222,7 @@
     }
 
     function postComment(payload) {
-        return fetch(API + '/api/comments', {
+        return fetchT(API + '/api/comments', {
             method: 'POST',
             headers: authHeaders(),
             body: JSON.stringify(payload)
@@ -300,21 +314,26 @@
             listEl.appendChild(el('li', 'cmt-empty', 'commentsapi not configured'));
             return;
         }
-        Promise.all([
-            fetch(API + '/api/comments/all?limit=100', { headers: authHeaders() })
-                .then(function (r) { if (!r.ok) throw new Error('bad status'); return r.json(); }),
-            window.CmtMD.ready()
-        ])
-            .then(function (results) {
-                var comments = results[0].comments || [];
-                THREADED = results[0].threaded === true;
-                listEl.innerHTML = '';
-                if (!comments.length) {
-                    listEl.appendChild(el('li', 'cmt-empty', LABELS.empty));
-                    return;
+        fetchT(API + '/api/comments/all?limit=100', { headers: authHeaders() })
+            .then(function (r) { if (!r.ok) throw new Error('bad status'); return r.json(); })
+            .then(function (data) {
+                var comments = data.comments || [];
+                THREADED = data.threaded === true;
+                function draw() {
+                    listEl.innerHTML = '';
+                    if (!comments.length) {
+                        listEl.appendChild(el('li', 'cmt-empty', LABELS.empty));
+                        return;
+                    }
+                    comments.forEach(function (c) { listEl.appendChild(renderComment(c)); });
                 }
-                comments.forEach(function (c) { listEl.appendChild(renderComment(c)); });
+                draw();                            // plain text first: never wait for the Markdown CDN
                 flash(focusId);
+                if (!window.CmtMD.loaded()) {      // upgrade to formatted Markdown once the libs arrive
+                    window.CmtMD.ready().then(function () {
+                        if (window.CmtMD.loaded() && !openForm) draw();
+                    });
+                }
             })
             .catch(function () {
                 listEl.innerHTML = '';
@@ -325,7 +344,7 @@
     function doReply(id) {
         var text = window.prompt(LABELS.promptReply);
         if (!text) return;
-        fetch(API + '/api/comments/' + id, {
+        fetchT(API + '/api/comments/' + id, {
             method: 'PATCH',
             headers: authHeaders(),
             body: JSON.stringify({ reply: text })
@@ -336,7 +355,7 @@
 
     function doDelete(id, liEl) {
         if (!window.confirm(LABELS.confirmDelete)) return;
-        fetch(API + '/api/comments/' + id, {
+        fetchT(API + '/api/comments/' + id, {
             method: 'DELETE',
             headers: authHeaders()
         })
