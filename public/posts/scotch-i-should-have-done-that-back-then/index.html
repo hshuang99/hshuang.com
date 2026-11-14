@@ -330,6 +330,26 @@
 
 
 
+<style>
+    .markdown-body a[data-cmt-img] {
+        display: inline-block;
+        padding: 2px 10px;
+        border: 1px dashed #999;
+        border-radius: 4px;
+        color: inherit;
+        text-decoration: none;
+        word-break: break-all;
+    }
+    .markdown-body a[data-cmt-img]:hover { background: rgba(128, 128, 128, 0.15); }
+    .markdown-body img.cmt-img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        max-height: 480px;
+        margin: 6px 0;
+        border-radius: 4px;
+    }
+</style>
 <script>
 (function () {
     if (window.CmtMD) return;
@@ -403,6 +423,98 @@
     }
 
     
+    var ZH = /^zh/i.test(document.documentElement.lang || '');
+    var T = {
+        load: ZH ? '點擊載入圖片' : 'Click to load image',
+        fail: ZH ? '圖片載入失敗' : 'Image failed to load'
+    };
+
+    function escAttr(v) {
+        return String(v == null ? '' : v).replace(/&/g, '&amp;').replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+    }
+
+    
+    function httpsHost(u) {
+        try {
+            var x = new URL(String(u), 'https://invalid.example/');
+            return (x.protocol === 'https:' && /^https:/i.test(String(u).trim())) ? x.hostname : '';
+        } catch (e) { return ''; }
+    }
+
+    function looksLikeImage(u) {
+        try {
+            var x = new URL(u);
+            if (x.protocol !== 'https:') return false;
+            if (/\.(png|jpe?g|gif|webp|avif|bmp)$/i.test(x.pathname)) return true;
+            
+            return /^(gist\.)?github\.com$/i.test(x.hostname) && /^\/user-attachments\/assets\//.test(x.pathname);
+        } catch (e) { return false; }
+    }
+
+    
+    
+    function imagePlaceholder(href, alt) {
+        var host = httpsHost(href);
+        if (!host) return escAttr(alt || href);                  
+        var label = (alt ? alt + ' \u00b7 ' : '') + host;
+        return '<a href="' + escAttr(href) + '" data-cmt-img="1" data-alt="' + escAttr(alt) + '">'
+            + '\uD83D\uDDBC ' + escAttr(T.load) + '\uFF1A' + escAttr(label) + '</a>';
+    }
+
+    function installRenderer() {
+        var m = window.marked;
+        if (!m || m.__cmtRenderer || typeof m.use !== 'function') return;
+        m.use({ renderer: {
+            
+            image: function (href, title, text) {
+                if (href && typeof href === 'object') { text = href.text; href = href.href; }  
+                return imagePlaceholder(String(href || ''), String(text || ''));
+            },
+            
+            link: function (href, title, text) {
+                if (href && typeof href === 'object') {          
+                    var tk = href;
+                    href = tk.href;
+                    text = typeof tk.text === 'string' ? tk.text
+                        : ((tk.tokens && tk.tokens[0] && tk.tokens[0].text) || '');
+                }
+                var shown = String(text || '').replace(/&amp;/g, '&');
+                if (looksLikeImage(String(href || '')) && shown === String(href).replace(/&amp;/g, '&')) {
+                    return imagePlaceholder(String(href), '');
+                }
+                return false;                                    
+            }
+        } });
+        m.__cmtRenderer = true;
+    }
+
+    
+    document.addEventListener('click', function (e) {
+        var t = e.target;
+        var a = t && t.closest ? t.closest('a[data-cmt-img]') : null;
+        if (!a) return;
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button === 1) return;  
+        var src = a.getAttribute('href') || '';
+        if (!httpsHost(src)) return;                             
+        e.preventDefault();
+
+        var img = document.createElement('img');
+        img.className = 'cmt-img';
+        img.alt = a.getAttribute('data-alt') || '';
+        img.setAttribute('loading', 'lazy');
+        img.setAttribute('decoding', 'async');
+        img.setAttribute('referrerpolicy', 'no-referrer');
+        img.onerror = function () {                              
+            if (!img.parentNode) return;
+            a.textContent = '\u26A0 ' + T.fail + '\uFF1A' + httpsHost(src);
+            img.parentNode.replaceChild(a, img);
+        };
+        a.parentNode.replaceChild(img, a);
+        img.src = src;
+    });
+
+    
     
     var ALLOWED_TAGS = ['p', 'br', 'strong', 'em', 'del', 'code', 'pre', 'blockquote',
         'ul', 'ol', 'li', 'a', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'hr',
@@ -412,8 +524,14 @@
         text = text || '';
         if (loaded()) {
             try {
+                installRenderer();
                 var raw = window.marked.parse(text, { breaks: true, gfm: true });
-                return window.DOMPurify.sanitize(raw, { ALLOWED_TAGS: ALLOWED_TAGS, ALLOWED_ATTR: ['href'] });
+                
+                return window.DOMPurify.sanitize(raw, {
+                    ALLOWED_TAGS: ALLOWED_TAGS,
+                    ALLOWED_ATTR: ['href', 'data-cmt-img', 'data-alt'],
+                    ALLOW_DATA_ATTR: false
+                });
             } catch (e) {
                 
             }
