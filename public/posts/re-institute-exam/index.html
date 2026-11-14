@@ -556,6 +556,17 @@
     }
 
     
+    
+    
+    
+    function trueColours(img) {
+        [['filter', 'none'], ['-webkit-filter', 'none'], ['mix-blend-mode', 'normal'],
+         ['background-blend-mode', 'normal'], ['image-rendering', 'auto']].forEach(function (d) {
+            img.style.setProperty(d[0], d[1], 'important');
+        });
+    }
+
+    
     document.addEventListener('click', function (e) {
         var t = e.target;
         var a = t && t.closest ? t.closest('a[data-cmt-img]') : null;
@@ -571,6 +582,7 @@
         img.setAttribute('loading', 'lazy');
         img.setAttribute('decoding', 'async');
         img.setAttribute('referrerpolicy', 'no-referrer');
+        trueColours(img);
         img.onerror = function () {                              
             if (!img.parentNode) return;
             a.textContent = '\u26A0 ' + T.fail + '\uFF1A' + httpsHost(src);

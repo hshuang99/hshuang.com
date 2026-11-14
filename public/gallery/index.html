@@ -9565,70 +9565,70 @@
             
             <figure class="gallery-item">
                 <a class="gallery-link" href="https://media.secologies.com/IMG_1171.webp" data-i="0" target="_blank" rel="noopener">
-                    <img src="https://media.secologies.com/IMG_1171.webp" alt="歐式麵包" loading="lazy" decoding="async">
+                    <img src="https://media.secologies.com/IMG_1171.webp" alt="歐式麵包" loading="lazy" decoding="async" style="filter:none!important;-webkit-filter:none!important;mix-blend-mode:normal!important;image-rendering:auto!important">
                     
                 </a>
             </figure>
             
             <figure class="gallery-item">
                 <a class="gallery-link" href="https://media.secologies.com/IMG_1030.webp" data-i="1" target="_blank" rel="noopener">
-                    <img src="https://media.secologies.com/IMG_1030.webp" alt="花蓮的海" loading="lazy" decoding="async">
+                    <img src="https://media.secologies.com/IMG_1030.webp" alt="花蓮的海" loading="lazy" decoding="async" style="filter:none!important;-webkit-filter:none!important;mix-blend-mode:normal!important;image-rendering:auto!important">
                     
                 </a>
             </figure>
             
             <figure class="gallery-item">
                 <a class="gallery-link" href="https://media.secologies.com/IMG_1026.webp" data-i="2" target="_blank" rel="noopener">
-                    <img src="https://media.secologies.com/IMG_1026.webp" alt="變電箱" loading="lazy" decoding="async">
+                    <img src="https://media.secologies.com/IMG_1026.webp" alt="變電箱" loading="lazy" decoding="async" style="filter:none!important;-webkit-filter:none!important;mix-blend-mode:normal!important;image-rendering:auto!important">
                     
                 </a>
             </figure>
             
             <figure class="gallery-item">
                 <a class="gallery-link" href="https://media.secologies.com/IMG_1023.webp" data-i="3" target="_blank" rel="noopener">
-                    <img src="https://media.secologies.com/IMG_1023.webp" alt="橋" loading="lazy" decoding="async">
+                    <img src="https://media.secologies.com/IMG_1023.webp" alt="橋" loading="lazy" decoding="async" style="filter:none!important;-webkit-filter:none!important;mix-blend-mode:normal!important;image-rendering:auto!important">
                     
                 </a>
             </figure>
             
             <figure class="gallery-item">
                 <a class="gallery-link" href="https://media.secologies.com/IMG_1016.webp" data-i="4" target="_blank" rel="noopener">
-                    <img src="https://media.secologies.com/IMG_1016.webp" alt="鄉鎮" loading="lazy" decoding="async">
+                    <img src="https://media.secologies.com/IMG_1016.webp" alt="鄉鎮" loading="lazy" decoding="async" style="filter:none!important;-webkit-filter:none!important;mix-blend-mode:normal!important;image-rendering:auto!important">
                     
                 </a>
             </figure>
             
             <figure class="gallery-item">
                 <a class="gallery-link" href="https://media.secologies.com/IMG_1014.webp" data-i="5" target="_blank" rel="noopener">
-                    <img src="https://media.secologies.com/IMG_1014.webp" alt="雙木" loading="lazy" decoding="async">
+                    <img src="https://media.secologies.com/IMG_1014.webp" alt="雙木" loading="lazy" decoding="async" style="filter:none!important;-webkit-filter:none!important;mix-blend-mode:normal!important;image-rendering:auto!important">
                     
                 </a>
             </figure>
             
             <figure class="gallery-item">
                 <a class="gallery-link" href="https://media.secologies.com/IMG_1051.webp" data-i="6" target="_blank" rel="noopener">
-                    <img src="https://media.secologies.com/IMG_1051.webp" alt="成功湖" loading="lazy" decoding="async">
+                    <img src="https://media.secologies.com/IMG_1051.webp" alt="成功湖" loading="lazy" decoding="async" style="filter:none!important;-webkit-filter:none!important;mix-blend-mode:normal!important;image-rendering:auto!important">
                     
                 </a>
             </figure>
             
             <figure class="gallery-item">
                 <a class="gallery-link" href="https://media.secologies.com/IMG_1067.webp" data-i="7" target="_blank" rel="noopener">
-                    <img src="https://media.secologies.com/IMG_1067.webp" alt="步道" loading="lazy" decoding="async">
+                    <img src="https://media.secologies.com/IMG_1067.webp" alt="步道" loading="lazy" decoding="async" style="filter:none!important;-webkit-filter:none!important;mix-blend-mode:normal!important;image-rendering:auto!important">
                     
                 </a>
             </figure>
             
             <figure class="gallery-item">
                 <a class="gallery-link" href="https://media.secologies.com/IMG_1187.webp" data-i="8" target="_blank" rel="noopener">
-                    <img src="https://media.secologies.com/IMG_1187.webp" alt="鴨子" loading="lazy" decoding="async">
+                    <img src="https://media.secologies.com/IMG_1187.webp" alt="鴨子" loading="lazy" decoding="async" style="filter:none!important;-webkit-filter:none!important;mix-blend-mode:normal!important;image-rendering:auto!important">
                     
                 </a>
             </figure>
             
             <figure class="gallery-item">
                 <a class="gallery-link" href="https://media.secologies.com/IMG_1100.webp" data-i="9" target="_blank" rel="noopener">
-                    <img src="https://media.secologies.com/IMG_1100.webp" alt="Faker" loading="lazy" decoding="async">
+                    <img src="https://media.secologies.com/IMG_1100.webp" alt="Faker" loading="lazy" decoding="async" style="filter:none!important;-webkit-filter:none!important;mix-blend-mode:normal!important;image-rendering:auto!important">
                     
                 </a>
             </figure>
@@ -9792,6 +9792,10 @@
     var stage = el('div', 'lb-stage');
     var fig = el('figure', 'lb-fig');
     var img = el('img', 'lb-img');
+    
+    [['filter', 'none'], ['-webkit-filter', 'none'], ['mix-blend-mode', 'normal'], ['image-rendering', 'auto']].forEach(function (d) {
+        img.style.setProperty(d[0], d[1], 'important');
+    });
     fig.appendChild(img);
     stage.appendChild(fig);
 

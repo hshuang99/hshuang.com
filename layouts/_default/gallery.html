@@ -103,7 +103,7 @@
             {{ range $i, $it := $items }}
             <figure class="gallery-item">
                 <a class="gallery-link" href="{{ $it.f }}" data-i="{{ $i }}" target="_blank" rel="noopener">
-                    <img src="{{ $it.t }}" alt="{{ $it.a }}" loading="lazy" decoding="async">
+                    <img src="{{ $it.t }}" alt="{{ $it.a }}" loading="lazy" decoding="async" style="filter:none!important;-webkit-filter:none!important;mix-blend-mode:normal!important;image-rendering:auto!important">
                     {{ if $it.n }}<span class="gallery-badge">{{ $it.n }}{{ if $isEn }} {{ if eq $it.n 1 }}post{{ else }}posts{{ end }}{{ else }} 篇{{ end }}</span>{{ end }}
                 </a>
             </figure>
@@ -269,6 +269,10 @@
     var stage = el('div', 'lb-stage');
     var fig = el('figure', 'lb-fig');
     var img = el('img', 'lb-img');
+    // theme colour-filters every <img>; an inline !important cannot be out-ranked by any stylesheet rule
+    [['filter', 'none'], ['-webkit-filter', 'none'], ['mix-blend-mode', 'normal'], ['image-rendering', 'auto']].forEach(function (d) {
+        img.style.setProperty(d[0], d[1], 'important');
+    });
     fig.appendChild(img);
     stage.appendChild(fig);
 

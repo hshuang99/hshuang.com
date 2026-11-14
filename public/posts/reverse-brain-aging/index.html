@@ -460,6 +460,17 @@ ntate gyrus)連結變得更強，而這造就海馬迴的通道更加緊密，�
     }
 
     
+    
+    
+    
+    function trueColours(img) {
+        [['filter', 'none'], ['-webkit-filter', 'none'], ['mix-blend-mode', 'normal'],
+         ['background-blend-mode', 'normal'], ['image-rendering', 'auto']].forEach(function (d) {
+            img.style.setProperty(d[0], d[1], 'important');
+        });
+    }
+
+    
     document.addEventListener('click', function (e) {
         var t = e.target;
         var a = t && t.closest ? t.closest('a[data-cmt-img]') : null;
@@ -475,6 +486,7 @@ ntate gyrus)連結變得更強，而這造就海馬迴的通道更加緊密，�
         img.setAttribute('loading', 'lazy');
         img.setAttribute('decoding', 'async');
         img.setAttribute('referrerpolicy', 'no-referrer');
+        trueColours(img);
         img.onerror = function () {                              
             if (!img.parentNode) return;
             a.textContent = '\u26A0 ' + T.fail + '\uFF1A' + httpsHost(src);

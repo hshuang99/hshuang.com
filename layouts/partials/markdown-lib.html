@@ -187,6 +187,17 @@
         m.__cmtRenderer = true;
     }
 
+    // The retro theme colour-filters every <img> (contrast / blend modes), which
+    // makes pictures come out blown-out. A stylesheet override can lose to a
+    // more specific theme selector (e.g. "#content img"); an inline !important
+    // cannot be beaten by any stylesheet, so set it on the element itself.
+    function trueColours(img) {
+        [['filter', 'none'], ['-webkit-filter', 'none'], ['mix-blend-mode', 'normal'],
+         ['background-blend-mode', 'normal'], ['image-rendering', 'auto']].forEach(function (d) {
+            img.style.setProperty(d[0], d[1], 'important');
+        });
+    }
+
     // One delegated handler for every placeholder on the page.
     document.addEventListener('click', function (e) {
         var t = e.target;
@@ -203,6 +214,7 @@
         img.setAttribute('loading', 'lazy');
         img.setAttribute('decoding', 'async');
         img.setAttribute('referrerpolicy', 'no-referrer');
+        trueColours(img);
         img.onerror = function () {                              // not an image / host down: back to a link
             if (!img.parentNode) return;
             a.textContent = '\u26A0 ' + T.fail + '\uFF1A' + httpsHost(src);
