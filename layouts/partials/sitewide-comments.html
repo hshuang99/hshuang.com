@@ -22,7 +22,6 @@
     .cmt-quote { color: #888; font-size: 0.85em; margin: 0 0 4px; padding-left: 8px; border-left: 2px solid #ddd; word-break: break-all; }
     .cmt-hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
     .cmt-flash { background: #fff8d6; transition: background 0.6s; }
-    .cmt-by-admin > .cmt-item-head .cmt-name { color: #2c5a8c; }
     .cmt-reply .cmt-reply-btn { margin-top: 6px; }
     .cmt-status { margin-left: 10px; font-size: 0.9em; }
     .cmt-status.cmt-error { color: #b94a48; }
@@ -138,6 +137,19 @@
         );
     }
 
+    // Turn every failure into a short reason that is shown next to the error
+    // text, e.g. "留言載入失敗。(HTTP 404)" — tells you whether the API route,
+    // the database or the network is at fault.
+    function checkJson(r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.json().catch(function () { throw new Error('bad response'); });
+    }
+    function reason(err) {
+        if (err && err.name === 'AbortError') return 'timeout';
+        if (err && /^HTTP |^bad response/.test(err.message || '')) return err.message;
+        return 'network';
+    }
+
     function authHeaders() {
         var h = { 'Content-Type': 'application/json' };
         if (isAdmin()) h['X-Admin-Key'] = getAdminKey();
@@ -148,6 +160,11 @@
         var li = el('li', 'cmt-item' + (c.is_admin ? ' cmt-by-admin' : ''));
         li.id = 'swc-' + c.id;
         li.setAttribute('data-id', c.id);
+
+        // The author's own comments get a BIOS-style panel. Only the comment itself
+        // goes inside it; replies from visitors (cmt-children) stay outside.
+        var box = li;
+        if (c.is_admin) { box = el('div', 'cmt-bios'); li.appendChild(box); }
 
         var head = el('div', 'cmt-item-head');
         var nameEl;
@@ -172,12 +189,12 @@
         head.appendChild(document.createTextNode(' \u00b7 '));
         head.appendChild(pageLink);
 
-        li.appendChild(head);
+        box.appendChild(head);
         if (c.parent_name && c.parent_excerpt) {
             var q = c.parent_excerpt.replace(/\s+/g, ' ');
-            li.appendChild(el('div', 'cmt-quote', '\u21a9 @' + c.parent_name + '\uff1a' + q + (c.parent_excerpt.length >= 80 ? '\u2026' : '')));
+            box.appendChild(el('div', 'cmt-quote', '\u21a9 @' + c.parent_name + '\uff1a' + q + (c.parent_excerpt.length >= 80 ? '\u2026' : '')));
         }
-        li.appendChild(markdownEl('cmt-content markdown-body', c.content));
+        box.appendChild(markdownEl('cmt-content markdown-body', c.content));
 
         if (c.admin_reply) {
             var reply = el('div', 'cmt-reply');
@@ -189,7 +206,7 @@
                 rb.addEventListener('click', function () { openReplyForm(c, li, LABELS.authorName); });
                 reply.appendChild(rb);
             }
-            li.appendChild(reply);
+            box.appendChild(reply);
         }
 
         var actions = el('div', 'cmt-admin-actions');
@@ -209,7 +226,7 @@
             actions.appendChild(adminBtn);
             actions.appendChild(delBtn);
         }
-        if (actions.childNodes.length) li.appendChild(actions);
+        if (actions.childNodes.length) box.appendChild(actions);
 
         return li;
     }
@@ -315,7 +332,7 @@
             return;
         }
         fetchT(API + '/api/comments/all?limit=100', { headers: authHeaders() })
-            .then(function (r) { if (!r.ok) throw new Error('bad status'); return r.json(); })
+            .then(checkJson)
             .then(function (data) {
                 var comments = data.comments || [];
                 THREADED = data.threaded === true;
@@ -335,9 +352,9 @@
                     });
                 }
             })
-            .catch(function () {
+            .catch(function (err) {
                 listEl.innerHTML = '';
-                listEl.appendChild(el('li', 'cmt-empty', LABELS.loadError));
+                listEl.appendChild(el('li', 'cmt-empty', LABELS.loadError + ' (' + reason(err) + ')'));
             });
     }
 
@@ -377,14 +394,6 @@
     .cmt-name { font-weight: bold; }
     .cmt-date { color: #999; font-size: 0.85em; margin-left: 8px; }
     .cmt-content { word-wrap: break-word; }
-    .cmt-reply {
-        margin-top: 10px;
-        margin-left: 20px;
-        padding: 8px 12px;
-        background: #f7f7f7;
-        border-left: 3px solid #ccc;
-    }
-    .cmt-reply-label { font-weight: bold; font-size: 0.85em; color: #666; }
     .cmt-admin-actions { margin-top: 6px; }
     .cmt-admin-actions button { font-size: 0.8em; margin-right: 8px; }
     .cmt-loading, .cmt-empty { color: #999; }

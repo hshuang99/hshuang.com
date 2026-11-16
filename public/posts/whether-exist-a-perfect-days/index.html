@@ -345,6 +345,99 @@
         margin: 6px 0;
         border-radius: 4px;
     }
+
+     
+    :is(#content, body) .cmt-reply,
+    :is(#content, body) .cmt-bios {
+        background: #aaaaaa;
+        color: #000000 !important;
+        border: 2px solid #000000;
+        box-shadow: inset 0 0 0 1px #e3e3e3;
+        font-weight: bold;
+        padding: 0 0 8px;
+    }
+    :is(#content, body) .cmt-reply {
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+    :is(#content, body) .cmt-bios {
+        margin: 0;
+    }
+    :is(#content, body) .cmt-reply-label,
+    :is(#content, body) .cmt-bios > .cmt-item-head {
+        background: #00aaaa;
+        color: #000000 !important;
+        margin: 0 0 8px;
+        padding: 2px 10px;
+        border-bottom: 2px solid #000000;
+        font-weight: bold;
+    }
+    :is(#content, body) .cmt-reply-label {
+        font-size: 0.9em;
+    }
+    :is(#content, body) .cmt-reply > :not(.cmt-reply-label),
+    :is(#content, body) .cmt-bios > :not(.cmt-item-head) {
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+    :is(#content, body) .cmt-reply :not(a):not(.cmt-badge):not(button),
+    :is(#content, body) .cmt-bios :not(a):not(.cmt-badge):not(button) {
+        color: #000000 !important;
+    }
+    :is(#content, body) .cmt-bios .cmt-date,
+    :is(#content, body) .cmt-bios .cmt-replyto,
+    :is(#content, body) .cmt-bios .cmt-quote,
+    :is(#content, body) .cmt-reply .cmt-date {
+        color: #000000 !important;
+    }
+    :is(#content, body) .cmt-bios .cmt-quote {
+        border-left-color: #000000;
+    }
+    :is(#content, body) .cmt-bios .cmt-badge {
+        background: #0000aa;
+        color: #ffffff;
+    }
+    :is(#content, body) .cmt-reply a,
+    :is(#content, body) .cmt-bios a {
+        color: #0000aa !important;
+        background: transparent !important;
+        text-decoration: underline !important;
+        font-weight: bold;
+    }
+    :is(#content, body) .cmt-reply a:hover,
+    :is(#content, body) .cmt-reply a:focus,
+    :is(#content, body) .cmt-bios a:hover,
+    :is(#content, body) .cmt-bios a:focus {
+        background: #f20303 !important;
+        color: #ffffff !important;
+        text-decoration: none !important;
+        outline: none;
+    }
+    :is(#content, body) .cmt-reply a[data-cmt-img],
+    :is(#content, body) .cmt-bios a[data-cmt-img] {
+        border-color: #000000;
+    }
+    :is(#content, body) .cmt-reply code,
+    :is(#content, body) .cmt-bios code,
+    :is(#content, body) .cmt-reply pre,
+    :is(#content, body) .cmt-bios pre {
+        background: #d4d4d4 !important;
+        color: #000000 !important;
+        border: 1px solid #000000 !important;
+    }
+    :is(#content, body) .cmt-reply blockquote,
+    :is(#content, body) .cmt-bios blockquote {
+        border-left: 4px solid #0000aa;
+        margin-left: 0;
+        padding-left: 8px;
+    }
+    :is(#content, body) .cmt-reply th,
+    :is(#content, body) .cmt-reply td,
+    :is(#content, body) .cmt-bios th,
+    :is(#content, body) .cmt-bios td {
+        border: 1px solid #000000;
+        padding: 2px 6px;
+    }
 </style>
 <script>
 (function () {
@@ -679,14 +772,6 @@
     .cmt-name { font-weight: bold; }
     .cmt-date { color: #999; font-size: 0.85em; margin-left: 8px; }
     .cmt-content { word-wrap: break-word; }
-    .cmt-reply {
-        margin-top: 10px;
-        margin-left: 20px;
-        padding: 8px 12px;
-        background: #f7f7f7;
-        border-left: 3px solid #ccc;
-    }
-    .cmt-reply-label { font-weight: bold; font-size: 0.85em; color: #666; }
     .cmt-admin-actions { margin-top: 6px; }
     .cmt-admin-actions button {
         font-size: 0.8em;
@@ -728,7 +813,6 @@
         border-radius: 3px;
         vertical-align: middle;
     }
-    .cmt-by-admin > .cmt-item-head .cmt-name { color: #2c5a8c; }
     .cmt-reply .cmt-reply-btn { margin-top: 6px; }
     @media (max-width: 480px) {
         .cmt-children { padding-left: 10px; }
@@ -859,6 +943,11 @@
         li.id = 'cmt-' + c.id;
         li.setAttribute('data-id', c.id);
 
+        
+        
+        var box = li;
+        if (c.is_admin) { box = el('div', 'cmt-bios'); li.appendChild(box); }
+
         var head = el('div', 'cmt-item-head');
         var nameEl;
         var site = safeUrl(c.website);
@@ -876,9 +965,9 @@
             head.appendChild(el('span', 'cmt-replyto', ' ↩ @' + c._parent.name));
         }
         head.appendChild(el('span', 'cmt-date', fmtDate(c.created_at)));
-        li.appendChild(head);
+        box.appendChild(head);
 
-        li.appendChild(markdownEl('cmt-content markdown-body', c.content));
+        box.appendChild(markdownEl('cmt-content markdown-body', c.content));
 
         if (c.admin_reply) {
             var reply = el('div', 'cmt-reply');
@@ -890,7 +979,7 @@
                 rb.addEventListener('click', function () { openReplyForm(c, li, LABELS.authorName); });
                 reply.appendChild(rb);
             }
-            li.appendChild(reply);
+            box.appendChild(reply);
         }
 
         var actions = el('div', 'cmt-admin-actions');
@@ -910,7 +999,7 @@
             actions.appendChild(adminBtn);
             actions.appendChild(delBtn);
         }
-        if (actions.childNodes.length) li.appendChild(actions);
+        if (actions.childNodes.length) box.appendChild(actions);
 
         if (!flat && c._kids.length) {
             var ul = el('ul', 'cmt-children');
@@ -1048,6 +1137,19 @@
         );
     }
 
+    
+    
+    
+    function checkJson(r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.json().catch(function () { throw new Error('bad response'); });
+    }
+    function reason(err) {
+        if (err && err.name === 'AbortError') return 'timeout';
+        if (err && /^HTTP |^bad response/.test(err.message || '')) return err.message;
+        return 'network';
+    }
+
     function authHeaders() {
         var h = { 'Content-Type': 'application/json' };
         if (isAdmin()) h['X-Admin-Key'] = getAdminKey();
@@ -1061,7 +1163,7 @@
             return;
         }
         fetchT(API + '/api/comments?slug=' + encodeURIComponent(SLUG), { headers: authHeaders() })
-            .then(function (r) { if (!r.ok) throw new Error('bad status'); return r.json(); })
+            .then(checkJson)
             .then(function (data) {
                 THREADED = data.threaded === true;
                 var comments = data.comments || [];
@@ -1073,9 +1175,9 @@
                     });
                 }
             })
-            .catch(function () {
+            .catch(function (err) {
                 listEl.innerHTML = '';
-                listEl.appendChild(el('li', 'cmt-empty', LABELS.loadError));
+                listEl.appendChild(el('li', 'cmt-empty', LABELS.loadError + ' (' + reason(err) + ')'));
             });
     }
 
