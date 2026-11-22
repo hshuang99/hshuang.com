@@ -815,6 +815,9 @@ $$</p>
         vertical-align: middle;
     }
     .cmt-reply .cmt-reply-btn { margin-top: 6px; }
+    .cmt-badge-pending { background: #c98a1b; }
+    .cmt-pending { opacity: 0.85; }
+    .cmt-notice { margin: 10px 0 4px; padding: 8px 12px; background: #fff8d6; border: 1px solid #ecdc8a; border-radius: 4px; font-size: 0.9em; }
     @media (max-width: 480px) {
         .cmt-children { padding-left: 10px; }
     }
@@ -867,6 +870,10 @@ $$</p>
         sendError: '送出失敗，請再試一次。',
         sending: '送出中...',
         sent: '留言成功！',
+        sentPending: '已收到你的留言，版主審核通過後就會顯示。',
+        pendingBadge: '待審核',
+        pendingCount: '待審',
+        approve: '核准',
         adminOn: '已進入管理者模式。',
         adminBadKey: '金鑰錯誤，仍為一般模式。'
     };
@@ -940,7 +947,9 @@ $$</p>
     }
 
     function renderComment(c, depth, flat) {
-        var li = el('li', 'cmt-item' + (depth ? ' cmt-child' : '') + (c.is_admin ? ' cmt-by-admin' : ''));
+        
+        var pending = c.is_approved === 0;
+        var li = el('li', 'cmt-item' + (depth ? ' cmt-child' : '') + (c.is_admin ? ' cmt-by-admin' : '') + (pending ? ' cmt-pending' : ''));
         li.id = 'cmt-' + c.id;
         li.setAttribute('data-id', c.id);
 
@@ -962,6 +971,7 @@ $$</p>
         }
         head.appendChild(nameEl);
         if (c.is_admin) head.appendChild(el('span', 'cmt-badge', LABELS.badge));
+        if (pending) head.appendChild(el('span', 'cmt-badge cmt-badge-pending', LABELS.pendingBadge));
         if (flat && c._parent) {
             head.appendChild(el('span', 'cmt-replyto', ' ↩ @' + c._parent.name));
         }
@@ -974,7 +984,7 @@ $$</p>
             var reply = el('div', 'cmt-reply');
             reply.appendChild(el('div', 'cmt-reply-label', '版主回覆'));
             reply.appendChild(markdownEl('cmt-content markdown-body', c.admin_reply));
-            if (THREADED) {
+            if (THREADED && !pending) {
                 var rb = el('button', 'btn btn-mini cmt-reply-btn', LABELS.replyAuthor);
                 rb.type = 'button';
                 rb.addEventListener('click', function () { openReplyForm(c, li, LABELS.authorName); });
@@ -984,13 +994,19 @@ $$</p>
         }
 
         var actions = el('div', 'cmt-admin-actions');
-        if (THREADED) {
+        if (THREADED && !pending) {
             var replyBtn = el('button', 'btn btn-mini cmt-reply-btn', LABELS.reply);
             replyBtn.type = 'button';
             replyBtn.addEventListener('click', function () { openReplyForm(c, li); });
             actions.appendChild(replyBtn);
         }
         if (isAdmin()) {
+            if (pending) {
+                var okBtn = el('button', 'btn btn-mini btn-success', LABELS.approve);
+                okBtn.type = 'button';
+                okBtn.addEventListener('click', function () { doApprove(c.id); });
+                actions.appendChild(okBtn);
+            }
             var adminBtn = el('button', 'btn btn-mini', LABELS.adminReply);
             adminBtn.type = 'button';
             adminBtn.addEventListener('click', function () { doReply(c.id); });
@@ -1017,7 +1033,9 @@ $$</p>
 
     function renderList(comments) {
         listEl.innerHTML = '';
-        countEl.textContent = LABELS.countPrefix + '（' + comments.length + '）';
+        var nPending = comments.filter(function (c) { return c.is_approved === 0 && !c.is_deleted; }).length;
+        countEl.textContent = LABELS.countPrefix + '（' + (comments.length - nPending) + '）' +
+            (nPending ? ' · ' + nPending + ' ' + LABELS.pendingCount : '');
         if (!comments.length) {
             listEl.appendChild(el('li', 'cmt-empty', LABELS.empty));
             return;
@@ -1094,6 +1112,15 @@ $$</p>
             };
             postComment(payload).then(function (d) {
                 saveProfile(payload.name, payload.website);
+                if (d && d.pending) {
+                    
+                    var note = el('div', 'cmt-notice', LABELS.sentPending);
+                    note.setAttribute('role', 'status');
+                    f.parentNode.replaceChild(note, f);
+                    openForm = null;
+                    setTimeout(function () { if (note.parentNode) note.parentNode.removeChild(note); }, 12000);
+                    return;
+                }
                 closeReplyForm();
                 loadComments(d && d.id);
             }).catch(function (err) {
@@ -1194,6 +1221,16 @@ $$</p>
             .catch(function () { window.alert(LABELS.sendError); });
     }
 
+    function doApprove(id) {
+        fetchT(API + '/api/comments/' + id + '/approve', {
+            method: 'POST',
+            headers: authHeaders(),
+            body: JSON.stringify({ approved: true })
+        })
+            .then(function (r) { if (!r.ok) throw new Error('bad status'); loadComments(id); })
+            .catch(function () { window.alert(LABELS.sendError); });
+    }
+
     function doDelete(id, liEl) {
         if (!window.confirm(LABELS.confirmDelete)) return;
         fetchT(API + '/api/comments/' + id, {
@@ -1230,7 +1267,7 @@ $$</p>
             })
             .then(function (d) {
                 statusEl.className = 'cmt-status cmt-ok';
-                statusEl.textContent = LABELS.sent;
+                statusEl.textContent = (d && d.pending) ? LABELS.sentPending : LABELS.sent;
                 saveProfile(payload.name, payload.website);
                 textarea.value = '';
                 if (tabEdit && tabPreview) {
